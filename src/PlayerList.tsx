@@ -132,7 +132,7 @@ const IntroTitle: React.FC<{ person?: TopPlayer }> = ({ person }) => {
           lineHeight: "1.4"
         }}
       >
-        A History of Greatness
+        Jangan Lupa Like & Share :)
       </h2>
 
       <h3
@@ -151,13 +151,25 @@ const IntroTitle: React.FC<{ person?: TopPlayer }> = ({ person }) => {
 const EndingSequence: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const duration = 4 * fps; // 4 seconds
+  const duration = 5 * fps; // 5 seconds
+
+  // Samakan rotasi watermark dengan Player List
+  const watermarkRotation = useMemo(() => {
+    return interpolate(
+      frame,
+      [0, duration],
+      [0, 360],
+      {
+        extrapolateRight: 'clamp',
+        extrapolateLeft: 'clamp',
+      }
+    );
+  }, [frame, duration]);
 
   const text = "Terima Kasih...";
   const characters = text.split('').map((char, index) => {
-    // Add extra space after each word
     if (char === ' ' && index < text.length - 1) {
-      return '  '; // Double space after each word
+      return '  ';
     }
     return char;
   });
@@ -185,19 +197,33 @@ const EndingSequence: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      {/* SVG Watermark */}
-      <div style={{
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        opacity: 0.1,
-        zIndex: 0
-      }}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="100%" height="100%">
-          <path d="m240 240 160-80v-.7A79.8 79.8 0 0 0 320.7 80h-.7l-80 160ZM240 240 160 80h-.7A79.8 79.8 0 0 0 80 159.3v.7l160 80ZM240 240l80 160h.7a79.8 79.8 0 0 0 79.3-79.3v-.7l-160-80ZM240 240 80 320v.7a79.8 79.8 0 0 0 79.3 79.3h.7l80-160ZM240 240l169.7 56.6.5-.5a79.8 79.8 0 0 0 0-112.2l-.5-.5L240 240ZM240 240l56.6-169.7-.5-.5a79.8 79.8 0 0 0-112.2 0l-.5.5L240 240ZM240 240l-56.6 169.7.5.5a79.8 79.8 0 0 0 112.2 0l.5-.5L240 240ZM240 240 70.3 183.4l-.5.5a79.8 79.8 0 0 0 0 112.2l.5.5L240 240Z" fill="#808" />
+      {/* SVG Watermark - sama dengan Player List */}
+      <div
+        style={{
+          position: "absolute",
+          width: "300px",
+          height: "300px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          opacity: 0.5,
+          zIndex: 0,
+          top: -90,
+          left: "50%",
+          transform: `translateX(-50%) rotate(${watermarkRotation}deg)`,
+          transition: "transform 0.1s linear",
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 480 480"
+          width="100%"
+          height="100%"
+        >
+          <path
+            d="m240 240 160-80v-.7A79.8 79.8 0 0 0 320.7 80h-.7l-80 160ZM240 240 160 80h-.7A79.8 79.8 0 0 0 80 159.3v.7l160 80ZM240 240l80 160h.7a79.8 79.8 0 0 0 79.3-79.3v-.7l-160-80ZM240 240 80 320v.7a79.8 79.8 0 0 0 79.3 79.3h.7l80-160ZM240 240l169.7 56.6.5-.5a79.8 79.8 0 0 0 0-112.2l-.5-.5L240 240ZM240 240l56.6-169.7-.5-.5a79.8 79.8 0 0 0-112.2 0l-.5.5L240 240ZM240 240l-56.6 169.7.5.5a79.8 79.8 0 0 0 112.2 0l.5-.5L240 240ZM240 240 70.3 183.4l-.5.5a79.8 79.8 0 0 0 0 112.2l.5.5L240 240Z"
+            fill="#000"
+          />
         </svg>
       </div>
 
@@ -243,7 +269,7 @@ export const PlayerList: React.FC = () => {
     const processData = async () => {
       try {
         const data = validateTopPlayers(rawTopPlayers)
-          .sort((a, b) => new Date(a.date_of_birth).getTime() - new Date(b.date_of_birth).getTime())
+          .sort((a, b) => new Date(a.date_of_join).getTime() - new Date(b.date_of_join).getTime())
           .reverse(); // Reverse to get oldest first
         setValidatedData(data);
         continueRender(handle);
@@ -256,8 +282,8 @@ export const PlayerList: React.FC = () => {
   }, [handle]);
 
   const introDelay = 120;
-  const totalDuration = fps * 15; // 210 detik
-  const cardsToShow = 4; // 42
+  const totalDuration = fps * 240; // 210 detik
+  const cardsToShow = 42; // 42
   const initialDelay = 30;
   const cardEntryDuration = 42; //42
   const staggerDelay = 100;
@@ -309,53 +335,135 @@ export const PlayerList: React.FC = () => {
 
       {/* Player List Animation */}
       <Sequence from={introDelay} durationInFrames={totalDuration}>
-        <div className="grass">
+        <div
+          className="grass"
+          style={{
+            // height: '100%',
+            // backgroundColor: "#434343",
+            // backgroundImage: "linear-gradient(#434343, #282828)",
+          }}
+        >
           <div className="w-full flex items-center justify-center">
             {/* SVG Watermark */}
-            <div style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              opacity: 0.1,
-              zIndex: 0,
-              top: -20,
-              transform: `rotate(${watermarkRotation}deg)`,
-              transition: 'transform 0.1s linear'
-            }}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="100%" height="100%">
-                <path d="m240 240 160-80v-.7A79.8 79.8 0 0 0 320.7 80h-.7l-80 160ZM240 240 160 80h-.7A79.8 79.8 0 0 0 80 159.3v.7l160 80ZM240 240l80 160h.7a79.8 79.8 0 0 0 79.3-79.3v-.7l-160-80ZM240 240 80 320v.7a79.8 79.8 0 0 0 79.3 79.3h.7l80-160ZM240 240l169.7 56.6.5-.5a79.8 79.8 0 0 0 0-112.2l-.5-.5L240 240ZM240 240l56.6-169.7-.5-.5a79.8 79.8 0 0 0-112.2 0l-.5.5L240 240ZM240 240l-56.6 169.7.5.5a79.8 79.8 0 0 0 112.2 0l.5-.5L240 240ZM240 240 70.3 183.4l-.5.5a79.8 79.8 0 0 0 0 112.2l.5.5L240 240Z" fill="#808" />
+            <div
+              style={{
+                position: "absolute",
+                width: "300px",
+                height: "300px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: 0.5,
+                zIndex: 0,
+                top: -90,
+                left: "50%",
+                transform: `translateX(-50%) rotate(${watermarkRotation}deg)`,
+                transition: "transform 0.1s linear",
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 480 480"
+                width="100%"
+                height="100%"
+              >
+                <path
+                  d="m240 240 160-80v-.7A79.8 79.8 0 0 0 320.7 80h-.7l-80 160ZM240 240 160 80h-.7A79.8 79.8 0 0 0 80 159.3v.7l160 80ZM240 240l80 160h.7a79.8 79.8 0 0 0 79.3-79.3v-.7l-160-80ZM240 240 80 320v.7a79.8 79.8 0 0 0 79.3 79.3h.7l80-160ZM240 240l169.7 56.6.5-.5a79.8 79.8 0 0 0 0-112.2l-.5-.5L240 240ZM240 240l56.6-169.7-.5-.5a79.8 79.8 0 0 0-112.2 0l-.5.5L240 240ZM240 240l-56.6 169.7.5.5a79.8 79.8 0 0 0 112.2 0l.5-.5L240 240ZM240 240 70.3 183.4l-.5.5a79.8 79.8 0 0 0 0 112.2l.5.5L240 240Z"
+                  fill="orange"
+                />
               </svg>
             </div>
 
             {/* Watermark Text */}
-            <div style={{
-              position: 'absolute',
-              width: '30%',
-              height: '100%',
-              display: 'flex',
-              justifyContent: 'flex-start',
-              alignItems: 'center',
-              fontSize: '3rem',
-              fontWeight: '900',
-              color: 'rgba(128, 0, 128, 0.2)',
-              pointerEvents: 'none',
-              zIndex: 0,
-              fontFamily: rubikFont,
-              textShadow: '4px 4px 8px rgba(0,0,0,0.2)',
-              whiteSpace: 'nowrap',
-              userSelect: 'none',
-              left: 0,
-              top: -20,
-              paddingLeft: '1rem'
-            }}>
+            <div
+              style={{
+                position: "absolute",
+                width: "30%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                fontSize: "5rem",
+                fontWeight: 900,
+                color: "rgba(0, 0, 0, 0.7)",
+                pointerEvents: "none",
+                zIndex: 0,
+                fontFamily: rubikFont,
+                textShadow: "4px 4px 8px rgba(0,0,0,0.2)",
+                whiteSpace: "nowrap",
+                userSelect: "none",
+                left: 0,
+                top: -20,
+                paddingLeft: "1rem",
+                // Efek getar (shake)
+                transform: `translate(
+                  ${Math.sin(frame * 0.8) * 2 + (Math.random() - 0.5) * 1.5}px,
+                  ${Math.cos(frame * 1.1) * 2 + (Math.random() - 0.5) * 1.5}px
+                ) rotate(${Math.sin(frame * 0.3) * 1.5}deg)`,
+                // Efek noise pada opacity
+                opacity: 0.18 + Math.abs(Math.sin(frame * 0.7 + Math.random() * 10)) * 0.07,
+              }}
+            >
               yt@sinauvideo
             </div>
 
+            {/* Watermark Overlay Atas Card, hanya 2 detik di detik ke-10 */}
+            {frame >= introDelay + fps * 10 && frame < introDelay + fps * 12 && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: 40,
+                  left: "50%",
+                  transform: `translate(-50%, ${
+                    interpolate(
+                      frame,
+                      [
+                        introDelay + fps * 10, 
+                        introDelay + fps * 10 + 10, 
+                        introDelay + fps * 12 - 10, 
+                        introDelay + fps * 12
+                      ],
+                      [-60, 0, 0, -60], // dari atas ke posisi normal, lalu keluar ke atas lagi
+                      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+                    )
+                  }px)`,
+                  zIndex: 10,
+                  background: "rgba(0,0,0,0.85)",
+                  color: "#fff",
+                  fontWeight: 900,
+                  fontSize: "3rem",
+                  padding: "0.7em 2em",
+                  borderRadius: "2em",
+                  boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
+                  fontFamily: rubikFont,
+                  opacity: interpolate(
+                    frame,
+                    [
+                      introDelay + fps * 10, 
+                      introDelay + fps * 10 + 10, 
+                      introDelay + fps * 12 - 10, 
+                      introDelay + fps * 12
+                    ],
+                    [0, 1, 1, 0],
+                    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+                  ),
+                  pointerEvents: "none",
+                  transition: "opacity 0.2s, transform 0.2s"
+                }}
+              >
+                yt@sinauvideo
+              </div>
+            )}
+
             {/* Container Kartu dengan Efek Scroll */}
-            <div className="flex gap-4" style={{ transform: `translateX(${scrollX}px)`, position: 'relative', zIndex: 1 }}>
+            <div
+              className="flex gap-4"
+              style={{
+                transform: `translateX(${scrollX}px)`,
+                position: "relative",
+                zIndex: 1,
+              }}
+            >
               {memoizedData.map((person, index) => {
                 const isMainCard = index < 4;
                 const delay = isMainCard
@@ -365,10 +473,15 @@ export const PlayerList: React.FC = () => {
                 const initialPosition = getStaticCardPosition(index, width);
 
                 const slideUpOffset = isMainCard
-                  ? interpolate(frame - delay - introDelay, [0, 30], [200, 0], {
-                      extrapolateLeft: "clamp",
-                      extrapolateRight: "clamp",
-                    })
+                  ? interpolate(
+                      frame - delay - introDelay,
+                      [0, 30],
+                      [200, 0],
+                      {
+                        extrapolateLeft: "clamp",
+                        extrapolateRight: "clamp",
+                      }
+                    )
                   : 0;
 
                 const bounceEffect = spring({
@@ -377,7 +490,7 @@ export const PlayerList: React.FC = () => {
                   to: 0,
                   fps,
                   config: {
-                    damping: 10, // Lebih smooth
+                    damping: 10,
                     stiffness: 90,
                     mass: 0.5,
                   },
@@ -389,11 +502,15 @@ export const PlayerList: React.FC = () => {
                     className="absolute pt-10"
                     style={{
                       left: initialPosition,
-                      opacity: interpolate(frame - delay - introDelay, [0, opacityTransitionDuration], [0, 1], {
-                        extrapolateLeft: "clamp",
-                        extrapolateRight: "clamp",
-                      }),
-                      transform: `translateY(${slideUpOffset + bounceEffect * 20}px)`,
+                      opacity: interpolate(
+                        frame - delay - introDelay,
+                        [0, opacityTransitionDuration],
+                        [0, 1],
+                        { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+                      ),
+                      transform: `translateY(${
+                        slideUpOffset + bounceEffect * 20
+                      }px)`,
                     }}
                   >
                     <PlayerCard person={person} style={{ height: cardHeight }} />
@@ -425,6 +542,8 @@ export const PlayerList: React.FC = () => {
           [0, 1],
           { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
         ) }}>
+
+          
           <EndingSequence />
         </div>
       </Sequence>

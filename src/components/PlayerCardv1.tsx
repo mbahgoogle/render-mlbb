@@ -141,7 +141,7 @@ export const PlayerCard: React.FC<{
 
           
           {/* year */}
-          <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
+          <div className="flex items-center text-left gap-4 p-3 rounded-md" style={{ background: "#18181b" }}>
             <Calendar className="h-9 w-9 text-gray-200" />
             <div>
                 <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Join</p>
@@ -152,7 +152,7 @@ export const PlayerCard: React.FC<{
           </div>
 
           {/* Birth Date */}
-          <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
+          <div className="flex items-center text-left gap-4 p-3 rounded-md" style={{ background: "#18181b" }}>
             <Birthday className="h-9 w-9 text-gray-200" />
             <div>
               <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Birthday</p>
@@ -208,50 +208,6 @@ export const PlayerCard: React.FC<{
           </div>
 
         </div>
-
-      
-
-         {/* Player info dengan spacing yang lebih baik */}
-         {/* <div className="pt-8 px-6 pb-4">
-          <div className="flex flex-col items-center text-center">
-            <div className="flex-grow">
-              <h1 className="text-6xl font-bold text-gray-800">
-                LLLLL
-              </h1>
-              <p className="text-2xl text-gray-500 mt-2 font-extrabold tracking-wider" style={{ fontFamily: RubikFont}}>{person.name}</p>
-              
-                <div className="flex justify-center mt-4">
-                <span className="bg-gray-800 text-white px-6 py-3 font-bold rounded-full flex items-center gap-3 text-3xl" style={{ willChange: "transform, opacity", fontFamily: RubikFont }}>
-                  {person.nation}{" "}
-                  {getCountryCode(person.nation_code) ? (
-                  <CircleFlag
-                    countryCode={getCountryCode(person.nation_code)}
-                    height="50"
-                    width="50"
-                  />
-                   ) : (
-                  "🌍"
-                  )}
-                </span>
-                </div>
-            </div>
-          </div>
-        </div> */}
-
-        
-      
-        {/* Logo Klub Bola */}
-        {/* <div className="flex justify-center items-center py-2">
-          <div className="w-45 h-45 flex items-center justify-center overflow-hidden bg-gray-0 rounded-md">
-            {getLogoCode(person.club) && (
-              <img
-                src={getLogoCode(person.club)}
-                alt="Club Logo"
-                className="w-full h-full object-contain py-1"
-              />
-            )}
-          </div>
-        </div> */}
         
       </div>
     </div>

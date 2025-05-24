@@ -1,0 +1,164 @@
+[
+    {
+        "team": "RRQ Hoshi",
+        "name": "Lemon",
+        "full_name": "Muhammad  Ikhsan",
+        "date_of_birth": "1998-12-30",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "RRQ Hoshi",
+        "status": "Inactive",
+        "image": "/player/RRQ_Lemon_S13.png",
+        "heros": [
+            "Kagura",
+            "Lunox",
+            "Faramis",
+            "Lapu-Lapu",
+            "Edith"
+        ],
+        "roles": [
+            "Mid Laner",
+            "EXP Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2017-09-14",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2021-07-19",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2022-01-22",
+                "team": "Rex Regum Qeon"
+            },
+            {
+                "date": "2024-01-09",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2024-03-27",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2024-07-24",
+                "team": "RRQ Hoshi"
+            }
+        ],
+        "date_of_join": "2017-09-14",
+        "url": "https://liquipedia.net/mobilelegends/lemon"
+    },
+    {
+        "team": "RRQ Hoshi",
+        "name": "Banshee",
+        "full_name": "Jordy Dave",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/player/RRQ_Banshee.png",
+        "heros": [
+            "Miya", "Moskov", "Bruno"
+        ],
+        "roles": [
+            "Gold Laner"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "2017-09-14",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "RRQ Hoshi",
+        "name": "Marsha",
+        "full_name": "Steven  Kurniawan",
+        "date_of_birth": "1994-10-05",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "ONIC",
+        "current_team": "no data",
+        "status": "Active",
+        "image": "player/RRQ_marsha.png",
+        "heros": [
+            "Franco",
+            "Akai",
+            "Johnson"
+        ],
+        "roles": [
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2017-09-14",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2018-04-30",
+                "team": "EVOS Esports"
+            },
+            {
+                "date": "2019-01-12",
+                "team": "Louvre Esports"
+            },
+            {
+                "date": "2019-07-23",
+                "team": "Aerowolf Pro Team"
+            },
+            {
+                "date": "2024-07-28",
+                "team": "ONIC"
+            }
+        ],
+        "date_of_join": "2017-09-14",
+        "url": "https://liquipedia.net/mobilelegends/marsha"
+    },
+    {
+        "team": "RRQ Hoshi",
+        "name": "Liam",
+        "full_name": "William  Setiawan",
+        "date_of_birth": "1998-11-30",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "EVOS Holy",
+        "current_team": "no data",
+        "status": "Retired",
+        "image": "/player/RRQ_Liam.png",
+        "heros": [
+            "Akai",
+            "Franco",
+            "Kaja"
+        ],
+        "roles": [
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2018-07-03",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2020-02-14",
+                "team": "RRQ Sena"
+            },
+            {
+                "date": "2020-07-28",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2022-01-22",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2023-10-04",
+                "team": "EVOS Holy"
+            }
+        ],
+        "date_of_join": "2018-07-03",
+        "url": "https://liquipedia.net/mobilelegends/liam"
+    }
+]

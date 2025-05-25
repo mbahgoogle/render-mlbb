@@ -108,7 +108,7 @@ export const PlayerCard: React.FC<{
             {/* Player name dan info */}
             <div className="flex-grow">
                 <div className="flex justify-center mt-4">
-                <span className="bg-gray-800 text-white px-6 py-3 font-bold rounded-full flex items-center gap-3 text-4xl" style={{ willChange: "transform, opacity", fontFamily: RubikFont }}>
+                <span className="bg-gray-900 text-white px-6 py-3 font-bold rounded-full flex items-center gap-3 text-4xl" style={{ willChange: "transform, opacity", fontFamily: RubikFont }}>
                   {person.name}
                   {getCountryCode(person.nation_code) ? (
                   <CircleFlag
@@ -128,7 +128,7 @@ export const PlayerCard: React.FC<{
        
 
         {/* Assists and goals counter dengan desain clean */}
-        <div className="px-6 py-4 bg-gray-800 border-t text-4xl border-b border-gray-700">
+        <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-5 px-5 mx-5">
           <div className="flex items-center justify-center">
             <p className="text-gray-200 font-bold text-center" style={{ fontFamily: robotoMonoFont }}>
               {person.full_name}
@@ -141,7 +141,7 @@ export const PlayerCard: React.FC<{
 
           
           {/* year */}
-          <div className="flex items-center text-left gap-4 p-3 rounded-md" style={{ background: "#18181b" }}>
+          <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
             <Calendar className="h-9 w-9 text-gray-200" />
             <div>
                 <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Join</p>
@@ -152,7 +152,7 @@ export const PlayerCard: React.FC<{
           </div>
 
           {/* Birth Date */}
-          <div className="flex items-center text-left gap-4 p-3 rounded-md" style={{ background: "#18181b" }}>
+          <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
             <Birthday className="h-9 w-9 text-gray-200" />
             <div>
               <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Birthday</p>

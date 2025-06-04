@@ -4,7 +4,7 @@ import './index.css';
 
 // Konfigurasi durasi
 const FPS = 60;
-const TOTAL_DURATION = FPS * 247; // 200 detik sesuai dengan PlayerList.tsx
+const TOTAL_DURATION = FPS * 297; // 200 detik sesuai dengan PlayerList.tsx
 
 export const RemotionRoot: React.FC = () => {
   return (

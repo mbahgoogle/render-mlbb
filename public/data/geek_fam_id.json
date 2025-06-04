@@ -1,0 +1,1772 @@
+[
+    {
+        "team": "Geek Fam ID",
+        "name": "RenV",
+        "full_name": "Rendy  Kurniawan (formerly known as Ipin)",
+        "date_of_birth": "2001-01-06",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID",
+        "current_team": "no data",
+        "status": "Inactive",
+        "image": "https://liquipedia.net/commons/images/c/ca/RENV.png",
+        "heros": [
+            "Selena",
+            "Helcurt",
+            "Leomord",
+            "Thamuz",
+            "Kimmy"
+        ],
+        "roles": [
+            "EXP Laner",
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2018-08-31",
+                "team": "SFI Esports (page does not exist)"
+            },
+            {
+                "date": "2019-01-23",
+                "team": "SFI Critical (page does not exist)"
+            },
+            {
+                "date": "2019-07-30",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-08-02",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/renv"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Doyok",
+        "full_name": "Tantyo  Aditya is a  retired Indonesian player who last played for  Geek Fam ID. He is currently a streamer for Geng Kapak.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID",
+        "current_team": "no data",
+        "status": "Retired",
+        "image": "https://liquipedia.net/commons/images/a/ae/GEEK_Doyok.png",
+        "heros": [
+            "Gusion",
+            "Roger",
+            "Lancelot",
+            "Harith",
+            "Yi Sun-shin"
+        ],
+        "roles": [
+            "Mid Laner",
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2018-08-31",
+                "team": "SFI Esports (page does not exist)"
+            },
+            {
+                "date": "2019-01-23",
+                "team": "SFI Critical (page does not exist)"
+            },
+            {
+                "date": "2019-07-30",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2020-02-13",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2020-03-12",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/doyok"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Ramzu",
+        "full_name": "Rama  Galasepta is a  retired Indonesian player who last played for  Geek Fam ID Jr.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID Jr",
+        "current_team": "no data",
+        "status": "Retired",
+        "image": "https://liquipedia.net/commons/images/a/a8/GEEK_Ramzu_S5.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Gold Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2019-01-23",
+                "team": "SFI Critical (page does not exist)"
+            },
+            {
+                "date": "2019-07-30",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2020-09-10",
+                "team": "Geek Fam ID Jr"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/ramzu"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Wongcoco",
+        "full_name": "Dian  Agusta is an  Indonesian player who is currently playing as an analyst for  Dewa United Morpheus.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Dewa United Morpheus",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/2/22/DEWA_Wongcoco_MDL_S10.png",
+        "heros": [
+            "Franco",
+            "Chou",
+            "Khufra",
+            "Hilda",
+            "Balmond"
+        ],
+        "roles": [
+            "Analyst",
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2018-01-10",
+                "team": "Elite 8 Critical Reborn (page does not exist)"
+            },
+            {
+                "date": "2018-08-31",
+                "team": "SFI Esports (page does not exist)"
+            },
+            {
+                "date": "2019-01-23",
+                "team": "SFI Critical (page does not exist)"
+            },
+            {
+                "date": "2019-07-30",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2020-02-13",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2020-03-12",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2020-09-10",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2024-02-27",
+                "team": "Dewa United Morpheus"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/wongcoco"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Joker",
+        "full_name": "David  Ginola is a  retired Indonesian player who last played for  Orange Esports.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Orange Esports",
+        "current_team": "no data",
+        "status": "Retired",
+        "image": "https://liquipedia.net/commons/images/3/3a/GEEK_Joker.png",
+        "heros": [
+            "Akai",
+            "Grock",
+            "Khufra",
+            "Hylos",
+            "Tigreal"
+        ],
+        "roles": [
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2018-01-10",
+                "team": "Elite 8 Critical Reborn (page does not exist)"
+            },
+            {
+                "date": "2018-08-31",
+                "team": "SFI Esports (page does not exist)"
+            },
+            {
+                "date": "2019-01-23",
+                "team": "SFI Critical (page does not exist)"
+            },
+            {
+                "date": "2019-07-30",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2020-02-13",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2020-03-12",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2020-11-23",
+                "team": "Orange Esports"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/joker"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Paul",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Kirito",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "InstincT",
+        "full_name": "Calvien  is a  retired Indonesian player who last played for  Geek Fam ID.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID",
+        "current_team": "no data",
+        "status": "Retired",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2017-09-14",
+                "team": "PSG.RRQ"
+            },
+            {
+                "date": "2019-08-02",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/instinct"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "VALL",
+        "full_name": "Thomas  Galileo is an  Indonesian player who last played for  Rebellion Zion.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Rebellion Zion",
+        "current_team": "no data",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/9/98/RBZ_Vall_S10.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2019-01-18",
+                "team": "Star8 Esports (page does not exist)"
+            },
+            {
+                "date": "2019-08-02",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2020-03-12",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2021-07-30",
+                "team": "Rebellion Zion"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/val"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Tezet",
+        "full_name": "Yosua  Sanger is an  Indonesian player who is currently playing as a coach for  Boostgate Esports.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Boostgate Esports",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/9/92/AURA_Tezet_S10.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Coach"
+        ],
+        "team_history": [
+            {
+                "date": "2019-01-18",
+                "team": "Star8 Esports (page does not exist)"
+            },
+            {
+                "date": "2019-08-02",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2020-03-12",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2020-06-11",
+                "team": "AURA Fire"
+            },
+            {
+                "date": "2020-08-20",
+                "team": "AURA Esports"
+            },
+            {
+                "date": "2021-07-25",
+                "team": "AURA Fire"
+            },
+            {
+                "date": "2022-02-05",
+                "team": "AURA Fire"
+            },
+            {
+                "date": "2022-06-14",
+                "team": "AURA Fire"
+            },
+            {
+                "date": "2023-01-27",
+                "team": "AURA Fire"
+            },
+            {
+                "date": "2025-04-15",
+                "team": "Boostgate Esports (page does not exist)"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/tezet"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "AyamJAGO",
+        "full_name": "no data",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "no data",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/ayamjago"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Schwann",
+        "full_name": "Bima  Putra (also known as Adam)",
+        "date_of_birth": "1999-05-05",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID Jr",
+        "current_team": "no data",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/d/de/Geek_Fam_ID_Schwann_MPL_S9.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "EXP Laner",
+            "Gold Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2020-07-25",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2020-08-20",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-07-26",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-08-25",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-09-08",
+                "team": "Geek Fam ID Jr"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/schwann"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Frzz",
+        "full_name": "Muhammad  Pahlevi (also known as Freeza) is an  Indonesian player who last played for  Geek Fam ID.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID",
+        "current_team": "no data",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/7/75/GEEK_Frzz.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Mid Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2020-09-10",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-02-06",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/frzz"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Babywww",
+        "full_name": "Farel  Rustjo is a  retired Indonesian player who last played for  Geek Fam ID Jr.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID Jr",
+        "current_team": "no data",
+        "status": "Retired",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2020-09-10",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2021-08-26",
+                "team": "Geek Fam ID Jr"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/babywww"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Despair",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Zunz",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Dilann",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Salman",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Hanz",
+        "full_name": "Muhammad  Alim",
+        "date_of_birth": "2002-01-08",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Raja Esports",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/3/3f/Geek_Fam_ID_Hanz_MDL_S5.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2021-02-10",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2021-08-19",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-01-20",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-03-17",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-08-25",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2024-01-23",
+                "team": "Raja Phoenix (page does not exist)"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/hanz"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "BB25",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Juliannn",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Vince",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Maevz",
+        "full_name": "Muhamad  Robby is an  Indonesian player who is currently playing as an EXP Laner for  Geek Fam ID Jr.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID Jr",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/5/59/Geek_Jr_Maevz_MDL_S8.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "EXP Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2021-07-24",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-02-04",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-03-30",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2023-01-31",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2023-02-25",
+                "team": "Geek Fam ID Jr"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/maevz"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Frzz",
+        "full_name": "Muhammad  Pahlevi (also known as Freeza) is an  Indonesian player who last played for  Geek Fam ID.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID",
+        "current_team": "no data",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/7/75/GEEK_Frzz.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Mid Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2020-09-10",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-02-06",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/frzz"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Rupture",
+        "full_name": "Advent  Valma",
+        "date_of_birth": "1998-12-16",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Vesakha Esports",
+        "current_team": "no data",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/e/e1/Geek_Rupture_S10.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2020-07-24",
+                "team": "AURA Esports"
+            },
+            {
+                "date": "2021-02-10",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-01-20",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-02-25",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-03-02",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-08-18",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2023-08-06",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2023-08-06",
+                "team": "Vesakha Esports (page does not exist)"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/rupture"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Luke",
+        "full_name": "Luke  Valentinus",
+        "date_of_birth": "2004-02-06",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Bigetron Esports",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/0/0f/BTR_Luke_S15.png",
+        "heros": [
+            "Fredrinn",
+            "Gloo",
+            "Arlott",
+            "Khaleed",
+            "Masha"
+        ],
+        "roles": [
+            "EXP Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2022-01-20",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-07-23",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2024-07-08",
+                "team": "Bigetron Esports"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/luke"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Schwann",
+        "full_name": "Bima  Putra (also known as Adam)",
+        "date_of_birth": "1999-05-05",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID Jr",
+        "current_team": "no data",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/d/de/Geek_Fam_ID_Schwann_MPL_S9.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "EXP Laner",
+            "Gold Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2020-07-25",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2020-08-20",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-07-26",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-08-25",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-09-08",
+                "team": "Geek Fam ID Jr"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/schwann"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Manskuy",
+        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Lzuraa",
+        "full_name": "Muhammad  Arif is an  Indonesian player who is currently playing as a Mid Laner for  Geek Fam ID Jr.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID Jr",
+        "status": "Active",
+        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Mid Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2022-01-20",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-07-30",
+                "team": "Geek Slate"
+            },
+            {
+                "date": "2023-01-31",
+                "team": "Geek Fam ID Jr"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/lzuraa"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Caderaa",
+        "full_name": "Mohammad  Pambudi",
+        "date_of_birth": "2003-01-05",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/a/ae/GEEK_Caderaa_S15.png",
+        "heros": [
+            "Claude",
+            "Beatrix",
+            "Harith",
+            "Natan",
+            "Moskov"
+        ],
+        "roles": [
+            "Gold Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2022-08-01",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/caderaa"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "RenV",
+        "full_name": "Rendy  Kurniawan (formerly known as Ipin)",
+        "date_of_birth": "2001-01-06",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Geek Fam ID",
+        "current_team": "no data",
+        "status": "Inactive",
+        "image": "https://liquipedia.net/commons/images/c/ca/RENV.png",
+        "heros": [
+            "Selena",
+            "Helcurt",
+            "Leomord",
+            "Thamuz",
+            "Kimmy"
+        ],
+        "roles": [
+            "EXP Laner",
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2018-08-31",
+                "team": "SFI Esports (page does not exist)"
+            },
+            {
+                "date": "2019-01-23",
+                "team": "SFI Critical (page does not exist)"
+            },
+            {
+                "date": "2019-07-30",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2022-08-02",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/renv"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Baloyskie",
+        "full_name": "Allen  Baloy (formerly known as Greed)",
+        "date_of_birth": "1998-10-10",
+        "nation": "Philippines",
+        "nation_code": "ph",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/d/de/GEEK_Baloyskie_S15.png",
+        "heros": [
+            "Natalia",
+            "Kaja",
+            "Ruby",
+            "Mathilda",
+            "Helcurt"
+        ],
+        "roles": [
+            "Roamer"
+        ],
+        "team_history": [
+            {
+                "date": "2019-08-03",
+                "team": "ONIC Philippines"
+            },
+            {
+                "date": "2020-01-09",
+                "team": "Sunsparks"
+            },
+            {
+                "date": "2020-06-24",
+                "team": "Aura PH"
+            },
+            {
+                "date": "2021-07-11",
+                "team": "ONIC Philippines"
+            },
+            {
+                "date": "2022-08-08",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/baloyskie"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Hadess",
+        "full_name": "Jaymark  Lazaro (also known as Janaaqt)",
+        "date_of_birth": "2002-01-10",
+        "nation": "Philippines",
+        "nation_code": "ph",
+        "last_team": "no data",
+        "current_team": "Team Flash on loan from Geek Fam ID",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/e/e6/NPFL_Hadess_at_M6_Swiss_Stage.jpg",
+        "heros": [
+            "Ling",
+            "Fanny",
+            "Lancelot",
+            "Aamon",
+            "Guinevere"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2020-06-05",
+                "team": "Cignal Ultra"
+            },
+            {
+                "date": "2020-11-10",
+                "team": "Aura PH"
+            },
+            {
+                "date": "2021-07-13",
+                "team": "ECHO"
+            },
+            {
+                "date": "2022-08-16",
+                "team": "Geek Slate"
+            },
+            {
+                "date": "2023-06-22",
+                "team": "Geek Slate"
+            },
+            {
+                "date": "2023-06-22",
+                "team": "Blacklist International"
+            },
+            {
+                "date": "2023-07-03",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2023-08-24",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2023-08-24",
+                "team": "Team Flash"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/hadess"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Renesmee",
+        "full_name": "Shaddam  Evan is an  Indonesian player who is currently playing as a Gold Laner for  Geek Fam ID Jr.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID Jr",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/7/7e/Geek_Jr_Renesmee_MDL_S8.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "Gold Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2021-07-24",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-08-25",
+                "team": "Geek Slate"
+            },
+            {
+                "date": "2023-01-31",
+                "team": "Geek Fam ID Jr"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/renesmee"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Aboy",
+        "full_name": "Valent  Putra",
+        "date_of_birth": "2004-08-06",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/0/0e/GEEK_Aboy_S15.png",
+        "heros": [
+            "Yve",
+            "Valentina",
+            "Lylia",
+            "Faramis",
+            "Novaria"
+        ],
+        "roles": [
+            "Mid Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2022-07-25",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2022-11-02",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/aboy"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Matt",
+        "full_name": "Matthew  Geraldo",
+        "date_of_birth": "2003-11-27",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "Rebellion Esports",
+        "current_team": "no data",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/b/bf/RBL_Matt_at_MPL_ID_S14.jpg",
+        "heros": [
+            "Lapu-Lapu",
+            "Beatrix",
+            "Irithel",
+            "Brody",
+            "Lunox"
+        ],
+        "roles": [
+            "Gold Laner",
+            "EXP Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2020-08-19",
+                "team": "Bigetron Beta"
+            },
+            {
+                "date": "2020-09-10",
+                "team": "Bigetron Alpha"
+            },
+            {
+                "date": "2022-08-25",
+                "team": "Bigetron Beta"
+            },
+            {
+                "date": "2023-01-27",
+                "team": "Bigetron Beta"
+            },
+            {
+                "date": "2023-01-27",
+                "team": "Geek Slate"
+            },
+            {
+                "date": "2023-06-21",
+                "team": "Team Secret"
+            },
+            {
+                "date": "2024-07-22",
+                "team": "Rebellion Esports"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/matt"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Markyyyyy",
+        "full_name": "Mark  Capacio",
+        "date_of_birth": "1998-12-28",
+        "nation": "Philippines",
+        "nation_code": "ph",
+        "last_team": "no data",
+        "current_team": "Twisted Minds",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/6/62/GEEK_Markyyyyy_S13.png",
+        "heros": [
+            "Wanwan",
+            "Claude",
+            "Beatrix",
+            "Harith",
+            "Irithel"
+        ],
+        "roles": [
+            "Gold Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2020-11-13",
+                "team": "ONIC Philippines"
+            },
+            {
+                "date": "2022-07-31",
+                "team": "Bigetron Alpha"
+            },
+            {
+                "date": "2023-07-05",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2024-08-12",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2024-08-12",
+                "team": "Evil"
+            },
+            {
+                "date": "2025-04-07",
+                "team": "Twisted Minds"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/markyyyyy"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Nnael",
+        "full_name": "Manuel  Simbolon",
+        "date_of_birth": "2006-01-18",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "ONIC",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/d/d7/ONIC_Nnael_S15.png",
+        "heros": [
+            "Ling",
+            "Lancelot",
+            "Nolan",
+            "Fanny",
+            "Baxia"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2022-01-31",
+                "team": "ONIC Prodigy"
+            },
+            {
+                "date": "2023-07-05",
+                "team": "ONIC Prodigy"
+            },
+            {
+                "date": "2023-07-05",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2024-07-30",
+                "team": "Alter Ego"
+            },
+            {
+                "date": "2024-11-13",
+                "team": "ONIC Prodigy"
+            },
+            {
+                "date": "2025-02-28",
+                "team": "ONIC"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/nnael"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Reyy",
+        "full_name": "Reynaldo  Ferdiand",
+        "date_of_birth": "2006-01-04",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Dewa United Esports",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/e/e3/DEWA_Reyy_S15.png",
+        "heros": [
+            "Lancelot",
+            "Ling",
+            "Fanny",
+            "Suyou"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2021-08-15",
+                "team": "Team Gryffin"
+            },
+            {
+                "date": "2022-01-12",
+                "team": "GPX"
+            },
+            {
+                "date": "2023-06-27",
+                "team": "Dewa United Esports"
+            },
+            {
+                "date": "2024-02-16",
+                "team": "Dewa United Esports"
+            },
+            {
+                "date": "2024-02-16",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2024-07-15",
+                "team": "Dewa United Esports"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/reyy"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Hazle",
+        "full_name": "Muhammad  Balakosa",
+        "date_of_birth": "2007-05-06",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Aero Esports on loan from RRQ Hoshi",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/1/12/RRQ_Hazle_S14.png",
+        "heros": [
+            "Lancelot",
+            "Fanny",
+            "Hayabusa",
+            "Suyou"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2023-08-23",
+                "team": "Pajajaran Esports (page does not exist)"
+            },
+            {
+                "date": "2024-02-16",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2024-07-23",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2025-05-07",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2025-05-07",
+                "team": "Aero Esports"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/hazle"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Vincentt",
+        "full_name": "Vincent  Suwandhi",
+        "date_of_birth": "2004-07-14",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Evil on loan from Geek Fam ID",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/a/ad/GEEK_Vincentt_at_MPL_ID_S14.jpg",
+        "heros": [
+            "Fanny",
+            "Fredrinn",
+            "Roger"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2022-01-25",
+                "team": "Rebellion Sinai"
+            },
+            {
+                "date": "2023-01-28",
+                "team": "Rebellion Esports"
+            },
+            {
+                "date": "2024-07-14",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2025-02-28",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2025-04-29",
+                "team": "Evil"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/vincentt"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Gobs",
+        "full_name": "Mercy  Ratuliu",
+        "date_of_birth": "2000-05-21",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/2/25/GEEK_Gobs_S15.png",
+        "heros": [
+            "Benedetta",
+            "Edith",
+            "Phoveus"
+        ],
+        "roles": [
+            "EXP Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2022-03-17",
+                "team": "DNS Hammersonic Romeo"
+            },
+            {
+                "date": "2022-08-27",
+                "team": "DNS Hammersonic Romeo"
+            },
+            {
+                "date": "2023-01-28",
+                "team": "Rebellion Sinai"
+            },
+            {
+                "date": "2023-06-18",
+                "team": "Tiger Wong Esports"
+            },
+            {
+                "date": "2024-02-15",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2024-07-30",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/gobs"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Mas4Ko",
+        "full_name": "Christian  Wagiu",
+        "date_of_birth": "1998-12-31",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/4/4d/OB_Mas4Ko_S15.png",
+        "heros": [
+            "Claude",
+            "Moskov",
+            "Natan",
+            "Melissa"
+        ],
+        "roles": [
+            "Gold Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2022-12-01",
+                "team": "OPI Pegasus"
+            },
+            {
+                "date": "2024-01-20",
+                "team": "BTK Esports (page does not exist)"
+            },
+            {
+                "date": "2024-04-26",
+                "team": "Geek Fam ID Jr"
+            },
+            {
+                "date": "2024-07-30",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2025-03-27",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2025-03-27",
+                "team": "Ocean Black (page does not exist)"
+            },
+            {
+                "date": "2025-05-08",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/mas4ko"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Veldora",
+        "full_name": "Kenley  Zefanya",
+        "date_of_birth": "2006-04-05",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "HomeBois on loan from EVOS Icon",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/0/03/HB_Veldora_S15.png",
+        "heros": [
+            "Edith",
+            "Hilda",
+            "Terizla",
+            "Phoveus",
+            "Benedetta"
+        ],
+        "roles": [
+            "EXP Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2023-01-28",
+                "team": "EVOS Icon"
+            },
+            {
+                "date": "2023-09-13",
+                "team": "EVOS Glory"
+            },
+            {
+                "date": "2024-03-20",
+                "team": "EVOS Icon"
+            },
+            {
+                "date": "2024-05-20",
+                "team": "EVOS Icon"
+            },
+            {
+                "date": "2024-08-01",
+                "team": "Geek Fam ID"
+            },
+            {
+                "date": "2024-11-21",
+                "team": "EVOS Icon"
+            },
+            {
+                "date": "2025-03-20",
+                "team": "EVOS Icon"
+            },
+            {
+                "date": "2025-03-20",
+                "team": "HomeBois"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/veldora"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "Maykids",
+        "full_name": "Muhammad  Ardani is an  Indonesian player who is currently playing as a Jungler for  Geek Fam ID.",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "Geek Fam ID",
+        "status": "Active",
+        "image": "https://liquipedia.net/commons/images/9/92/GEEK_Maykids_S15.png",
+        "heros": [
+            "Joy",
+            "Suyou",
+            "Fanny"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            {
+                "date": "2024-01-26",
+                "team": "EVOS Icon"
+            },
+            {
+                "date": "2024-08-02",
+                "team": "EVOS Holy"
+            },
+            {
+                "date": "2025-01-09",
+                "team": "Geek Fam ID"
+            }
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/maykids"
+    },
+    {
+        "team": "Geek Fam ID",
+        "name": "KennzyySkie",
+        "full_name": "no data",
+        "date_of_birth": "no data",
+        "nation": "no data",
+        "nation_code": "no data",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "no data",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "join no data",
+        "url": "https://liquipedia.net/mobilelegends/kennzyyskie"
+    }
+]

@@ -19,7 +19,8 @@ import { getLogoCode } from "./utils/getLogoClub";
 
 
 
-import rawTopPlayers from "../public/data/rrq_hoshi.json";
+import rawTopPlayers from "../public/data/evos.json";
+// import rawTopPlayers from "../public/data/rrq_hoshi.json";
 
 
 const { fontFamily: rubikFont } = loadRubik();
@@ -231,7 +232,7 @@ const EndingSequence: React.FC = () => {
         style={{
           fontFamily: rubikFont,
           fontSize: '4rem',
-          color: 'white',
+          color: 'black',
           textAlign: 'center',
           lineHeight: 1.5,
           textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
@@ -282,8 +283,8 @@ export const PlayerList: React.FC = () => {
   }, [handle]);
 
   const introDelay = 120;
-  const totalDuration = fps * 240; // 210 detik
-  const cardsToShow = 42; // 42
+  const totalDuration = fps * 290; // 210 detik
+  const cardsToShow = 58; // 42
   const initialDelay = 30;
   const cardEntryDuration = 42; //42
   const staggerDelay = 100;
@@ -369,7 +370,7 @@ export const PlayerList: React.FC = () => {
               >
                 <path
                   d="m240 240 160-80v-.7A79.8 79.8 0 0 0 320.7 80h-.7l-80 160ZM240 240 160 80h-.7A79.8 79.8 0 0 0 80 159.3v.7l160 80ZM240 240l80 160h.7a79.8 79.8 0 0 0 79.3-79.3v-.7l-160-80ZM240 240 80 320v.7a79.8 79.8 0 0 0 79.3 79.3h.7l80-160ZM240 240l169.7 56.6.5-.5a79.8 79.8 0 0 0 0-112.2l-.5-.5L240 240ZM240 240l56.6-169.7-.5-.5a79.8 79.8 0 0 0-112.2 0l-.5.5L240 240ZM240 240l-56.6 169.7.5.5a79.8 79.8 0 0 0 112.2 0l.5-.5L240 240ZM240 240 70.3 183.4l-.5.5a79.8 79.8 0 0 0 0 112.2l.5.5L240 240Z"
-                  fill="orange"
+                  fill="gray"
                 />
               </svg>
             </div>

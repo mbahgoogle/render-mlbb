@@ -58,9 +58,9 @@ export const PlayerCard: React.FC<{
       }}
     >
       {/* Card dengan desain modern dan profesional */}
-      <div className="w-[600px] rounded-xl shadow-5xl backdrop-blur-md bg-white/60 border border-white/20" style={{height: HeightConfig}}>
+      <div className="w-[600px] rounded-xl shadow-5xl backdrop-blur-md bg-black/60 border border-white/20" style={{height: HeightConfig}}>
         {/* Header dengan gradien biru */}
-        <div className="relative h-140 rounded-t-xl overflow-hidden backdrop-blur-sm bg-gradient-to-b from-white/10 to-transparent">
+        <div className="relative h-140 rounded-t-xl overflow-hidden backdrop-blur-sm bg-gradient-to-a from-white/40 to-transparent">
           {/* Club Logo */}
           <div className="absolute top-6 right-6 w-100 h-100 opacity-80">
             <img
@@ -82,7 +82,7 @@ export const PlayerCard: React.FC<{
           </div>
 
           {/* Player Image */}
-          <div className="absolute top-10 left-25 w-100 h-150 flex items-center justify-center overflow-hidden">
+          <div className="absolute top-2 left-25 w-100 h-150 flex items-center justify-center overflow-hidden">
             <img
               src={getImageSource(person.image)}
               alt={person.name}

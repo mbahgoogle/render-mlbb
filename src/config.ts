@@ -8,7 +8,7 @@ export const CONFIG = {
   HEIGHT: 1440,
 
   // Content Settings
-  cardsToShow: 36,           // Jumlah kartu yang akan ditampilkan
+  cardsToShow: 47,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
 
   // Timing Settings

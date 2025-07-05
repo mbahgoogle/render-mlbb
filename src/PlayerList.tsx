@@ -13,15 +13,30 @@ import {
 } from "remotion";
 import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
-import { TopPlayer, validateTopPlayers, } from "./types/schema";
+import { TopPlayer, validateTopPlayers } from "./types/schema";
 import { PlayerCard } from "./components/PlayerCardv1";
+
 import { getLogoCode } from "./utils/getLogoClub";
+import { CONFIG } from "./config";
 
-
-
-import rawTopPlayers from "../public/data/evos.json";
+// import rawTopPlayers from "../public/data/alter_ego.json";
+// import rawTopPlayers from "../public/data/bigetron_esports.json";
+// import rawTopPlayers from "../public/data/dewa_united_esports.json";
+// import rawTopPlayers from "../public/data/geek_fam_id.json";
+import rawTopPlayers from "../public/data/onic.json";
+// import rawTopPlayers from "../public/data/evos.json";
 // import rawTopPlayers from "../public/data/rrq_hoshi.json";
 
+// Add helper function to check if URL is local or remote
+const getImageSource = (url: string | undefined) => {
+  if (!url) return staticFile('default-player.png'); // Add a default image
+  // Check if the URL is remote (starts with http:// or https://)
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  // If it's a local file, use staticFile
+  return staticFile(url);
+};
 
 const { fontFamily: rubikFont } = loadRubik();
 
@@ -94,7 +109,7 @@ const IntroTitle: React.FC<{ person?: TopPlayer }> = ({ person }) => {
       >
         <div className="w-150 h-150 flex items-center justify-center overflow-hidden rounded-full bg-black">
           <img
-            src={getLogoCode(person.team)}
+            src={getImageSource(getLogoCode(person.team))}
             alt="Club Logo"
             className="w-full h-full object-contain p-20"
           />
@@ -149,10 +164,10 @@ const IntroTitle: React.FC<{ person?: TopPlayer }> = ({ person }) => {
   );
 };
 
-const EndingSequence: React.FC = () => {
+const EndingSequence: React.FC<{ endingDuration: number }> = ({ endingDuration }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const duration = 5 * fps; // 5 seconds
+  const duration = endingDuration; // Use the prop instead of hardcoded 5 * fps
 
   // Samakan rotasi watermark dengan Player List
   const watermarkRotation = useMemo(() => {
@@ -260,7 +275,19 @@ const EndingSequence: React.FC = () => {
   );
 };
 
-export const PlayerList: React.FC = () => {
+type PlayerListProps = {
+  cardsToShow: number;
+  durasiPerCardDetik: number;
+  introDelay: number;
+  endingDuration: number;
+};
+
+export const PlayerList: React.FC<PlayerListProps> = ({ 
+  cardsToShow = 10, 
+  durasiPerCardDetik = 6, 
+  introDelay = 120, 
+  endingDuration = 300 
+}) => {
   const frame = useCurrentFrame();
   const { fps, width, height, } = useVideoConfig();
   const [handle] = useState(() => delayRender("timeout-60000")); // Tambahkan timeout 60 detik
@@ -282,21 +309,18 @@ export const PlayerList: React.FC = () => {
     processData();
   }, [handle]);
 
-  const introDelay = 120;
-  const totalDuration = fps * 290; // 210 detik
-  const cardsToShow = 58; // 42
-  const initialDelay = 30;
-  const cardEntryDuration = 42; //42
-  const staggerDelay = 100;
+  const durationPerCard = durasiPerCardDetik * fps; // Durasi per kartu dalam frame
+  const totalDuration = cardsToShow * durationPerCard;
+  const initialDelay = CONFIG.initialDelay;
+  const cardEntryDuration = CONFIG.cardEntryDuration;
+  const staggerDelay = CONFIG.staggerDelay;
   const mainCardsAnimationDuration = initialDelay + 4 * cardEntryDuration;
   const scrollDuration = totalDuration - mainCardsAnimationDuration;
-  const opacityTransitionDuration = 40; // Increased from 20 to 40 for smoother transition
-  const endingDelay = 0; // 1 second delay before ending
-  const endingDuration = 5 * fps; // 4 seconds for ending
+  const opacityTransitionDuration = CONFIG.opacityTransitionDuration;
 
   // Hitung frame mulai ending sequence
   // Ganti endingStartFrame agar mulai setelah Player List selesai
-  const endingStartFrame = introDelay + totalDuration; // setelah Player List selesai
+  const endingStartFrame = introDelay + totalDuration; // Ending mulai setelah Player List selesai
 
   const memoizedData = useMemo(() => validatedData.slice(0, cardsToShow), [validatedData, cardsToShow]);
 
@@ -545,7 +569,7 @@ export const PlayerList: React.FC = () => {
         ) }}>
 
           
-          <EndingSequence />
+          <EndingSequence endingDuration={endingDuration} />
         </div>
       </Sequence>
     </AbsoluteFill>

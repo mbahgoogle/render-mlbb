@@ -1,0 +1,298 @@
+1
+00:00:00,000 --> 00:00:02,000
+Riwayat Pemain EVOS Esports 2017-2025
+
+2
+00:00:02,000 --> 00:00:07,000
+SwayLow (Indonesia)
+Nama: Attanasius Sihaloho | Tanggal masuk EVOS Esports: 13 March 2025 | Roles: [Mid Laner]
+
+3
+00:00:07,000 --> 00:00:12,000
+Kyy (Indonesia)
+Nama: Hengky Gunawan | Tanggal masuk EVOS Esports: 01 February 2025 | Roles: [Roamer]
+
+4
+00:00:12,000 --> 00:00:17,000
+Alberttt (Indonesia)
+Nama: Albert Iskandar | Tanggal masuk EVOS Esports: 08 December 2024 | Roles: [Jungler, Gold Laner]
+
+5
+00:00:17,000 --> 00:00:22,000
+Alevaa (Indonesia)
+Nama: Nusa Ardhaleva | Tanggal masuk EVOS Esports: 11 September 2024 | Roles: [Roamer]
+
+6
+00:00:22,000 --> 00:00:27,000
+Depezett (Indonesia)
+Nama: Muhammad Shihab | Tanggal masuk EVOS Esports: 11 September 2024 | Roles: [Mid Laner]
+
+7
+00:00:27,000 --> 00:00:32,000
+Natco (Indonesia)
+Nama: Nicodemus Koesnadi | Tanggal masuk EVOS Esports: 20 March 2024 | Roles: [Gold Laner, EXP Laner]
+
+8
+00:00:32,000 --> 00:00:37,000
+Claw Kun (Indonesia)
+Nama: Adriansyah Lesmana | Tanggal masuk EVOS Esports: 20 March 2024 | Roles: [Mid Laner]
+
+9
+00:00:37,000 --> 00:00:42,000
+Anavel (Indonesia)
+Nama: Junisen Lo | Tanggal masuk EVOS Esports: 20 March 2024 | Roles: [Jungler]
+
+10
+00:00:42,000 --> 00:00:47,000
+Super Red (Philippines)
+Nama: Jon Redick Bordeos | Tanggal masuk EVOS Esports: 26 January 2024 | Roles: [Gold Laner]
+
+11
+00:00:47,000 --> 00:00:52,000
+VAN (Indonesia)
+Nama: Silvan Vanness | Tanggal masuk EVOS Esports: 26 January 2024 | Roles: [Jungler]
+
+12
+00:00:52,000 --> 00:00:57,000
+Warlord (Indonesia)
+Nama: Rizky Agustian | Tanggal masuk EVOS Esports: 26 January 2024 | Roles: [Mid Laner]
+
+13
+00:00:57,000 --> 00:01:02,000
+Veldora (Indonesia)
+Nama: Kenley Zefanya | Tanggal masuk EVOS Esports: 13 September 2023 | Roles: [EXP Laner]
+
+14
+00:01:02,000 --> 00:01:07,000
+Erlan (Indonesia)
+Nama: Erland Saputra | Tanggal masuk EVOS Esports: 09 August 2023 | Roles: [Gold Laner]
+
+15
+00:01:07,000 --> 00:01:12,000
+Fluffy (Indonesia)
+Nama: Regi Marviola | Tanggal masuk EVOS Esports: 30 June 2023 | Roles: [EXP Laner]
+
+16
+00:01:12,000 --> 00:01:17,000
+Hijumee (Indonesia)
+Nama: Dalvin Putra | Tanggal masuk EVOS Esports: 28 January 2023 | Roles: [Mid Laner]
+
+17
+00:01:17,000 --> 00:01:22,000
+Branz (Indonesia)
+Nama: Jabran Wiloko | Tanggal masuk EVOS Esports: 28 January 2023 | Roles: [Gold Laner]
+
+18
+00:01:22,000 --> 00:01:27,000
+Saykots (Indonesia)
+Nama: Rizqi Iskandar | Tanggal masuk EVOS Esports: 15 September 2022 | Roles: [EXP Laner]
+
+19
+00:01:27,000 --> 00:01:32,000
+Sutsujin (Indonesia)
+Nama: Arthur Sunarkho | Tanggal masuk EVOS Esports: 18 August 2022 | Roles: [Jungler]
+
+20
+00:01:32,000 --> 00:01:37,000
+DreamS (Indonesia)
+Nama: Rachmad Wahyudi | Tanggal masuk EVOS Esports: 18 August 2022 | Roles: [Roamer]
+
+21
+00:01:37,000 --> 00:01:42,000
+Dlar (Philippines)
+Nama: Gerald Trinchera | Tanggal masuk EVOS Esports: 04 August 2022 | Roles: [EXP Laner]
+
+22
+00:01:42,000 --> 00:01:47,000
+Tazz (Indonesia)
+Nama: Darrel Wijaya | Tanggal masuk EVOS Esports: 01 August 2022 | Roles: [Jungler, Mid Laner]
+
+23
+00:01:47,000 --> 00:01:52,000
+WyvorZ (Indonesia)
+Nama: Hartawan Muliadi | Tanggal masuk EVOS Esports: 07 February 2022 | Roles: [EXP Laner]
+
+24
+00:01:52,000 --> 00:01:57,000
+Cr1te (Indonesia)
+Nama: Muhammad Yusuf | Tanggal masuk EVOS Esports: 07 February 2022 | Roles: [Mid Laner]
+
+25
+00:01:57,000 --> 00:02:02,000
+Panser (Indonesia)
+Nama: Thimothy Tonny | Tanggal masuk EVOS Esports: 27 July 2021 | Roles: [Roamer]
+
+26
+00:02:02,000 --> 00:02:07,000
+VaanStrong (Indonesia)
+Nama: Vincentsius Adrianto | Tanggal masuk EVOS Esports: 27 July 2021 | Roles: [Roamer, Gold Laner]
+
+27
+00:02:07,000 --> 00:02:12,000
+Falah (Indonesia)
+Nama: Gilang Falah | Tanggal masuk EVOS Esports: 26 July 2021 | Roles: [Mid Laner, Gold Laner]
+
+28
+00:02:12,000 --> 00:02:17,000
+Ferxiic (Indonesia)
+Nama: Ferdyansyah Kamaruddin | Tanggal masuk EVOS Esports: 11 March 2021 | Roles: [Jungler]
+
+29
+00:02:17,000 --> 00:02:22,000
+Darkness (Indonesia)
+Nama: Novan Lumingkewas | Tanggal masuk EVOS Esports: 15 February 2021 | Roles: [Roamer]
+
+30
+00:02:22,000 --> 00:02:27,000
+Clover (Indonesia)
+Nama: Hafizhan Mirzaputra | Tanggal masuk EVOS Esports: 15 February 2021 | Roles: [Gold Laner]
+
+31
+00:02:27,000 --> 00:02:32,000
+Antimage (Indonesia)
+Nama: Maxhill Leonardo | Tanggal masuk EVOS Esports: 15 November 2020 | Roles: [EXP Laner]
+
+32
+00:02:32,000 --> 00:02:37,000
+LJ (Indonesia)
+Nama: Joshua Darmansyah | Tanggal masuk EVOS Esports: 15 November 2020 | Roles: [Roamer]
+
+33
+00:02:37,000 --> 00:02:42,000
+Pendragon (Indonesia)
+Nama: Sebastian Arthur | Tanggal masuk EVOS Esports: 25 July 2020 | Roles: [EXP Laner]
+
+34
+00:02:42,000 --> 00:02:47,000
+Ckim (Indonesia)
+Nama: Miftach Hakim | Tanggal masuk EVOS Esports: 11 March 2020 | Roles: [Gold Laner]
+
+35
+00:02:47,000 --> 00:02:52,000
+Larajie (Indonesia)
+Nama: Farhan Mahri | Tanggal masuk EVOS Esports: 20 February 2020 | Roles: [EXP Laner]
+
+36
+00:02:52,000 --> 00:02:57,000
+Butsss (Indonesia)
+Nama: Muhammad Sanubari | Tanggal masuk EVOS Esports: 30 January 2020 | Roles: [EXP Laner]
+
+37
+00:02:57,000 --> 00:03:02,000
+Zeys (Singapore)
+Nama: Bjorn Ong | Tanggal masuk EVOS Esports: 23 August 2019 | Roles: [Roamer]
+
+38
+00:03:02,000 --> 00:03:07,000
+Zunz (Indonesia)
+Nama: Eko Mustofa | Tanggal masuk EVOS Esports: 23 August 2019 | Roles: [Roamer]
+
+39
+00:03:07,000 --> 00:03:12,000
+Rexxy (Indonesia)
+Nama: Fahmi Alamsyah | Tanggal masuk EVOS Esports: 23 August 2019 | Roles: [Mid Laner]
+
+40
+00:03:12,000 --> 00:03:17,000
+Bajan (Indonesia)
+Nama: Raihan Ardy | Tanggal masuk EVOS Esports: 23 August 2019 | Roles: [Roamer]
+
+41
+00:03:17,000 --> 00:03:22,000
+Vinss (Indonesia)
+Nama: Kevin | Tanggal masuk EVOS Esports: 23 July 2019 | Roles: [EXP Laner]
+
+42
+00:03:22,000 --> 00:03:27,000
+Luminaire (Indonesia)
+Nama: Ihsan Kusudana | Tanggal masuk EVOS Esports: 23 July 2019 | Roles: [Mid Laner, Roamer]
+
+43
+00:03:27,000 --> 00:03:32,000
+Wannn (Indonesia)
+Nama: Muhammad Ridwan | Tanggal masuk EVOS Esports: 23 July 2019 | Roles: [Talent, Jungler]
+
+44
+00:03:32,000 --> 00:03:37,000
+Sugar (Indonesia)
+Nama: Martinus Widjanarko | Tanggal masuk EVOS Esports: 03 May 2019 | Roles: [Roamer]
+
+45
+00:03:37,000 --> 00:03:42,000
+Jiao (Indonesia)
+Nama: Taufik Hidayah | Tanggal masuk EVOS Esports: 28 February 2019 | Roles: [Roamer]
+
+46
+00:03:42,000 --> 00:03:47,000
+G (Indonesia)
+Nama: Afrindo Valentino | Tanggal masuk EVOS Esports: 28 December 2018 | Roles: [Coach]
+
+47
+00:03:47,000 --> 00:03:52,000
+Emperor (Indonesia)
+Nama: Jonathan Liandi | Tanggal masuk EVOS Esports: 24 July 2018 | Roles: [Mid Laner]
+
+48
+00:03:52,000 --> 00:03:57,000
+Marsha (Indonesia)
+Nama: Steven Kurniawan | Tanggal masuk EVOS Esports: 30 April 2018 | Roles: [Roamer]
+
+49
+00:03:57,000 --> 00:04:02,000
+IOS (Indonesia)
+Nama: Sebastianus Kusuma | Tanggal masuk EVOS Esports: 24 February 2018 | Roles: [Roamer]
+
+50
+00:04:02,000 --> 00:04:07,000
+JessNoLimit (Indonesia)
+Nama: Tobias Justin | Tanggal masuk EVOS Esports: 24 February 2018 | Roles: [Jungler]
+
+51
+00:04:07,000 --> 00:04:12,000
+Oura (Indonesia)
+Nama: Eko Julianto | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [EXP Laner, Jungler]
+
+52
+00:04:12,000 --> 00:04:17,000
+Oreo (Indonesia)
+Nama: Renhart Khoeway | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [Roamer]
+
+53
+00:04:17,000 --> 00:04:22,000
+Donkey (Indonesia)
+Nama: Yurino Angkawidjaja | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [Roamer]
+
+54
+00:04:22,000 --> 00:04:27,000
+R E K T (Indonesia)
+Nama: Gustian | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [Coach, Roamer]
+
+55
+00:04:27,000 --> 00:04:32,000
+Bandot (Indonesia)
+Nama: Richard Feberi | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [Gold Laner, Flex]
+
+56
+00:04:32,000 --> 00:04:37,000
+KneEr (Indonesia)
+Nama: Aprizal Jaya | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [Gold Laner, Roamer]
+
+57
+00:04:37,000 --> 00:04:42,000
+Quack (Indonesia)
+Nama:  | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [Flex]
+
+58
+00:04:42,000 --> 00:04:47,000
+Eiduart (Indonesia)
+Nama: Eiduart Tjahyadikarta | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [Flex]
+
+59
+00:04:47,000 --> 00:04:52,000
+Fabiens (Indonesia)
+Nama: Thong Andara | Tanggal masuk EVOS Esports: 03 November 2017 | Roles: [Flex]
+
+60
+00:04:52,000 --> 00:04:57,000
+Terima kasih sudah menonton!
+

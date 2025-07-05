@@ -2,16 +2,16 @@
     {
         "team": "Bigetron",
         "name": "Eiduart",
-        "full_name": "Eiduart  Tjahyadikarta is a  retired Indonesian player who last played for  Revo.",
+        "full_name": "Eiduart  Tjahyadikarta",
         "date_of_birth": "no data",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "Revo",
         "current_team": "no data",
         "status": "Retired",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_Eiduart.png",
         "heros": [
-            "no data"
+            "Grock"
         ],
         "roles": [
             "Roamer"
@@ -23,7 +23,7 @@
             },
             {
                 "date": "2017-12-26",
-                "team": "Bigetron Player Kill"
+                "team": "Bigetron Esports"
             },
             {
                 "date": "2018-07-11",
@@ -34,22 +34,23 @@
                 "team": "Revo (page does not exist)"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2017-12-26",
         "url": "https://liquipedia.net/mobilelegends/eiduart"
     },
     {
         "team": "Bigetron",
         "name": "Fabiens",
-        "full_name": "Thong  Andara is an  Indonesian player who last played for  Pabz Esports.",
+        "full_name": "Thong Andara",
         "date_of_birth": "no data",
         "nation": "Indonesia",
         "nation_code": "id",
-        "last_team": "Pabz Esports",
+        "last_team": "no data",
         "current_team": "no data",
         "status": "Active",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_FABIENZ.png",
         "heros": [
-            "no data"
+            "Aurora",
+            "Harley"
         ],
         "roles": [
             "Talent",
@@ -62,7 +63,7 @@
             },
             {
                 "date": "2017-12-26",
-                "team": "Bigetron Player Kill"
+                "team": "Bigetron Esports"
             },
             {
                 "date": "2019-01-14",
@@ -81,22 +82,24 @@
                 "team": "Pabz Esports"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2017-12-26",
         "url": "https://liquipedia.net/mobilelegends/fabiens"
     },
     {
         "team": "Bigetron",
         "name": "VIN",
-        "full_name": "Michael  Noviano is a  retired Indonesian player who last played for  AURA Fire.",
+        "full_name": "Michael Noviano",
         "date_of_birth": "no data",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "AURA Fire",
         "current_team": "no data",
         "status": "Retired",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_VIN.png",
         "heros": [
-            "no data"
+            "Grock",
+            "Chou",
+            "Kaja"
         ],
         "roles": [
             "Roamer"
@@ -104,27 +107,27 @@
         "team_history": [
             {
                 "date": "2017-12-26",
-                "team": "Bigetron Player Kill"
+                "team": "Bigetron Esports"
             },
             {
                 "date": "2018-12-16",
                 "team": "AURA Fire"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2017-12-26",
         "url": "https://liquipedia.net/mobilelegends/vin"
     },
     {
         "team": "Bigetron",
         "name": "Emperor",
-        "full_name": "Jonathan  Liandi",
+        "full_name": "Jonathan Liandi",
         "date_of_birth": "1997-03-27",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "Revo",
         "current_team": "no data",
         "status": "Retired",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_emperor_2.png",
         "heros": [
             "Gusion",
             "Kagura",
@@ -136,7 +139,7 @@
         "team_history": [
             {
                 "date": "2017-12-26",
-                "team": "Bigetron Player Kill"
+                "team": "Bigetron Esports"
             },
             {
                 "date": "2018-07-24",
@@ -147,7 +150,7 @@
                 "team": "Revo (page does not exist)"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2017-12-26",
         "url": "https://liquipedia.net/mobilelegends/emperor"
     },
     {
@@ -160,7 +163,7 @@
         "last_team": "no data",
         "current_team": "Alter Ego",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/6/60/AE_Rekt_S15.png",
+        "image": "/player/BTR_REKT.png",
         "heros": [
             "Claude",
             "Kimmy",
@@ -169,8 +172,7 @@
             "Hilda"
         ],
         "roles": [
-            "Coach",
-            "Roamer"
+            "Coach"
         ],
         "team_history": [
             {
@@ -179,7 +181,7 @@
             },
             {
                 "date": "2017-12-26",
-                "team": "Bigetron Player Kill"
+                "team": "Bigetron Esports"
             },
             {
                 "date": "2018-06-01",
@@ -198,43 +200,43 @@
                 "team": "Alter Ego"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2017-12-26",
         "url": "https://liquipedia.net/mobilelegends/rekt"
     },
     {
         "team": "Bigetron",
         "name": "coffeeguy",
-        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "full_name": "Eldosan",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_CoffeGuy.png",
         "heros": [
-            "no data"
+            "Alpha"
         ],
         "roles": [
-            "no data"
+            "Flex"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2017-12-26",
         "url": "https://liquipedia.net/mobilelegends/index.php"
     },
     {
         "team": "Bigetron",
         "name": "YAM",
-        "full_name": "William  is a  retired Indonesian player who last played for  Alter Ego.",
+        "full_name": "William",
         "date_of_birth": "no data",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "Alter Ego",
         "current_team": "no data",
         "status": "Retired",
-        "image": "https://liquipedia.net/commons/images/6/6b/AE_YAM.png",
+        "image": "/player/BTR_YAM.png",
         "heros": [
             "Yu Zhong",
             "Esmeralda"
@@ -256,22 +258,24 @@
                 "team": "Alter Ego"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2018-05-09",
         "url": "https://liquipedia.net/mobilelegends/yam"
     },
     {
         "team": "Bigetron",
         "name": "JeeL",
-        "full_name": "Gerald  Belarmino is a  retired Indonesian player who last played for  Aerowolf Pro Team.",
+        "full_name": "Gerald Belarmino",
         "date_of_birth": "no data",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "Aerowolf Pro Team",
         "current_team": "no data",
         "status": "Retired",
-        "image": "https://liquipedia.net/commons/images/1/1d/GFLX_Jeel.png",
+        "image": "/player/BTR_JeeL.png",
         "heros": [
-            "no data"
+            "Martis",
+            "Gusion",
+            "Hayabusa"
         ],
         "roles": [
             "EXP Laner",
@@ -291,45 +295,46 @@
                 "team": "Aerowolf Pro Team"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2018-06-06",
         "url": "https://liquipedia.net/mobilelegends/jeel"
     },
     {
         "team": "Bigetron",
         "name": "Rage",
-        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "full_name": "Yohanes Efendi",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_Rage.png",
         "heros": [
-            "no data"
+            "Kagura",
+            "Cyclops"
         ],
         "roles": [
-            "no data"
+            "Mid Laner"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2018-06-07",
         "url": "https://liquipedia.net/mobilelegends/index.php"
     },
     {
         "team": "Bigetron",
         "name": "Bravo",
-        "full_name": "Akbar  Nida",
+        "full_name": "Akbar Nida",
         "date_of_birth": "2000-02-07",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
         "current_team": "Pendekar Esports",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/e/ec/PDKR_Bravo_MDL_S11.png",
+        "image": "/player/BTR_BRAVO.png",
         "heros": [
-            "no data"
+            "Uranus"
         ],
         "roles": [
             "EXP Laner"
@@ -356,7 +361,7 @@
                 "team": "Pendekar Esports"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2018-10-0",
         "url": "https://liquipedia.net/mobilelegends/bravo"
     },
     {
@@ -369,7 +374,7 @@
         "last_team": "no data",
         "current_team": "Alter Ego",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/4/49/AE_DreamS_S15.png",
+        "image": "/player/BTR_Dreams_S7.png",
         "heros": [
             "Franco",
             "Kadita",
@@ -418,7 +423,7 @@
                 "team": "Alter Ego"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2018-10-07",
         "url": "https://liquipedia.net/mobilelegends/dreams"
     },
     {
@@ -431,7 +436,7 @@
         "last_team": "RRQ Hoshi",
         "current_team": "no data",
         "status": "Retired",
-        "image": "https://liquipedia.net/commons/images/a/a5/RRQ_VYN_S13.png",
+        "image": "/player/BTR_VYN_S13.png",
         "heros": [
             "Franco",
             "Kaja",
@@ -465,30 +470,30 @@
                 "team": "RRQ Hoshi"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-01-17",
         "url": "https://liquipedia.net/mobilelegends/vyn"
     },
     {
         "team": "Bigetron",
         "name": "Lynx",
-        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "full_name": "Luis Novianto",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_Lynx.png",
         "heros": [
-            "no data"
+            "Granger"
         ],
         "roles": [
-            "no data"
+            "Jungler"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-01-17",
         "url": "https://liquipedia.net/mobilelegends/index.php"
     },
     {
@@ -501,7 +506,7 @@
         "last_team": "no data",
         "current_team": "EVOS",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/c/c1/EVOS_Branz_at_MPL_ID_S14.jpg",
+        "image": "/player/BTR_BRANZ_S8.png",
         "heros": [
             "Claude",
             "Karrie",
@@ -534,30 +539,30 @@
                 "team": "EVOS"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-01-17",
         "url": "https://liquipedia.net/mobilelegends/branz"
     },
     {
         "team": "Bigetron",
         "name": "Xora",
-        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "full_name": "Febri Eza Cotrunada",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_Xora.png",
         "heros": [
-            "no data"
+            "Selena"
         ],
         "roles": [
-            "no data"
+            "Mid Laner"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-01-17",
         "url": "https://liquipedia.net/mobilelegends/index.php"
     },
     {
@@ -570,12 +575,15 @@
         "last_team": "ONIC Prodigy",
         "current_team": "no data",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/4/4c/ONIC_Taka_MDL_S7.png",
+        "image": "/player/BTR_taka.png",
         "heros": [
-            "no data"
+            "Bruno",
+            "Ruby",
+            "Benedetta",
+            "Aldous"
         ],
         "roles": [
-            "Gold Laner"
+            "Flex"
         ],
         "team_history": [
             {
@@ -603,22 +611,25 @@
                 "team": "ONIC Prodigy"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-04-22",
         "url": "https://liquipedia.net/mobilelegends/taka"
     },
     {
         "team": "Bigetron",
         "name": "Zoeybit",
-        "full_name": "Irfandhi  Bakri",
+        "full_name": "Irfandhi Bakri",
         "date_of_birth": "1999-10-10",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "EVOS Icon",
         "current_team": "no data",
         "status": "Retired",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_Zoeybit.png",
         "heros": [
-            "no data"
+            "Kimmy",
+            "Gusion",
+            "Kagura",
+            "Kadita"
         ],
         "roles": [
             "Mid Laner"
@@ -641,89 +652,91 @@
                 "team": "EVOS Icon"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-04-30",
         "url": "https://liquipedia.net/mobilelegends/zoeybit"
     },
     {
         "team": "Bigetron",
         "name": "Hexazor",
-        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "full_name": "Arya Hans Arifan",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_Hexazor.png",
         "heros": [
-            "no data"
+            "Kaja"
         ],
         "roles": [
-            "no data"
+            "Roamer"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-07-15",
         "url": "https://liquipedia.net/mobilelegends/index.php"
     },
     {
         "team": "Bigetron",
         "name": "Rousel",
-        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "full_name": "Rivaldo Wijaya",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_Rousel.png",
         "heros": [
-            "no data"
+            "Yu Zhong",
+            "Pharsa"
         ],
         "roles": [
-            "no data"
+            "Flex"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-08-02",
         "url": "https://liquipedia.net/mobilelegends/index.php"
     },
     {
         "team": "Bigetron",
         "name": "Jo",
-        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "full_name": "Johannes",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_JO.png",
         "heros": [
-            "no data"
+            "Lolita",
+            "Khufra"
         ],
         "roles": [
-            "no data"
+            "Roamer"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-08-02",
         "url": "https://liquipedia.net/mobilelegends/index.php"
     },
     {
         "team": "Bigetron",
-        "name": "Cr1te",
-        "full_name": "Muhammad  Yusuf (formerly known as 3yy)",
+        "name": "Cr1te (3yy)",
+        "full_name": "Muhammad  Yusuf",
         "date_of_birth": "2001-02-17",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
         "current_team": "EVOS Academy",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/7/73/AE_Cr1te_S13.png",
+        "image": "/player/BTR_3yy.png",
         "heros": [
             "Cecilion",
             "Yve",
@@ -780,7 +793,7 @@
                 "team": "EVOS Academy (page does not exist)"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2019-08-02",
         "url": "https://liquipedia.net/mobilelegends/cr1te"
     },
     {
@@ -793,7 +806,7 @@
         "last_team": "no data",
         "current_team": "EVOS",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/5/57/EVOS_Kyy_S15.png",
+        "image": "/player/BTR_Kyy_S13.png",
         "heros": [
             "Mathilda",
             "Grock",
@@ -814,7 +827,7 @@
                 "team": "EVOS"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2020-01-10",
         "url": "https://liquipedia.net/mobilelegends/kyy"
     },
     {
@@ -827,7 +840,7 @@
         "last_team": "no data",
         "current_team": "JP NINERS",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/6/64/VMS_Warlord_at_M6_Knockout_Stage.jpg",
+        "image": "/player/BTR_Warlord.png",
         "heros": [
             "Yve",
             "Cecilion",
@@ -876,30 +889,30 @@
                 "team": "JP NINERS"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2020-01-10",
         "url": "https://liquipedia.net/mobilelegends/warlord"
     },
     {
         "team": "Bigetron",
-        "name": "Annisa",
-        "full_name": "The Mobile Legends: Bang Bang (MLBB) esports wiki covering everything from players, teams & transfers, to tournaments and results, heroes, equipment, & patches.",
+        "name": "Sinyoo (Annisa)",
+        "full_name": "Guntur Khoiru Wildan",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "/mobilelegends/extensions/SearchEngineOptimization/resources/images/facebook-image.png",
+        "image": "/player/BTR_SINYOO.png",
         "heros": [
-            "no data"
+            "Selena"
         ],
         "roles": [
-            "no data"
+            "Mid Laner"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2020-01-10",
         "url": "https://liquipedia.net/mobilelegends/index.php"
     },
     {
@@ -909,10 +922,10 @@
         "date_of_birth": "2000-02-25",
         "nation": "Malaysia",
         "nation_code": "my",
-        "last_team": "no data",
-        "current_team": "Ocean Black",
-        "status": "Active",
-        "image": "https://liquipedia.net/commons/images/c/c6/OB_Rippo_S15.png",
+        "last_team": "Ocean Black",
+        "current_team": "no data",
+        "status": "Retired",
+        "image": "/player/BTR_Rippo_S10.png",
         "heros": [
             "Esmeralda",
             "Thamuz",
@@ -944,20 +957,20 @@
                 "team": "Ocean Black (page does not exist)"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2020-06-07",
         "url": "https://liquipedia.net/mobilelegends/rippo"
     },
     {
         "team": "Bigetron",
         "name": "RENBO",
-        "full_name": "Deven  Markos",
+        "full_name": "Deven Markos",
         "date_of_birth": "1999-05-20",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "RRQ Goro",
         "current_team": "no data",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/d/dc/RRQ_Renbo_S11.png",
+        "image": "/player/BTR_Renbo.png",
         "heros": [
             "Cecilion",
             "Johnson",
@@ -994,7 +1007,7 @@
                 "team": "RRQ Goro (page does not exist)"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2020-06-17",
         "url": "https://liquipedia.net/mobilelegends/renbo"
     },
     {
@@ -1007,7 +1020,7 @@
         "last_team": "Rebellion Esports",
         "current_team": "no data",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/b/bf/RBL_Matt_at_MPL_ID_S14.jpg",
+        "image": "/player/BTR_Matt.png",
         "heros": [
             "Lapu-Lapu",
             "Beatrix",
@@ -1049,20 +1062,20 @@
                 "team": "Rebellion Esports"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2020-09-10",
         "url": "https://liquipedia.net/mobilelegends/matt"
     },
     {
         "team": "Bigetron",
         "name": "Maxx",
-        "full_name": "Maxwell  Alessandro",
+        "full_name": "Maxwell Alessandro",
         "date_of_birth": "2003-11-27",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
         "current_team": "JP NINERS",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/a/a9/JP_Maxx_S14.png",
+        "image": "/player/BTR_Maxx.png",
         "heros": [
             "Ling",
             "Hayabusa",
@@ -1111,43 +1124,20 @@
                 "team": "JP NINERS"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2020-09-17",
         "url": "https://liquipedia.net/mobilelegends/maxx"
     },
     {
         "team": "Bigetron",
-        "name": "Kenn",
-        "full_name": "no data",
-        "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
-        "last_team": "no data",
-        "current_team": "no data",
-        "status": "no data",
-        "image": "no data",
-        "heros": [
-            "no data"
-        ],
-        "roles": [
-            "no data"
-        ],
-        "team_history": [
-            "no data"
-        ],
-        "date_of_join": "join no data",
-        "url": "https://liquipedia.net/mobilelegends/kenn_(indonesian_player)"
-    },
-    {
-        "team": "Bigetron",
         "name": "Bottle",
-        "full_name": "I  Dita",
+        "full_name": "I Gusti Pramana",
         "date_of_birth": "2004-04-01",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
         "current_team": "Pendekar Esports",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/3/34/PDKR_Bottle_MDL_S11.png",
+        "image": "/player/BTR_Bottle.png",
         "heros": [
             "Ling",
             "Bruno"
@@ -1178,20 +1168,20 @@
                 "team": "Pendekar Esports"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2021-07-02",
         "url": "https://liquipedia.net/mobilelegends/bottle"
     },
     {
         "team": "Bigetron",
         "name": "Xorizo",
-        "full_name": "I  Dwipayana",
+        "full_name": "I Dwipayana",
         "date_of_birth": "2003-03-30",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
         "current_team": "Dewa United Esports",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/3/38/DEWA_Xorizo_S15.png",
+        "image": "/player/BTR_Xorizo_S12.png",
         "heros": [
             "Gloo",
             "Uranus",
@@ -1216,27 +1206,26 @@
                 "team": "Dewa United Esports"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2021-08-26",
         "url": "https://liquipedia.net/mobilelegends/xorizo"
     },
     {
         "team": "Bigetron",
         "name": "Barbossa",
-        "full_name": "Arya  Nazhari",
+        "full_name": "Arya Nazhari",
         "date_of_birth": "2002-05-13",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
-        "current_team": "Bigetron Esports",
+        "current_team": "Bigetron by Vitality",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/e/e9/BTR_Barbossa_S15.png",
+        "image": "/player/BTR_Barbossa_S15.png",
         "heros": [
             "Hilda",
             "Chou"
         ],
         "roles": [
-            "Coach",
-            "Roamer"
+            "Coach"
         ],
         "team_history": [
             {
@@ -1297,73 +1286,11 @@
             },
             {
                 "date": "2025-03-13",
-                "team": "Bigetron Esports"
+                "team": "Bigetron by Vitality"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2021-08-26",
         "url": "https://liquipedia.net/mobilelegends/barbossa"
-    },
-    {
-        "team": "Bigetron",
-        "name": "Maxx",
-        "full_name": "Maxwell  Alessandro",
-        "date_of_birth": "2003-11-27",
-        "nation": "Indonesia",
-        "nation_code": "id",
-        "last_team": "no data",
-        "current_team": "JP NINERS",
-        "status": "Active",
-        "image": "https://liquipedia.net/commons/images/a/a9/JP_Maxx_S14.png",
-        "heros": [
-            "Ling",
-            "Hayabusa",
-            "Paquito",
-            "Karina",
-            "Roger"
-        ],
-        "roles": [
-            "Jungler"
-        ],
-        "team_history": [
-            {
-                "date": "2020-09-02",
-                "team": "Bigetron Beta"
-            },
-            {
-                "date": "2020-09-17",
-                "team": "Bigetron Alpha"
-            },
-            {
-                "date": "2021-08-01",
-                "team": "Bigetron Beta"
-            },
-            {
-                "date": "2022-02-08",
-                "team": "Bigetron Alpha"
-            },
-            {
-                "date": "2023-06-21",
-                "team": "Bigetron Alpha"
-            },
-            {
-                "date": "2023-06-21",
-                "team": "Team Secret"
-            },
-            {
-                "date": "2024-04-17",
-                "team": "JP NINERS"
-            },
-            {
-                "date": "2025-03-29",
-                "team": "JP NINERS"
-            },
-            {
-                "date": "2025-05-01",
-                "team": "JP NINERS"
-            }
-        ],
-        "date_of_join": "join no data",
-        "url": "https://liquipedia.net/mobilelegends/maxx"
     },
     {
         "team": "Bigetron",
@@ -1372,15 +1299,14 @@
         "date_of_birth": "1999-02-14",
         "nation": "Indonesia",
         "nation_code": "id",
-        "last_team": "Bigetron Alpha",
+        "last_team": "no data",
         "current_team": "no data",
         "status": "Retired",
-        "image": "https://liquipedia.net/commons/images/c/c3/BTR_Falah_S13.png",
+        "image": "/player/BTR_Falah_S13.png",
         "heros": [
-            "no data"
+            "Cecilion"
         ],
         "roles": [
-            "Coach",
             "Mid Laner"
         ],
         "team_history": [
@@ -1405,20 +1331,20 @@
                 "team": "Bigetron Alpha"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2022-06-29",
         "url": "https://liquipedia.net/mobilelegends/falah"
     },
     {
         "team": "Bigetron",
         "name": "Moreno",
-        "full_name": "Marcel  Sinulingga",
+        "full_name": "Marcel Sinulingga",
         "date_of_birth": "2005-10-05",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
-        "current_team": "Bigetron Esports",
+        "current_team": "Bigetron by Vitality",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/4/45/BTR_Moreno_S15.png",
+        "image": "/player/BTR_Moreno_S13.png",
         "heros": [
             "Cecilion",
             "Yve",
@@ -1436,23 +1362,23 @@
             },
             {
                 "date": "2022-07-25",
-                "team": "Bigetron Esports"
+                "team": "Bigetron by Vitality"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2022-07-25",
         "url": "https://liquipedia.net/mobilelegends/moreno"
     },
     {
         "team": "Bigetron",
         "name": "Markyyyyy",
-        "full_name": "Mark  Capacio",
+        "full_name": "Mark Capacio",
         "date_of_birth": "1998-12-28",
         "nation": "Philippines",
         "nation_code": "ph",
         "last_team": "no data",
         "current_team": "Twisted Minds",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/6/62/GEEK_Markyyyyy_S13.png",
+        "image": "/player/BTR_Markyyyyy_S10.png",
         "heros": [
             "Wanwan",
             "Claude",
@@ -1489,20 +1415,20 @@
                 "team": "Twisted Minds"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2022-07-31",
         "url": "https://liquipedia.net/mobilelegends/markyyyyy"
     },
     {
         "team": "Bigetron",
         "name": "Saken",
-        "full_name": "Dicky  Cahyana",
+        "full_name": "Dicky Cahyana",
         "date_of_birth": "2003-05-16",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "Team HAQ",
         "current_team": "no data",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/4/4b/THQ_Saken_S13.png",
+        "image": "/player/BTR_Saken_S12.png",
         "heros": [
             "Popol and Kupa",
             "Melissa",
@@ -1539,66 +1465,71 @@
                 "team": "Team HAQ"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2022-09-15",
         "url": "https://liquipedia.net/mobilelegends/saken"
     },
     {
         "team": "Bigetron",
         "name": "VyrNoCure",
-        "full_name": "no data",
-        "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "full_name": "Dede Firman",
+        "date_of_birth": "2001-10-23",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "no data",
+        "image": "/player/BTR_VyrNoCure_S11.png",
         "heros": [
-            "no data"
+            "Gloo",
+            "Benedetta",
+            "Paquito",
+            "Uranus",
+            "Esmeralda"
         ],
         "roles": [
-            "no data"
+            "EXP Laner"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2023-01-28",
         "url": "https://liquipedia.net/mobilelegends/vyrnocure"
     },
     {
         "team": "Bigetron",
         "name": "Just Garrr",
-        "full_name": "no data",
+        "full_name": "Garry Ketaren",
         "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "no data",
+        "image": "/player/BTR_Just_Garrr_S11.png",
         "heros": [
-            "no data"
-        ],
+            "Fanny",
+            "Ling",
+            "Karina"        ],
         "roles": [
-            "no data"
+            "Jungler"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2023-01-28",
         "url": "https://liquipedia.net/mobilelegends/just_garrr"
     },
     {
         "team": "Bigetron",
         "name": "Gamora",
-        "full_name": "Muhammad  Perkasa",
+        "full_name": "Muhammad Perkasa",
         "date_of_birth": "2000-05-10",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "EVOS Icon",
         "current_team": "no data",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/7/7c/EVOS_Gamora_MDL_S8.png",
+        "image": "/player/BTR_Gamora_S11.png",
         "heros": [
             "Yve",
             "Lylia",
@@ -1625,7 +1556,7 @@
                 "team": "EVOS Icon"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2023-01-28",
         "url": "https://liquipedia.net/mobilelegends/gamora"
     },
     {
@@ -1638,7 +1569,7 @@
         "last_team": "no data",
         "current_team": "Natus Vincere",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/9/9d/NAVI_Xyve_S15.png",
+        "image": "/player/BTR_Xyve_S12.png",
         "heros": [
             "Brody",
             "Claude",
@@ -1671,7 +1602,7 @@
                 "team": "Natus Vincere"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2023-09-06",
         "url": "https://liquipedia.net/mobilelegends/xyve"
     },
     {
@@ -1684,7 +1615,7 @@
         "last_team": "no data",
         "current_team": "ONIC Prodigy",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/5/5e/ONIC_Narashi_MDL_S11.png",
+        "image": "/player/BTR_Narashi_MDL_S7.png",
         "heros": [
             "Benedetta",
             "Gloo",
@@ -1723,7 +1654,7 @@
                 "team": "ONIC Prodigy"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2023-09-13a",
         "url": "https://liquipedia.net/mobilelegends/narashi"
     },
     {
@@ -1734,9 +1665,9 @@
         "nation": "Philippines",
         "nation_code": "ph",
         "last_team": "no data",
-        "current_team": "Bigetron Esports",
+        "current_team": "Bigetron by Vitality",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/8/8b/BTR_EMANN_S15.png",
+        "image": "/player/BTR_EMANN_S15.png",
         "heros": [
             "Beatrix",
             "Claude",
@@ -1754,33 +1685,33 @@
             },
             {
                 "date": "2024-02-02",
-                "team": "Bigetron Esports"
+                "team": "Bigetron by Vitality"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2024-02-02",
         "url": "https://liquipedia.net/mobilelegends/emann"
     },
     {
         "team": "Bigetron",
         "name": "JM",
-        "full_name": "no data",
-        "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "full_name": "Jhon Marl Sebastian",
+        "date_of_birth": "2005-06-27",
+        "nation": "Philippines",
+        "nation_code": "ph",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "no data",
+        "image": "/player/BTR_JM_S13.png",
         "heros": [
-            "no data"
+            "Cici"
         ],
         "roles": [
-            "no data"
+            "EXP Laner"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2024-02-02",
         "url": "https://liquipedia.net/mobilelegends/jm"
     },
     {
@@ -1791,9 +1722,9 @@
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
-        "current_team": "Bigetron Esports",
+        "current_team": "Bigetron by Vitality",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/0/0f/BTR_Luke_S15.png",
+        "image": "/player/BTR_Luke_S14.png",
         "heros": [
             "Fredrinn",
             "Gloo",
@@ -1815,10 +1746,10 @@
             },
             {
                 "date": "2024-07-08",
-                "team": "Bigetron Esports"
+                "team": "Bigetron by Vitality"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2024-07-08",
         "url": "https://liquipedia.net/mobilelegends/luke"
     },
     {
@@ -1829,11 +1760,11 @@
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
-        "current_team": "Bigetron Esports",
+        "current_team": "Bigetron by Vitality",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/7/79/BTR_Finn_S15.png",
+        "image": "/player/BTR_Finn_S15.png",
         "heros": [
-            "no data"
+            "Mathilda"
         ],
         "roles": [
             "Roamer"
@@ -1853,23 +1784,23 @@
             },
             {
                 "date": "2025-04-17",
-                "team": "Bigetron Esports"
+                "team": "Bigetron by Vitality"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2024-07-23",
         "url": "https://liquipedia.net/mobilelegends/finn"
     },
     {
         "team": "Bigetron",
         "name": "Anavel",
-        "full_name": "Junisen  Lo (also known as Nea)",
+        "full_name": "Junisen  Lo (Nea)",
         "date_of_birth": "2007-06-13",
         "nation": "Indonesia",
         "nation_code": "id",
         "last_team": "no data",
-        "current_team": "Bigetron Esports",
+        "current_team": "Bigetron by Vitality",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/9/90/BTR_Anavel_S15.png",
+        "image": "/player/BTR_Anavel_S15.png",
         "heros": [
             "Lancelot",
             "Ling",
@@ -1894,23 +1825,23 @@
             },
             {
                 "date": "2025-02-01",
-                "team": "Bigetron Esports"
+                "team": "Bigetron by Vitality"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2025-02-01",
         "url": "https://liquipedia.net/mobilelegends/anavel"
     },
     {
         "team": "Bigetron",
-        "name": "Light",
-        "full_name": "For the Burmese player, see Light (Burmese player).\n\nDylan  Catipon (formerly known as Unravel)",
+        "name": "Light (Unravel)",
+        "full_name": "Dylan Catipon",
         "date_of_birth": "2002-11-14",
         "nation": "Philippines",
         "nation_code": "ph",
         "last_team": "no data",
-        "current_team": "Bigetron Esports",
+        "current_team": "Bigetron by Vitality",
         "status": "Active",
-        "image": "https://liquipedia.net/commons/images/a/ab/BTR_Light_S15.png",
+        "image": "/player/BTR_Light_S15.png",
         "heros": [
             "Franco",
             "Khufra",
@@ -1936,33 +1867,37 @@
             },
             {
                 "date": "2025-02-01",
-                "team": "Bigetron Esports"
+                "team": "Bigetron by Vitality"
             }
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2025-02-01",
         "url": "https://liquipedia.net/mobilelegends/light"
     },
     {
         "team": "Bigetron",
         "name": "Super Kenn",
-        "full_name": "no data",
-        "date_of_birth": "no data",
-        "nation": "no data",
-        "nation_code": "no data",
+        "full_name": "Kenneth Marcello",
+        "date_of_birth": "2006-12-28",
+        "nation": "Indonesia",
+        "nation_code": "id",
         "last_team": "no data",
         "current_team": "no data",
         "status": "no data",
-        "image": "no data",
+        "image": "/player/BTR_Kenn_S13.png",
         "heros": [
-            "no data"
+            "Ling",
+            "Lancelot",
+            "Fanny",
+            "Joy",
+            "Nolan"
         ],
         "roles": [
-            "no data"
+            "Jungler"
         ],
         "team_history": [
             "no data"
         ],
-        "date_of_join": "join no data",
+        "date_of_join": "2023-03-02",
         "url": "https://liquipedia.net/mobilelegends/kenn_(indonesian_player)"
     }
 ]

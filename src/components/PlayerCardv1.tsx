@@ -58,13 +58,23 @@ export const PlayerCard: React.FC<{
       }}
     >
       {/* Card dengan desain modern dan profesional */}
-      <div className="w-[600px] rounded-xl shadow-5xl backdrop-blur-md bg-black/60 border border-white/20" style={{height: HeightConfig}}>
-        {/* Header dengan gradien biru */}
-        <div className="relative h-140 rounded-t-xl overflow-hidden backdrop-blur-sm bg-gradient-to-a from-white/40 to-transparent">
+      <div
+        className="w-[600px] rounded-xl shadow-5xl backdrop-blur-md bg-white/50 bg-clip-padding border border-white/30 rounded-xl"
+        style={{
+          height: HeightConfig,
+          background: "linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.25) 100%)",
+          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.18)",
+          border: "1.5px solid rgba(255,255,255,0.4)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+        }}
+      >
+        {/* Header */}
+        <div className="relative h-140 rounded-t-xl overflow-hidden backdrop-blur-sm bg-gradient-to-a from-white/100 to-transparent p-0">
           {/* Club Logo */}
           <div className="absolute top-6 right-6 w-100 h-100 opacity-80">
             <img
-              src={getLogoCode(person.team)}
+              src={getImageSource(getLogoCode(person.team))}
               alt="Club Logo"
               className="w-full h-full object-contain"
               style={{
@@ -82,17 +92,18 @@ export const PlayerCard: React.FC<{
           </div>
 
           {/* Player Image */}
-          <div className="absolute top-2 left-25 w-100 h-150 flex items-center justify-center overflow-hidden">
+          <div className="absolute top-2 left-5 w-150 h-150 flex items-center justify-center overflow-hidden" style={{ position: 'relative' }}>
             <img
               src={getImageSource(person.image)}
               alt={person.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               style={{
                 willChange: 'transform',
                 transform: 'translateZ(0)',
                 backfaceVisibility: 'hidden',
                 opacity: 1,
-                transition: 'opacity 0.3s ease-in-out'
+                transition: 'opacity 0.3s ease-in-out',
+                zIndex: 1
               }}
               onError={(e) => {
                 const target = e.target as HTMLImageElement;

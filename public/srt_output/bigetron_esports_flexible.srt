@@ -1,0 +1,243 @@
+1
+00:00:00,000 --> 00:00:02,000
+Riwayat Pemain Bigetron 2017-2025
+
+2
+00:00:02,000 --> 00:00:07,000
+Light (Unravel) (Philippines)
+Nama: Dylan Catipon | Tanggal masuk Bigetron: 01 February 2025 | Roles: [Roamer]
+
+3
+00:00:07,000 --> 00:00:12,000
+Anavel (Indonesia)
+Nama: Junisen Lo (Nea) | Tanggal masuk Bigetron: 01 February 2025 | Roles: [Jungler]
+
+4
+00:00:12,000 --> 00:00:17,000
+Finn (Indonesia)
+Nama: Muhammad Hikmatullah | Tanggal masuk Bigetron: 23 July 2024 | Roles: [Roamer]
+
+5
+00:00:17,000 --> 00:00:22,000
+Luke (Indonesia)
+Nama: Luke Valentinus | Tanggal masuk Bigetron: 08 July 2024 | Roles: [EXP Laner]
+
+6
+00:00:22,000 --> 00:00:27,000
+JM (Philippines)
+Nama: Jhon Marl Sebastian | Tanggal masuk Bigetron: 02 February 2024 | Roles: [EXP Laner]
+
+7
+00:00:27,000 --> 00:00:32,000
+EMANN (Philippines)
+Nama: Eman Sangco | Tanggal masuk Bigetron: 02 February 2024 | Roles: [Gold Laner]
+
+8
+00:00:32,000 --> 00:00:37,000
+Xyve (Indonesia)
+Nama: Michael Richi | Tanggal masuk Bigetron: 06 September 2023 | Roles: [Gold Laner]
+
+9
+00:00:37,000 --> 00:00:42,000
+Super Kenn (Indonesia)
+Nama: Kenneth Marcello | Tanggal masuk Bigetron: 02 March 2023 | Roles: [Jungler]
+
+10
+00:00:42,000 --> 00:00:47,000
+Gamora (Indonesia)
+Nama: Muhammad Perkasa | Tanggal masuk Bigetron: 28 January 2023 | Roles: [Mid Laner]
+
+11
+00:00:47,000 --> 00:00:52,000
+Just Garrr (Indonesia)
+Nama: Garry Ketaren | Tanggal masuk Bigetron: 28 January 2023 | Roles: [Jungler]
+
+12
+00:00:52,000 --> 00:00:57,000
+VyrNoCure (Indonesia)
+Nama: Dede Firman | Tanggal masuk Bigetron: 28 January 2023 | Roles: [EXP Laner]
+
+13
+00:00:57,000 --> 00:01:02,000
+Saken (Indonesia)
+Nama: Dicky Cahyana | Tanggal masuk Bigetron: 15 September 2022 | Roles: [Gold Laner]
+
+14
+00:01:02,000 --> 00:01:07,000
+Markyyyyy (Philippines)
+Nama: Mark Capacio | Tanggal masuk Bigetron: 31 July 2022 | Roles: [Gold Laner]
+
+15
+00:01:07,000 --> 00:01:12,000
+Moreno (Indonesia)
+Nama: Marcel Sinulingga | Tanggal masuk Bigetron: 25 July 2022 | Roles: [Mid Laner]
+
+16
+00:01:12,000 --> 00:01:17,000
+Falah (Indonesia)
+Nama: Gilang Falah | Tanggal masuk Bigetron: 29 June 2022 | Roles: [Mid Laner]
+
+17
+00:01:17,000 --> 00:01:22,000
+Barbossa (Indonesia)
+Nama: Arya Nazhari | Tanggal masuk Bigetron: 26 August 2021 | Roles: [Coach]
+
+18
+00:01:22,000 --> 00:01:27,000
+Xorizo (Indonesia)
+Nama: I Dwipayana | Tanggal masuk Bigetron: 26 August 2021 | Roles: [EXP Laner]
+
+19
+00:01:27,000 --> 00:01:32,000
+Bottle (Indonesia)
+Nama: I Gusti Pramana | Tanggal masuk Bigetron: 02 July 2021 | Roles: [Gold Laner, Jungler]
+
+20
+00:01:32,000 --> 00:01:37,000
+Maxx (Indonesia)
+Nama: Maxwell Alessandro | Tanggal masuk Bigetron: 17 September 2020 | Roles: [Jungler]
+
+21
+00:01:37,000 --> 00:01:42,000
+Matt (Indonesia)
+Nama: Matthew Geraldo | Tanggal masuk Bigetron: 10 September 2020 | Roles: [Gold Laner, EXP Laner]
+
+22
+00:01:42,000 --> 00:01:47,000
+RENBO (Indonesia)
+Nama: Deven Markos | Tanggal masuk Bigetron: 17 June 2020 | Roles: [Mid Laner]
+
+23
+00:01:47,000 --> 00:01:52,000
+RIPPO (Malaysia)
+Nama: Muhammad Arif Abdul Halim | Tanggal masuk Bigetron: 07 June 2020 | Roles: [EXP Laner]
+
+24
+00:01:52,000 --> 00:01:57,000
+Sinyoo (Annisa) (Indonesia)
+Nama: Guntur Khoiru Wildan | Tanggal masuk Bigetron: 10 January 2020 | Roles: [Mid Laner]
+
+25
+00:01:57,000 --> 00:02:02,000
+Warlord (Indonesia)
+Nama: Rizky Agustian | Tanggal masuk Bigetron: 10 January 2020 | Roles: [Mid Laner]
+
+26
+00:02:02,000 --> 00:02:07,000
+Kyy (Indonesia)
+Nama: Hengky Gunawan | Tanggal masuk Bigetron: 10 January 2020 | Roles: [Roamer]
+
+27
+00:02:07,000 --> 00:02:12,000
+Cr1te (3yy) (Indonesia)
+Nama: Muhammad Yusuf | Tanggal masuk Bigetron: 02 August 2019 | Roles: [Mid Laner]
+
+28
+00:02:12,000 --> 00:02:17,000
+Jo (Indonesia)
+Nama: Johannes | Tanggal masuk Bigetron: 02 August 2019 | Roles: [Roamer]
+
+29
+00:02:17,000 --> 00:02:22,000
+Rousel (Indonesia)
+Nama: Rivaldo Wijaya | Tanggal masuk Bigetron: 02 August 2019 | Roles: [Flex]
+
+30
+00:02:22,000 --> 00:02:27,000
+Hexazor (Indonesia)
+Nama: Arya Hans Arifan | Tanggal masuk Bigetron: 15 July 2019 | Roles: [Roamer]
+
+31
+00:02:27,000 --> 00:02:32,000
+Zoeybit (Indonesia)
+Nama: Irfandhi Bakri | Tanggal masuk Bigetron: 30 April 2019 | Roles: [Mid Laner]
+
+32
+00:02:32,000 --> 00:02:37,000
+Taka (Indonesia)
+Nama: Fadhil Asra | Tanggal masuk Bigetron: 22 April 2019 | Roles: [Flex]
+
+33
+00:02:37,000 --> 00:02:42,000
+Xora (Indonesia)
+Nama: Febri Eza Cotrunada | Tanggal masuk Bigetron: 17 January 2019 | Roles: [Mid Laner]
+
+34
+00:02:42,000 --> 00:02:47,000
+Branz (Indonesia)
+Nama: Jabran Wiloko | Tanggal masuk Bigetron: 17 January 2019 | Roles: [Gold Laner]
+
+35
+00:02:47,000 --> 00:02:52,000
+Lynx (Indonesia)
+Nama: Luis Novianto | Tanggal masuk Bigetron: 17 January 2019 | Roles: [Jungler]
+
+36
+00:02:52,000 --> 00:02:57,000
+VYN (Indonesia)
+Nama: Calvin | Tanggal masuk Bigetron: 17 January 2019 | Roles: [Roamer, Mid Laner]
+
+37
+00:02:57,000 --> 00:03:02,000
+DreamS (Indonesia)
+Nama: Rachmad Wahyudi | Tanggal masuk Bigetron: 07 October 2018 | Roles: [Roamer]
+
+38
+00:03:02,000 --> 00:03:07,000
+Rage (Indonesia)
+Nama: Yohanes Efendi | Tanggal masuk Bigetron: 07 June 2018 | Roles: [Mid Laner]
+
+39
+00:03:07,000 --> 00:03:12,000
+JeeL (Indonesia)
+Nama: Gerald Belarmino | Tanggal masuk Bigetron: 06 June 2018 | Roles: [EXP Laner, Gold Laner]
+
+40
+00:03:12,000 --> 00:03:17,000
+YAM (Indonesia)
+Nama: William | Tanggal masuk Bigetron: 09 May 2018 | Roles: [EXP Laner]
+
+41
+00:03:17,000 --> 00:03:22,000
+coffeeguy (Indonesia)
+Nama: Eldosan | Tanggal masuk Bigetron: 26 December 2017 | Roles: [Flex]
+
+42
+00:03:22,000 --> 00:03:27,000
+R E K T (Indonesia)
+Nama: Gustian | Tanggal masuk Bigetron: 26 December 2017 | Roles: [Coach]
+
+43
+00:03:27,000 --> 00:03:32,000
+Emperor (Indonesia)
+Nama: Jonathan Liandi | Tanggal masuk Bigetron: 26 December 2017 | Roles: [Mid Laner]
+
+44
+00:03:32,000 --> 00:03:37,000
+VIN (Indonesia)
+Nama: Michael Noviano | Tanggal masuk Bigetron: 26 December 2017 | Roles: [Roamer]
+
+45
+00:03:37,000 --> 00:03:42,000
+Fabiens (Indonesia)
+Nama: Thong Andara | Tanggal masuk Bigetron: 26 December 2017 | Roles: [Talent, Mid Laner]
+
+46
+00:03:42,000 --> 00:03:47,000
+Eiduart (Indonesia)
+Nama: Eiduart Tjahyadikarta | Tanggal masuk Bigetron: 26 December 2017 | Roles: [Roamer]
+
+47
+00:03:47,000 --> 00:03:52,000
+Narashi (Indonesia)
+Nama: Sabyan Firdaus | Tanggal masuk Bigetron: 2023-09-13a | Roles: [EXP Laner]
+
+48
+00:03:52,000 --> 00:03:57,000
+Bravo (Indonesia)
+Nama: Akbar Nida | Tanggal masuk Bigetron: 2018-10-0 | Roles: [EXP Laner]
+
+49
+00:03:57,000 --> 00:04:02,000
+Terima kasih sudah menonton!
+

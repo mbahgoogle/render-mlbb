@@ -19,10 +19,10 @@ import { PlayerCard } from "./components/PlayerCardv1";
 import { getLogoCode } from "./utils/getLogoClub";
 import { CONFIG } from "./config";
 
-import rawTopPlayers from "../public/data/alter_ego.json";
+// import rawTopPlayers from "../public/data/alter_ego.json";
 // import rawTopPlayers from "../public/data/bigetron_esports.json";
 // import rawTopPlayers from "../public/data/dewa_united_esports.json";
-// import rawTopPlayers from "../public/data/geek_fam_id.json";
+import rawTopPlayers from "../public/data/geek_fam_id.json";
 // import rawTopPlayers from "../public/data/onic.json";
 // import rawTopPlayers from "../public/data/evos.json";
 // import rawTopPlayers from "../public/data/rrq_hoshi.json";

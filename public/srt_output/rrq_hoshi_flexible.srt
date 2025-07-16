@@ -3,211 +3,211 @@
 Riwayat Pemain RRQ Hoshi 2017-2025
 
 2
-00:00:02,000 --> 00:00:07,000
+00:00:02,000 --> 00:00:08,000
 Chenn (Indonesia)
 Nama: Arron Fernaus | Tanggal masuk RRQ Hoshi: 08 May 2025 | Roles: [Jungler]
 
 3
-00:00:07,000 --> 00:00:12,000
+00:00:08,000 --> 00:00:14,000
 ToYy (Indonesia)
 Nama: Muhammad Rizky | Tanggal masuk RRQ Hoshi: 05 February 2025 | Roles: [Gold Laner]
 
 4
-00:00:12,000 --> 00:00:17,000
+00:00:14,000 --> 00:00:20,000
 Hazle (Indonesia)
 Nama: Muhammad Balakosa | Tanggal masuk RRQ Hoshi: 23 July 2024 | Roles: [Jungler]
 
 5
-00:00:17,000 --> 00:00:22,000
+00:00:20,000 --> 00:00:26,000
 Sutsujin (Indonesia)
 Nama: Arthur Sunarkho | Tanggal masuk RRQ Hoshi: 23 July 2024 | Roles: [Jungler]
 
 6
-00:00:22,000 --> 00:00:27,000
+00:00:26,000 --> 00:00:32,000
 Idok (Indonesia)
 Nama: Said Ridho | Tanggal masuk RRQ Hoshi: 20 July 2024 | Roles: [Roamer]
 
 7
-00:00:27,000 --> 00:00:32,000
+00:00:32,000 --> 00:00:38,000
 Rinz (Indonesia)
 Nama: Hajirin Arafat | Tanggal masuk RRQ Hoshi: 17 July 2024 | Roles: [Mid Laner]
 
 8
-00:00:32,000 --> 00:00:37,000
+00:00:38,000 --> 00:00:44,000
 Bunnyqt (Indonesia)
 Nama: Muhammad Saifuddin | Tanggal masuk RRQ Hoshi: 11 January 2024 | Roles: [Gold Laner]
 
 9
-00:00:37,000 --> 00:00:42,000
+00:00:44,000 --> 00:00:50,000
 Octa (Indonesia)
 Nama: Muhamad Maulana | Tanggal masuk RRQ Hoshi: 11 January 2024 | Roles: [Mid Laner]
 
 10
-00:00:42,000 --> 00:00:47,000
+00:00:50,000 --> 00:00:56,000
 Donn (Indonesia)
 Nama: Ramadhoni | Tanggal masuk RRQ Hoshi: 07 January 2024 | Roles: [EXP Laner]
 
 11
-00:00:47,000 --> 00:00:52,000
+00:00:56,000 --> 00:01:02,000
 Irrad (Philippines)
 Nama: John Abarquez | Tanggal masuk RRQ Hoshi: 05 December 2023 | Roles: [Jungler]
 
 12
-00:00:52,000 --> 00:00:57,000
+00:01:02,000 --> 00:01:08,000
 Brusko (Philippines)
 Nama: Borris Parro | Tanggal masuk RRQ Hoshi: 05 December 2023 | Roles: [Roamer]
 
 13
-00:00:57,000 --> 00:01:02,000
+00:01:08,000 --> 00:01:14,000
 Dyrennn (Indonesia)
 Nama: Rendy Syahputra | Tanggal masuk RRQ Hoshi: 09 July 2023 | Roles: [EXP Laner]
 
 14
-00:01:02,000 --> 00:01:07,000
+00:01:14,000 --> 00:01:20,000
 Ferxiic (Indonesia)
 Nama: Ferdyansyah Kamaruddin | Tanggal masuk RRQ Hoshi: 13 June 2023 | Roles: [Jungler]
 
 15
-00:01:07,000 --> 00:01:12,000
+00:01:20,000 --> 00:01:26,000
 Naomi (Myanmar)
 Nama: Min Ko Ko | Tanggal masuk RRQ Hoshi: 02 June 2023 | Roles: [Roamer]
 
 16
-00:01:12,000 --> 00:01:17,000
+00:01:26,000 --> 00:01:32,000
 RENBO (Indonesia)
 Nama: Deven Markos | Tanggal masuk RRQ Hoshi: 25 January 2023 | Roles: [Mid Laner]
 
 17
-00:01:17,000 --> 00:01:22,000
+00:01:32,000 --> 00:01:38,000
 Banana (Indonesia)
 Nama: Andre Putra | Tanggal masuk RRQ Hoshi: 01 September 2022 | Roles: [EXP Laner]
 
 18
-00:01:22,000 --> 00:01:27,000
+00:01:38,000 --> 00:01:44,000
 Aether (Indonesia)
 Nama: Jason Zefanya | Tanggal masuk RRQ Hoshi: 22 January 2022 | Roles: [Jungler]
 
 19
-00:01:27,000 --> 00:01:32,000
+00:01:44,000 --> 00:01:50,000
 Justinnn (Indonesia)
 Nama: Edi Susanto | Tanggal masuk RRQ Hoshi: 22 January 2022 | Roles: [EXP Laner]
 
 20
-00:01:32,000 --> 00:01:37,000
+00:01:50,000 --> 00:01:56,000
 Violence (Indonesia)
 Nama: Riko | Tanggal masuk RRQ Hoshi: 22 January 2022 | Roles: [Roamer]
 
 21
-00:01:37,000 --> 00:01:42,000
+00:01:56,000 --> 00:02:02,000
 Clayyy (Indonesia)
 Nama: Deden Nurhasan | Tanggal masuk RRQ Hoshi: 07 July 2021 | Roles: [Mid Laner]
 
 22
-00:01:42,000 --> 00:01:47,000
+00:02:02,000 --> 00:02:08,000
 Skylar (Indonesia)
 Nama: Schevenko Tendean | Tanggal masuk RRQ Hoshi: 03 March 2021 | Roles: [Gold Laner]
 
 23
-00:01:47,000 --> 00:01:52,000
+00:02:08,000 --> 00:02:14,000
 Taka (Indonesia)
 Nama: Fadhil Asra | Tanggal masuk RRQ Hoshi: 09 February 2021 | Roles: [Gold Laner]
 
 24
-00:01:52,000 --> 00:01:57,000
+00:02:14,000 --> 00:02:20,000
 Psychoo (Indonesia)
 Nama: Teguh Firdaus | Tanggal masuk RRQ Hoshi: 04 December 2020 | Roles: [Mid Laner, Roamer]
 
 25
-00:01:57,000 --> 00:02:02,000
+00:02:20,000 --> 00:02:26,000
 Alberttt (Indonesia)
 Nama: Albert Iskandar | Tanggal masuk RRQ Hoshi: 21 August 2020 | Roles: [Jungler, Gold Laner]
 
 26
-00:02:02,000 --> 00:02:07,000
+00:02:26,000 --> 00:02:32,000
 Wizzking (Brunei)
 Nama: Mohd Zulkifli | Tanggal masuk RRQ Hoshi: 24 January 2020 | Roles: [EXP Laner, Gold Laner]
 
 27
-00:02:07,000 --> 00:02:12,000
+00:02:32,000 --> 00:02:38,000
 VYN (Indonesia)
 Nama: Calvin | Tanggal masuk RRQ Hoshi: 13 August 2019 | Roles: [Roamer, Mid Laner]
 
 28
-00:02:12,000 --> 00:02:17,000
+00:02:38,000 --> 00:02:44,000
 R7 (Indonesia)
 Nama: Rivaldi Fatah | Tanggal masuk RRQ Hoshi: 02 August 2019 | Roles: [EXP Laner]
 
 29
-00:02:17,000 --> 00:02:22,000
+00:02:44,000 --> 00:02:50,000
 MidGod (Indonesia)
 Nama: Agung Wibowo | Tanggal masuk RRQ Hoshi: 26 June 2019 | Roles: [EXP Laner]
 
 30
-00:02:22,000 --> 00:02:27,000
+00:02:50,000 --> 00:02:56,000
 LJ (Indonesia)
 Nama: Joshua Darmansyah | Tanggal masuk RRQ Hoshi: 26 June 2019 | Roles: []
 
 31
-00:02:27,000 --> 00:02:32,000
+00:02:56,000 --> 00:03:02,000
 Rave (Indonesia)
 Nama: Fadhil Abdurahman | Tanggal masuk RRQ Hoshi: 26 June 2019 | Roles: [Roamer]
 
 32
-00:02:32,000 --> 00:02:37,000
+00:03:02,000 --> 00:03:08,000
 XINNN (Indonesia)
 Nama: Yesaya Wowiling | Tanggal masuk RRQ Hoshi: 18 January 2019 | Roles: [Gold Laner, Jungler]
 
 33
-00:02:37,000 --> 00:02:42,000
+00:03:08,000 --> 00:03:14,000
 Jamess (Taiwan)
 Nama: Chen James | Tanggal masuk RRQ Hoshi: 17 January 2019 | Roles: [EXP Laner]
 
 34
-00:02:42,000 --> 00:02:47,000
+00:03:14,000 --> 00:03:20,000
 AyamJAGO (Indonesia)
 Nama: Widyanto Sukardi | Tanggal masuk RRQ Hoshi: 03 July 2018 | Roles: [Mid Laner]
 
 35
-00:02:47,000 --> 00:02:52,000
+00:03:20,000 --> 00:03:26,000
 Liam (Indonesia)
 Nama: William Setiawan | Tanggal masuk RRQ Hoshi: 03 July 2018 | Roles: [Roamer]
 
 36
-00:02:52,000 --> 00:02:57,000
+00:03:26,000 --> 00:03:32,000
 Lavitz (Indonesia)
 Nama: Soetrisno | Tanggal masuk RRQ Hoshi: 17 May 2018 | Roles: [EXP Laner]
 
 37
-00:02:57,000 --> 00:03:02,000
+00:03:32,000 --> 00:03:38,000
 Tuturu (Indonesia)
 Nama: Diky | Tanggal masuk RRQ Hoshi: 14 September 2017 | Roles: [Gold Laner]
 
 38
-00:03:02,000 --> 00:03:07,000
+00:03:38,000 --> 00:03:44,000
 InstincT (Indonesia)
 Nama: Calvien Liem | Tanggal masuk RRQ Hoshi: 14 September 2017 | Roles: [Roamer]
 
 39
-00:03:07,000 --> 00:03:12,000
+00:03:44,000 --> 00:03:50,000
 xBarierjr (Indonesia)
 Nama: Risky Gunawan | Tanggal masuk RRQ Hoshi: 14 September 2017 | Roles: [Roamer]
 
 40
-00:03:12,000 --> 00:03:17,000
+00:03:50,000 --> 00:03:56,000
 Marsha (Indonesia)
 Nama: Steven Kurniawan | Tanggal masuk RRQ Hoshi: 14 September 2017 | Roles: [Roamer]
 
 41
-00:03:17,000 --> 00:03:22,000
+00:03:56,000 --> 00:04:02,000
 Banshee (Indonesia)
 Nama: Jordy Dave | Tanggal masuk RRQ Hoshi: 14 September 2017 | Roles: [Gold Laner]
 
 42
-00:03:22,000 --> 00:03:27,000
+00:04:02,000 --> 00:04:08,000
 Lemon (Indonesia)
 Nama: Muhammad Ikhsan | Tanggal masuk RRQ Hoshi: 14 September 2017 | Roles: [Mid Laner, EXP Laner]
 
 43
-00:03:27,000 --> 00:03:32,000
+00:04:08,000 --> 00:04:13,000
 Terima kasih sudah menonton!
 

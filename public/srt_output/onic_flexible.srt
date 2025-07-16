@@ -3,161 +3,161 @@
 Riwayat Pemain ONIC 2017-2025
 
 2
-00:00:02,000 --> 00:00:07,000
+00:00:02,000 --> 00:00:08,000
 Ryota (Philippines)
 Nama: Nowee Cabailo Macasa | Tanggal masuk ONIC: 13 March 2025 | Roles: [EXP Laner]
 
 3
-00:00:07,000 --> 00:00:12,000
+00:00:08,000 --> 00:00:14,000
 Savero (Indonesia)
 Nama: Clayton Kuswanto | Tanggal masuk ONIC: 28 February 2025 | Roles: [Gold Laner]
 
 4
-00:00:12,000 --> 00:00:17,000
+00:00:14,000 --> 00:00:20,000
 Nnael (Indonesia)
 Nama: Manuel Simbolon | Tanggal masuk ONIC: 28 February 2025 | Roles: [Jungler]
 
 5
-00:00:17,000 --> 00:00:22,000
+00:00:20,000 --> 00:00:26,000
 Lutpiii (Indonesia)
 Nama: Moch Ardianto | Tanggal masuk ONIC: 28 February 2025 | Roles: [EXP Laner]
 
 6
-00:00:22,000 --> 00:00:27,000
+00:00:26,000 --> 00:00:32,000
 Rezzz (Indonesia)
 Nama: Muhammad Kurniawan | Tanggal masuk ONIC: 29 August 2024 | Roles: [EXP Laner]
 
 7
-00:00:27,000 --> 00:00:32,000
+00:00:32,000 --> 00:00:38,000
 Marsha (Indonesia)
 Nama: Steven Kurniawan | Tanggal masuk ONIC: 28 July 2024 | Roles: [Roamer]
 
 8
-00:00:32,000 --> 00:00:37,000
+00:00:38,000 --> 00:00:44,000
 Alberttt (Indonesia)
 Nama: Albert Iskandar | Tanggal masuk ONIC: 23 June 2023 | Roles: [Jungler, Gold Laner]
 
 9
-00:00:37,000 --> 00:00:42,000
+00:00:44,000 --> 00:00:50,000
 Kairi (Philippines)
 Nama: Kairi Rayosdelsol | Tanggal masuk ONIC: 04 July 2022 | Roles: [Jungler]
 
 10
-00:00:42,000 --> 00:00:47,000
+00:00:50,000 --> 00:00:56,000
 SamoHt (Indonesia)
 Nama: Thomas Budiman | Tanggal masuk ONIC: 24 February 2022 | Roles: [Roamer]
 
 11
-00:00:47,000 --> 00:00:52,000
+00:00:56,000 --> 00:01:02,000
 Sir Ft Lans (Indonesia)
 Nama: Moch Aliarahman | Tanggal masuk ONIC: 12 February 2021 | Roles: [Jungler]
 
 12
-00:00:52,000 --> 00:00:57,000
+00:01:02,000 --> 00:01:08,000
 Maipan (Indonesia)
 Nama: Irfan Yusuf | Tanggal masuk ONIC: 12 February 2021 | Roles: [Mid Laner]
 
 13
-00:00:57,000 --> 00:01:02,000
+00:01:08,000 --> 00:01:14,000
 Sanz (Indonesia)
 Nama: Gilang | Tanggal masuk ONIC: 07 July 2020 | Roles: [Mid Laner]
 
 14
-00:01:02,000 --> 00:01:07,000
+00:01:14,000 --> 00:01:20,000
 Butsss (Indonesia)
 Nama: Muhammad Sanubari | Tanggal masuk ONIC: 06 June 2020 | Roles: [EXP Laner]
 
 15
-00:01:07,000 --> 00:01:12,000
+00:01:20,000 --> 00:01:26,000
 CW (Indonesia)
 Nama: Calvin Winata | Tanggal masuk ONIC: 26 February 2020 | Roles: [Gold Laner]
 
 16
-00:01:12,000 --> 00:01:17,000
+00:01:26,000 --> 00:01:32,000
 Rasy (Indonesia)
 Nama: Rasya Wisita | Tanggal masuk ONIC: 26 February 2020 | Roles: [Roamer]
 
 17
-00:01:17,000 --> 00:01:22,000
+00:01:32,000 --> 00:01:38,000
 Gov (Indonesia)
 Nama: Govher Madethen | Tanggal masuk ONIC: 27 January 2020 | Roles: [Roamer]
 
 18
-00:01:22,000 --> 00:01:27,000
+00:01:38,000 --> 00:01:44,000
 JHeHeHe (Indonesia)
 Nama: Jian Juliansyah | Tanggal masuk ONIC: 27 January 2020 | Roles: [Mid Laner]
 
 19
-00:01:27,000 --> 00:01:32,000
+00:01:44,000 --> 00:01:50,000
 Angsa (Indonesia)
 Nama: Dywa Hanif | Tanggal masuk ONIC: 27 January 2020 | Roles: [EXP Laner]
 
 20
-00:01:32,000 --> 00:01:37,000
+00:01:50,000 --> 00:01:56,000
 Rasdalima (Indonesia)
 Nama: Muhammad Rafli Z | Tanggal masuk ONIC: 27 January 2020 | Roles: [Mid Laner]
 
 21
-00:01:37,000 --> 00:01:42,000
+00:01:56,000 --> 00:02:02,000
 Kiboy (Indonesia)
 Nama: Nicky Pontonuwu | Tanggal masuk ONIC: 27 January 2020 | Roles: [Roamer]
 
 22
-00:01:42,000 --> 00:01:47,000
+00:02:02,000 --> 00:02:08,000
 Sasa (Malaysia)
 Nama: Lu Khai Bean | Tanggal masuk ONIC: 31 January 2019 | Roles: [Coach, Gold Laner]
 
 23
-00:01:47,000 --> 00:01:52,000
+00:02:08,000 --> 00:02:14,000
 Psychoo (Indonesia)
 Nama: Teguh Firdaus | Tanggal masuk ONIC: 31 January 2019 | Roles: [Mid Laner, Roamer]
 
 24
-00:01:52,000 --> 00:01:57,000
+00:02:14,000 --> 00:02:20,000
 Udil (Indonesia)
 Nama: Muhammad Ardiansyah | Tanggal masuk ONIC: 31 January 2019 | Roles: [Mid Laner]
 
 25
-00:01:57,000 --> 00:02:02,000
+00:02:20,000 --> 00:02:26,000
 AzeR (Indonesia)
 Nama: Reza Kurniawan | Tanggal masuk ONIC: 31 January 2019 | Roles: [Gold Laner]
 
 26
-00:02:02,000 --> 00:02:07,000
+00:02:26,000 --> 00:02:32,000
 Watt (Indonesia)
 Nama: Supriadi Putra | Tanggal masuk ONIC: 10 August 2018 | Roles: [Gold Laner]
 
 27
-00:02:07,000 --> 00:02:12,000
+00:02:32,000 --> 00:02:38,000
 Antimage (Indonesia)
 Nama: Maxhill Leonardo | Tanggal masuk ONIC: 13 July 2018 | Roles: [EXP Laner]
 
 28
-00:02:12,000 --> 00:02:17,000
+00:02:38,000 --> 00:02:44,000
 Ichsan (Indonesia)
 Nama: Muhammad Ichsan | Tanggal masuk ONIC: 11 July 2018 | Roles: [Mid Laner]
 
 29
-00:02:17,000 --> 00:02:22,000
+00:02:44,000 --> 00:02:50,000
 Drian (Indonesia)
 Nama: Adriand Wong | Tanggal masuk ONIC: 11 July 2018 | Roles: [Roamer, Mid Laner]
 
 30
-00:02:22,000 --> 00:02:27,000
+00:02:50,000 --> 00:02:56,000
 Eiduart (Indonesia)
 Nama: Eiduart Tjahyadikarta | Tanggal masuk ONIC: 11 July 2018 | Roles: [Roamer]
 
 31
-00:02:27,000 --> 00:02:32,000
+00:02:56,000 --> 00:03:02,000
 Fenrir (Singapore)
 Nama: Nashrudin | Tanggal masuk ONIC: 11 July 2018 | Roles: [Mid Laner]
 
 32
-00:02:32,000 --> 00:02:37,000
+00:03:02,000 --> 00:03:08,000
 Spade (Indonesia)
 Nama: Hansen Meyerson | Tanggal masuk ONIC: 11 July 2018 | Roles: [Gold Laner]
 
 33
-00:02:37,000 --> 00:02:42,000
+00:03:08,000 --> 00:03:13,000
 Terima kasih sudah menonton!
 

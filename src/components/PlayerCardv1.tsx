@@ -14,7 +14,7 @@ import { MdStadium as Stadium
 
 import { getLogoCode } from "../utils/getLogoClub";
 import { getCountryCode } from "../utils/getCountryCode";
-import { getHeros } from "../utils/getHeros";
+import { herosIcon } from "../utils/getHeros";
 import { loadFont as loadRoboto } from "@remotion/google-fonts/Roboto";
 import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
 import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
@@ -207,7 +207,7 @@ export const PlayerCard: React.FC<{
                   <div key={index} className="flex flex-col items-center">
                     <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-200 border-10 border-[#243c5a]">
                       <img
-                        src={getImageSource(getHeros(hero))}
+                        src={getImageSource(herosIcon(hero))}
                         alt={hero}
                         className="w-full h-full object-cover"
                       />

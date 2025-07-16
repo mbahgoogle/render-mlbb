@@ -8,272 +8,46 @@ import {
   delayRender,
   continueRender,
   Audio,
-  OffthreadVideo,
   staticFile,
 } from "remotion";
 import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { TopPlayer, validateTopPlayers } from "./types/schema";
-import { PlayerCard } from "./components/PlayerCardv1";
-
-import { getLogoCode } from "./utils/getLogoClub";
+import { DoubleCard } from "./components/DoubleCardv1";
 import { CONFIG } from "./config";
 
 // import rawTopPlayers from "../public/data/alter_ego.json";
 // import rawTopPlayers from "../public/data/bigetron_esports.json";
 // import rawTopPlayers from "../public/data/dewa_united_esports.json";
-import rawTopPlayers from "../public/data/geek_fam_id.json";
+// import rawTopPlayers from "../public/data/geek_fam_id.json";
 // import rawTopPlayers from "../public/data/onic.json";
 // import rawTopPlayers from "../public/data/evos.json";
 // import rawTopPlayers from "../public/data/rrq_hoshi.json";
 
-// Add helper function to check if URL is local or remote
-const getImageSource = (url: string | undefined) => {
-  if (!url) return staticFile('default-player.png'); // Add a default image
-  // Check if the URL is remote (starts with http:// or https://)
-  if (url.startsWith('http://') || url.startsWith('https://')) {
-    return url;
-  }
-  // If it's a local file, use staticFile
-  return staticFile(url);
-};
+import rawTopPlayers from "../public/data/mlbb_exp_laner.json";
+// import rawTopPlayers from "../public/data/mlbb_gold_laner.json";
+// import rawTopPlayers from "../public/data/mlbb_mid_laner.json";
+// import rawTopPlayers from "../public/data/mlbb_jungle.json";
+// import rawTopPlayers from "../public/data/mlbb_roam.json";
+
+import Intro from "./components/Intro";
+import Ending from "./components/Ending";
+
 
 const { fontFamily: rubikFont } = loadRubik();
 
+/**
+ * Fungsi untuk menghitung posisi statis kartu berdasarkan indeks dan lebar layar
+ * @param index - Indeks kartu dalam array
+ * @param screenWidth - Lebar layar video
+ * @returns Posisi horizontal kartu dalam piksel
+ */
 const getStaticCardPosition = (index: number, screenWidth: number) => {
   const startPosition = screenWidth / 2 - 1300;
   return startPosition + index * 650;
 };
 
-const IntroTitle: React.FC<{ person?: TopPlayer }> = ({ person }) => {
-  const frame = useCurrentFrame();
-
-  if (!person) {
-    return null; // Jika person tidak ada, jangan render apapun
-  }
-
-  const logoSlideDown = useMemo(
-    () =>
-      interpolate(frame, [0, 15], [0, 5], {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      }),
-    [frame]
-  );
-
-  const titleSlideUp = useMemo(
-    () =>
-      interpolate(frame, [0, 25], [100, 0], {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      }),
-    [frame]
-  );
-
-  const subtitleSlideUp = useMemo(
-    () =>
-      interpolate(frame, [15, 40], [100, 0], {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      }),
-    [frame]
-  );
-
-  const presenetBySlideUp = useMemo(
-    () =>
-      interpolate(frame, [15, 40], [100, 0], {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
-      }),
-    [frame]
-  );
-
-  return (
-    <div
-      style={{
-        position: "absolute",
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: rubikFont,
-        overflow: "hidden",
-      }}
-    >
-      {/* Logo Klub */}
-      <div
-        className="flex justify-center items-center pb-5"
-        style={{ transform: `translateY(${logoSlideDown}%)` }}
-      >
-        <div className="w-150 h-150 flex items-center justify-center overflow-hidden rounded-full bg-black">
-          <img
-            src={getImageSource(getLogoCode(person.team))}
-            alt="Club Logo"
-            className="w-full h-full object-contain p-20"
-          />
-        </div>
-      </div>
-
-      {/* Judul */}
-      <h1
-        style={{
-          fontSize: "7rem",
-          fontWeight: "900",
-          transform: `translateY(${titleSlideUp}%)`,
-        }}
-      >
-        {person.team}
-      </h1>
-
-      <h2
-        style={{
-          fontSize: "5rem",
-          fontWeight: "700",
-          transform: `translateY(${subtitleSlideUp}%)`,
-        }}
-      >
-        Data Riwayat Pemain
-      </h2>
-
-      <h2
-        style={{
-          fontSize: "4rem",
-          fontWeight: "700",
-          transform: `translateY(${subtitleSlideUp}%)`,
-          maxWidth: "60%",
-          textAlign: "center",
-          margin: "0 auto",
-          lineHeight: "1.4"
-        }}
-      >
-        Jangan Lupa Like & Share :)
-      </h2>
-
-      <h3
-        style={{
-          fontSize: "3rem",
-          fontWeight: "600",
-          transform: `translateY(${presenetBySlideUp}%)`,
-        }}
-      >
-        ⚡Present by: SINAU VIDEO
-      </h3>
-    </div>
-  );
-};
-
-const EndingSequence: React.FC<{ endingDuration: number }> = ({ endingDuration }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const duration = endingDuration; // Use the prop instead of hardcoded 5 * fps
-
-  // Samakan rotasi watermark dengan Player List
-  const watermarkRotation = useMemo(() => {
-    return interpolate(
-      frame,
-      [0, duration],
-      [0, 360],
-      {
-        extrapolateRight: 'clamp',
-        extrapolateLeft: 'clamp',
-      }
-    );
-  }, [frame, duration]);
-
-  const text = "Terima Kasih...";
-  const characters = text.split('').map((char, index) => {
-    if (char === ' ' && index < text.length - 1) {
-      return '  ';
-    }
-    return char;
-  });
-  
-  const typingProgress = useMemo(() => {
-    return interpolate(
-      frame,
-      [0, duration],
-      [0, characters.length],
-      {
-        extrapolateLeft: 'clamp',
-        extrapolateRight: 'clamp',
-      }
-    );
-  }, [frame, duration, characters.length]);
-
-  return (
-    <div
-      style={{
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      {/* SVG Watermark - sama dengan Player List */}
-      <div
-        style={{
-          position: "absolute",
-          width: "300px",
-          height: "300px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          opacity: 0.5,
-          zIndex: 0,
-          top: -90,
-          left: "50%",
-          transform: `translateX(-50%) rotate(${watermarkRotation}deg)`,
-          transition: "transform 0.1s linear",
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 480 480"
-          width="100%"
-          height="100%"
-        >
-          <path
-            d="m240 240 160-80v-.7A79.8 79.8 0 0 0 320.7 80h-.7l-80 160ZM240 240 160 80h-.7A79.8 79.8 0 0 0 80 159.3v.7l160 80ZM240 240l80 160h.7a79.8 79.8 0 0 0 79.3-79.3v-.7l-160-80ZM240 240 80 320v.7a79.8 79.8 0 0 0 79.3 79.3h.7l80-160ZM240 240l169.7 56.6.5-.5a79.8 79.8 0 0 0 0-112.2l-.5-.5L240 240ZM240 240l56.6-169.7-.5-.5a79.8 79.8 0 0 0-112.2 0l-.5.5L240 240ZM240 240l-56.6 169.7.5.5a79.8 79.8 0 0 0 112.2 0l.5-.5L240 240ZM240 240 70.3 183.4l-.5.5a79.8 79.8 0 0 0 0 112.2l.5.5L240 240Z"
-            fill="#000"
-          />
-        </svg>
-      </div>
-
-      <div
-        style={{
-          fontFamily: rubikFont,
-          fontSize: '4rem',
-          color: 'black',
-          textAlign: 'center',
-          lineHeight: 1.5,
-          textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-          letterSpacing: '0em',
-          position: 'relative',
-          zIndex: 1
-        }}
-      >
-        {characters.map((char, i) => (
-          <span
-            key={i}
-            style={{
-              opacity: i < typingProgress ? 1 : 0,
-              display: 'inline-block',
-              transform: `translateY(${i < typingProgress ? 0 : 20}px)`,
-              transition: 'all 0.1s ease-out',
-              whiteSpace: 'pre'
-            }}
-          >
-            {char}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-};
+// HAPUS: IntroTitle dan EndingSequence
 
 type PlayerListProps = {
   cardsToShow: number;
@@ -282,6 +56,13 @@ type PlayerListProps = {
   endingDuration: number;
 };
 
+/**
+ * Komponen utama PlayerList yang menangani animasi daftar pemain
+ * @param cardsToShow - Jumlah kartu yang akan ditampilkan
+ * @param durasiPerCardDetik - Durasi tampilan per kartu dalam detik
+ * @param introDelay - Delay sebelum intro dimulai
+ * @param endingDuration - Durasi ending sequence
+ */
 export const PlayerList: React.FC<PlayerListProps> = ({ 
   cardsToShow = 10, 
   durasiPerCardDetik = 6, 
@@ -290,15 +71,20 @@ export const PlayerList: React.FC<PlayerListProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const { fps, width, height, } = useVideoConfig();
-  const [handle] = useState(() => delayRender("timeout-60000")); // Tambahkan timeout 60 detik
+  // Delay render dengan timeout 60 detik untuk memastikan data ter-load
+  const [handle] = useState(() => delayRender("timeout-60000"));
   const [validatedData, setValidatedData] = useState<TopPlayer[]>([]);
 
+  /**
+   * Effect untuk memproses dan memvalidasi data pemain
+   * Mengurutkan berdasarkan tanggal bergabung (terlama di atas)
+   */
   useEffect(() => {
     const processData = async () => {
       try {
         const data = validateTopPlayers(rawTopPlayers)
-          .sort((a, b) => new Date(a.date_of_join).getTime() - new Date(b.date_of_join).getTime())
-          .reverse(); // Reverse to get oldest first
+          .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+          .reverse(); // Reverse untuk mendapatkan yang terlama di atas
         setValidatedData(data);
         continueRender(handle);
       } catch (error) {
@@ -309,6 +95,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
     processData();
   }, [handle]);
 
+  // Perhitungan durasi dan timing untuk animasi
   const durationPerCard = durasiPerCardDetik * fps; // Durasi per kartu dalam frame
   const totalDuration = cardsToShow * durationPerCard;
   const initialDelay = CONFIG.initialDelay;
@@ -319,11 +106,16 @@ export const PlayerList: React.FC<PlayerListProps> = ({
   const opacityTransitionDuration = CONFIG.opacityTransitionDuration;
 
   // Hitung frame mulai ending sequence
-  // Ganti endingStartFrame agar mulai setelah Player List selesai
-  const endingStartFrame = introDelay + totalDuration; // Ending mulai setelah Player List selesai
+  // Ending mulai setelah Player List selesai
+  const endingStartFrame = introDelay + totalDuration;
 
+  // Memoize data untuk performa, hanya ambil jumlah kartu yang diperlukan
   const memoizedData = useMemo(() => validatedData.slice(0, cardsToShow), [validatedData, cardsToShow]);
 
+  /**
+   * Perhitungan posisi scroll horizontal untuk efek sliding kartu
+   * Menggunakan interpolate untuk animasi yang smooth
+   */
   const scrollX = useMemo(
     () =>
       interpolate(frame - mainCardsAnimationDuration, [0, scrollDuration], [0, -650 * (cardsToShow - 1)], {
@@ -334,9 +126,12 @@ export const PlayerList: React.FC<PlayerListProps> = ({
   );
 
   // Sesuaikan tinggi kartu berdasarkan resolusi video
-  const cardHeight = height * 0.5; // Misalnya, setengah dari tinggi video
+  const cardHeight = height * 0.5; // Setengah dari tinggi video
 
-  // Calculate rotation for watermark
+  /**
+   * Perhitungan rotasi watermark untuk efek berputar
+   * Watermark akan berputar 360 derajat selama durasi video
+   */
   const watermarkRotation = useMemo(() => {
     return interpolate(
       frame,
@@ -351,14 +146,14 @@ export const PlayerList: React.FC<PlayerListProps> = ({
 
   return (
     <AbsoluteFill>
-      {/* Intro Sequence */}
+      {/* Sequence Intro - Menampilkan komponen Intro */}
       <Sequence from={0} durationInFrames={introDelay}>
         <div className="grass">
-          {memoizedData.length > 0 && <IntroTitle person={memoizedData[0]} />}
+          <Intro person={memoizedData[0]} />
         </div>
       </Sequence>
 
-      {/* Player List Animation */}
+      {/* Sequence Player List Animation - Animasi daftar pemain */}
       <Sequence from={introDelay} durationInFrames={totalDuration}>
         <div
           className="grass"
@@ -369,7 +164,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
           }}
         >
           <div className="w-full flex items-center justify-center">
-            {/* SVG Watermark */}
+            {/* SVG Watermark - Logo berputar di background */}
             <div
               style={{
                 position: "absolute",
@@ -382,7 +177,8 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                 zIndex: 0,
                 top: -90,
                 left: "50%",
-                transform: `translateX(-50%) rotate(${watermarkRotation}deg)`,
+                // Percepat putaran watermark: kalikan sudut rotasi dengan 2
+                transform: `translateX(-50%) rotate(${watermarkRotation * 10}deg)`,
                 transition: "transform 0.1s linear",
               }}
             >
@@ -399,7 +195,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
               </svg>
             </div>
 
-            {/* Watermark Text */}
+            {/* Watermark Text - Teks watermark dengan efek getar */}
             <div
               style={{
                 position: "absolute",
@@ -420,67 +216,65 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                 left: 0,
                 top: -20,
                 paddingLeft: "1rem",
-                // Efek getar (shake)
+                // Efek getar (shake) menggunakan sin dan cos
                 transform: `translate(
                   ${Math.sin(frame * 0.8) * 2 + (Math.random() - 0.5) * 1.5}px,
                   ${Math.cos(frame * 1.1) * 2 + (Math.random() - 0.5) * 1.5}px
                 ) rotate(${Math.sin(frame * 0.3) * 1.5}deg)`,
-                // Efek noise pada opacity
+                // Efek noise pada opacity untuk variasi
                 opacity: 0.18 + Math.abs(Math.sin(frame * 0.7 + Math.random() * 10)) * 0.07,
               }}
             >
               yt@sinauvideo
             </div>
 
-            {/* Watermark Overlay Atas Card, hanya 2 detik di detik ke-10 */}
-            {frame >= introDelay + fps * 10 && frame < introDelay + fps * 12 && (
-              <div
-                style={{
-                  position: "absolute",
-                  top: 40,
-                  left: "50%",
-                  transform: `translate(-50%, ${
-                    interpolate(
-                      frame,
-                      [
-                        introDelay + fps * 10, 
-                        introDelay + fps * 10 + 10, 
-                        introDelay + fps * 12 - 10, 
-                        introDelay + fps * 12
-                      ],
-                      [-60, 0, 0, -60], // dari atas ke posisi normal, lalu keluar ke atas lagi
+            {/* Watermark Overlay - Muncul setiap 30 detik selama 3 detik */}
+            {(() => {
+              const watermarkInterval = 30 * fps;
+              const watermarkDuration = 3 * fps;
+              const watermarkStart = introDelay + 16 * fps; // mulai di detik ke-16 setelah intro
+              const watermarkFrame = frame - watermarkStart >= 0 ? (frame - watermarkStart) % watermarkInterval : -1;
+              const showWatermark = (frame >= watermarkStart) && (watermarkFrame >= 0) && (watermarkFrame < watermarkDuration);
+              if (!showWatermark) return null;
+              return (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 40,
+                    left: "50%",
+                    transform: `translate(-50%, ${
+                      interpolate(
+                        watermarkFrame,
+                        [0, 10, watermarkDuration - 10, watermarkDuration],
+                        [-60, 0, 0, -60], // Animasi slide dari atas ke posisi normal, lalu keluar ke atas lagi
+                        { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+                      )
+                    }px)`,
+                    zIndex: 10,
+                    background: "rgba(0,0,0,0.85)",
+                    color: "#fff",
+                    fontWeight: 900,
+                    fontSize: "3rem",
+                    padding: "0.7em 2em",
+                    borderRadius: "2em",
+                    boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
+                    fontFamily: rubikFont,
+                    opacity: interpolate(
+                      watermarkFrame,
+                      [0, 10, watermarkDuration - 10, watermarkDuration],
+                      [0, 1, 1, 0],
                       { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-                    )
-                  }px)`,
-                  zIndex: 10,
-                  background: "rgba(0,0,0,0.85)",
-                  color: "#fff",
-                  fontWeight: 900,
-                  fontSize: "3rem",
-                  padding: "0.7em 2em",
-                  borderRadius: "2em",
-                  boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
-                  fontFamily: rubikFont,
-                  opacity: interpolate(
-                    frame,
-                    [
-                      introDelay + fps * 10, 
-                      introDelay + fps * 10 + 10, 
-                      introDelay + fps * 12 - 10, 
-                      introDelay + fps * 12
-                    ],
-                    [0, 1, 1, 0],
-                    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-                  ),
-                  pointerEvents: "none",
-                  transition: "opacity 0.2s, transform 0.2s"
-                }}
-              >
-                yt@sinauvideo
-              </div>
-            )}
+                    ),
+                    pointerEvents: "none",
+                    transition: "opacity 0.2s, transform 0.2s"
+                  }}
+                >
+                  yt@sinauvideo
+                </div>
+              );
+            })()}
 
-            {/* Container Kartu dengan Efek Scroll */}
+            {/* Container Kartu dengan Efek Scroll - Container utama untuk semua kartu */}
             <div
               className="flex gap-4"
               style={{
@@ -490,17 +284,24 @@ export const PlayerList: React.FC<PlayerListProps> = ({
               }}
             >
               {memoizedData.map((person, index) => {
+                // Tentukan apakah kartu termasuk dalam 4 kartu utama
                 const isMainCard = index < 4;
+                // Hitung delay animasi berdasarkan jenis kartu
                 const delay = isMainCard
                   ? initialDelay + index * cardEntryDuration
                   : mainCardsAnimationDuration + (index - 4) * staggerDelay;
 
+                // Posisi awal kartu
                 const initialPosition = getStaticCardPosition(index, width);
 
+                /**
+                 * Efek slide up untuk kartu utama
+                 * Kartu akan slide dari bawah ke posisi normal
+                 */
                 const slideUpOffset = isMainCard
                   ? interpolate(
                       frame - delay - introDelay,
-                      [0, 30],
+                      [15, 30],
                       [200, 0],
                       {
                         extrapolateLeft: "clamp",
@@ -509,6 +310,10 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                     )
                   : 0;
 
+                /**
+                 * Efek bounce menggunakan spring animation
+                 * Memberikan efek pantulan saat kartu muncul
+                 */
                 const bounceEffect = spring({
                   frame: frame - delay - introDelay,
                   from: 1,
@@ -527,24 +332,27 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                     className="absolute pt-10"
                     style={{
                       left: initialPosition,
+                      // Animasi opacity untuk fade in
                       opacity: interpolate(
                         frame - delay - introDelay,
                         [0, opacityTransitionDuration],
                         [0, 1],
                         { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
                       ),
+                      // Kombinasi slide up dan bounce effect
                       transform: `translateY(${
                         slideUpOffset + bounceEffect * 20
                       }px)`,
                     }}
                   >
-                    <PlayerCard person={person} style={{ height: cardHeight }} />
+                    <DoubleCard person={person} style={{ height: cardHeight }} index={index} />
                   </div>
                 );
               })}
             </div>
           </div>
         </div>
+        {/* Audio Background - Musik dengan fade in/out */}
         <Audio
           volume={(f) =>
             interpolate(
@@ -559,17 +367,10 @@ export const PlayerList: React.FC<PlayerListProps> = ({
         />
       </Sequence>
 
-      {/* Ending Sequence - Muncul setelah Player List Animation selesai */}
+      {/* Sequence Ending - Muncul setelah Player List Animation selesai */}
       <Sequence from={endingStartFrame} durationInFrames={endingDuration}>
-        <div className="grass" style={{ opacity: interpolate(
-          frame - endingStartFrame,
-          [0, 30],
-          [0, 1],
-          { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-        ) }}>
-
-          
-          <EndingSequence endingDuration={endingDuration} />
+        <div className="grass">
+          <Ending />
         </div>
       </Sequence>
     </AbsoluteFill>

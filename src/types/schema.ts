@@ -3,16 +3,17 @@ import { z } from 'zod';
 // Schema untuk data pemain bola
 export const TopPlayerSchema = z.object({
   // rank: z.number(), // Bisa kosong
-  name: z.string(),
-  full_name: z.string(),
-  heros: z.array(z.string()),
+  name: z.string().optional(),
+  full_name: z.string().optional(),
+  heros: z.array(z.string()).optional(),
   image: z.string().optional(),
-  nation: z.string(),
-  nation_code: z.string(),
-  team: z.string(),
-  date_of_birth: z.string(),
-  roles: z.array(z.string()),
-  date_of_join: z.string(),
+  nation: z.string().optional(),
+  nation_code: z.string().optional(),
+  team: z.string().optional(),
+  date_of_birth: z.string().optional(),
+  roles: z.array(z.string()).optional(),
+  description: z.string().optional(),
+  date: z.string(),
 });
 
 // Type yang dihasilkan dari schema

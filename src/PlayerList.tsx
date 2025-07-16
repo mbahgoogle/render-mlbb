@@ -27,8 +27,8 @@ import { CONFIG } from "./config";
 // import rawTopPlayers from "../public/data/mlbb_exp_laner.json";
 // import rawTopPlayers from "../public/data/mlbb_gold_laner.json";
 // import rawTopPlayers from "../public/data/mlbb_mid_laner.json";
-import rawTopPlayers from "../public/data/mlbb_jungle.json";
-// import rawTopPlayers from "../public/data/mlbb_roam.json";
+// import rawTopPlayers from "../public/data/mlbb_jungle.json";
+import rawTopPlayers from "../public/data/mlbb_roam.json";
 
 import Intro from "./components/Intro";
 import Ending from "./components/Ending";

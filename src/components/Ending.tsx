@@ -11,8 +11,7 @@ const Ending: React.FC<{ endingDuration?: number }> = ({ endingDuration = 300 })
   // Samakan rotasi watermark dengan Player List
   const watermarkRotation = useMemo(() => {
     return interpolate(frame, [0, duration], [0, 360], {
-      extrapolateRight: 'clamp',
-      extrapolateLeft: 'clamp',
+      extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
     });
   }, [frame, duration]);
 
@@ -26,8 +25,7 @@ const Ending: React.FC<{ endingDuration?: number }> = ({ endingDuration = 300 })
 
   const typingProgress = useMemo(() => {
     return interpolate(frame, [0, duration], [0, characters.length], {
-      extrapolateLeft: 'clamp',
-      extrapolateRight: 'clamp',
+      extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
     });
   }, [frame, duration, characters.length]);
 

@@ -25,8 +25,8 @@ import { CONFIG } from "./config";
 // import rawTopPlayers from "../public/data/rrq_hoshi.json";
 
 // import rawTopPlayers from "../public/data/mlbb_exp_laner.json";
-import rawTopPlayers from "../public/data/mlbb_gold_laner.json";
-// import rawTopPlayers from "../public/data/mlbb_mid_laner.json";
+// import rawTopPlayers from "../public/data/mlbb_gold_laner.json";
+import rawTopPlayers from "../public/data/mlbb_mid_laner.json";
 // import rawTopPlayers from "../public/data/mlbb_jungle.json";
 // import rawTopPlayers from "../public/data/mlbb_roam.json";
 
@@ -362,8 +362,8 @@ export const PlayerList: React.FC<PlayerListProps> = ({
               { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
             )
           }
-          // src={staticFile("_audio/parzival_william_rosati.mp3")}
-          src={staticFile("_audio/pooka_kevin_macleod.mp3")}          
+          src={staticFile("_audio/parzival_william_rosati.mp3")}
+          // src={staticFile("_audio/pooka_kevin_macleod.mp3")}          
           startFrom={120}
         />
       </Sequence>

@@ -272,7 +272,7 @@ const heroMap: { [key: string]: string } = {
     "Yi Sun-shin":  withCloudImgCrop("https://liquipedia.net/commons/images/thumb/7/7e/Yi_Sun-Shin_infobox.jpg/600px-Yi_Sun-Shin_infobox.jpg"),
     "Yin":  withCloudImgCrop("https://liquipedia.net/commons/images/thumb/2/25/Yin_infobox.jpg/600px-Yin_infobox.jpg"),
     "Yu Zhong":  withCloudImgCrop("https://liquipedia.net/commons/images/thumb/9/9c/Yu_Zhong_infobox.jpg/600px-Yu_Zhong_infobox.jpg"),
-    "Yve":  withCloudImgCrop("https://liquipedia.net/commons/images/d/d3/Yve_infobox.jpg"),
+    "Yve":  withCloudImgCrop("https://static.wikia.nocookie.net/character-stats-and-profiles/images/0/0c/Yve_%28MLBB%29.webp/revision/latest?cb=20241114040954"),
     "Zetian":  withCloudImgCrop("https://liquipedia.net/commons/images/0/08/Zetian_infobox.png"),
     "Zhask":  withCloudImgCrop("https://cdn.oneesports.gg/cdn-data/2022/02/MLBB_Zhask-1.jpg"),
     "Zhuxin":  withCloudImgCrop("https://liquipedia.net/commons/images/3/34/Zhuxin_infobox.jpg"),

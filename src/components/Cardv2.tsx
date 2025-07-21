@@ -112,7 +112,7 @@ const PlayerCardBlock: React.FC<{ person: TopPlayer; height: number; frameOffset
   );
 };
 
-export const DoubleCard: React.FC<{
+export const Carding: React.FC<{
   person: TopPlayer;
   style?: React.CSSProperties;
   index?: number; // Tambahkan index
@@ -152,4 +152,4 @@ export const DoubleCard: React.FC<{
   );
 };
 
-export default DoubleCard;
+export default Carding;

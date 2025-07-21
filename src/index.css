@@ -51,6 +51,7 @@
 }
 
 
+
 .text-xxs {
   font-size: 0.65rem;
   line-height: 0.85rem;
@@ -80,6 +81,15 @@
   }
 }
 
+.card-container {
+  position: relative;
+  z-index: 2; /* Lebih tinggi dari .dot-mask */
+}
+.glass {
+  /* From https://css.glass */
+  background: rgb(238, 255, 0);
+}
+
 .grass {
   /* 
     Perbaikan: CSS variable harus didefinisikan dengan --nama: value; 
@@ -89,7 +99,7 @@
   --line: 2px;
   width: 100%;
   height: 100%;
-  background: #f1fa6e;
+  background: transparent;
   /* background: #09ff00; */
   background-image: 
     linear-gradient(var(--line-gradient) var(--line), transparent var(--line), transparent calc(100% - var(--line)), var(--line-gradient) calc(100% - var(--line))), 
@@ -98,3 +108,46 @@
   border: var(--line) solid var(--line-gradient);
 }
 
+.dot-mask {
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  /* Adaptif: gunakan warna dengan opacity agar cocok di background gelap/terang */
+  --dot-color: rgb(180, 135, 135);
+  background-image: radial-gradient(var(--dot-color) 0.15em, transparent 0.15em);
+  background-size: 1em 1em;
+  /* Mask tetap hitam agar area dot tetap transparan */
+  -webkit-mask-image: radial-gradient(
+    ellipse 60% 60% at 50% 50%,
+    #000 80%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 60% 60% at 50% 50%,
+    #000 80%,
+    transparent 100%
+  );
+}
+
+.grid-mask {
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  --grid-color: rgba(252, 252, 252, 0.555);
+  background-image:
+    linear-gradient(to right, var(--grid-color) 0.12em, transparent 0.12em),
+    linear-gradient(to bottom, var(--grid-color) 0.12em, transparent 0.12em);
+  background-size: 5.15em 5.6em;
+  -webkit-mask-image: radial-gradient(
+    ellipse 60% 60% at 50% 50%,
+    #000 80%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 60% 60% at 50% 50%,
+    #000 80%,
+    transparent 100%
+  );
+}

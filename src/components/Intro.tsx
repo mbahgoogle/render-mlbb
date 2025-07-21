@@ -3,7 +3,7 @@ import { interpolate, useCurrentFrame } from 'remotion';
 import { loadFont as loadRubik } from '@remotion/google-fonts/Rubik';
 import { getLogoCode } from '../utils/getLogoClub';
 import { staticFile } from 'remotion';
-import type { TopPlayer } from '../types/schema';
+import type { rawData } from '../types/schema';
 import { CONFIG } from '../config';
 
 // Optional: bisa menerima props jika ingin dinamis
@@ -19,7 +19,13 @@ const getImageSource = (url: string | undefined) => {
   return staticFile(url);
 };
 
-const Intro: React.FC<{ person: TopPlayer }> = ({ person }) => {
+const Intro: React.FC<{ person: rawData; colorText?: string }> = ({ person, colorText = '#fff' }) => {
+  // Utility function to quickly apply consistent text styles (e.g., color)
+  const getTextStyle = (extraStyles: React.CSSProperties = {}) => ({
+    color: colorText,
+    ...extraStyles,
+  });
+
   const typingText = "Don't Forget Like & Share";
   const typingSpeed = 2; // Semakin kecil, semakin cepat (1 = 1 char per frame)
   const frame = useCurrentFrame(); // Sudah ada, gunakan ulang
@@ -62,7 +68,6 @@ const Intro: React.FC<{ person: TopPlayer }> = ({ person }) => {
     // Dari hitam transparan ke hijau transparan
     const startColor = [0, 0, 0, 0.18]; // rgba(0,0,0,0.18)
     const endColor = [255, 255, 255, 0.38]; // rgba(255, 255, 255, 0.38)
-    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
     // Posisi sapuan (0% ke 100%)
     const sweep = Math.round(gradientStep * 100); // 0-100%
     // Stop kedua dan ketiga berdekatan untuk efek tajam
@@ -133,14 +138,14 @@ const Intro: React.FC<{ person: TopPlayer }> = ({ person }) => {
         </div>
       </div>
       {/* Judul */}
-      <h1 style={{ fontSize: '7rem', fontWeight: 900, transform: `translateY(${titleSlideUp}%)` }}>
+      <h1 style={getTextStyle({ fontSize: '7rem', fontWeight: 900, transform: `translateY(${titleSlideUp}%)` })}>
         {person.team}
       </h1>
-      <h2 style={{ fontSize: '5rem', fontWeight: 700, transform: `translateY(${subtitleSlideUp}%)` }}>{CONFIG.cardTitle}</h2>
-      <h2 style={{ fontSize: '4rem', fontWeight: 700, transform: `translateY(${subtitleSlideUp}%)`, maxWidth: '60%', textAlign: 'center', margin: '0 auto', lineHeight: '1.4' }}>
+      <h2 style={getTextStyle({ fontSize: '5rem', fontWeight: 700, transform: `translateY(${subtitleSlideUp}%)` })}>{CONFIG.cardTitle}</h2>
+      <h2 style={getTextStyle({ fontSize: '4rem', fontWeight: 700, transform: `translateY(${subtitleSlideUp}%)`, maxWidth: '60%', textAlign: 'center', margin: '0 auto', lineHeight: '1.4' })}>
         {displayedTypingText}
       </h2>
-      <h3 style={{ fontSize: '3rem', fontWeight: 600, transform: `translateY(${presenetBySlideUp}%)` }}>Present by: SINAU VIDEO</h3>
+      <h3 style={getTextStyle({ fontSize: '3rem', fontWeight: 600, transform: `translateY(${presenetBySlideUp}%)` })}>Present by: SINAU VIDEO</h3>
     </div>
   );
 };

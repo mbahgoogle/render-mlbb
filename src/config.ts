@@ -4,12 +4,31 @@
 export const CONFIG = {
   // Video Settings
   FPS: 60,
-  WIDTH: 2560,
+  
+  
+  // Resolusi video (belum digunakan, pilih sesuai kebutuhan)
+  // SD:     640x480
+  // HD:     1280x720
+  // Full HD:1920x1080
+  // 2K:     2048x1152
+  // QHD:    2560x1440 (default)
+  // 4K:     3840x2160
+
+  // SD
+  // WIDTH: 640,   
+  // HEIGHT: 480,
+
+  // SD
+  // WIDTH: 1280,   
+  // HEIGHT: 720,
+
+  // 2K
+  WIDTH: 2560,   
   HEIGHT: 1440,
 
   // Content Settings
   cardTitle: "Mobile Legends Cosplay Edition",
-  cardsToShow: 25,           // Jumlah kartu yang akan ditampilkan
+  cardsToShow: 20,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
 
   // Timing Settings

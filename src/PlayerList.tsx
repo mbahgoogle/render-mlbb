@@ -12,8 +12,8 @@ import {
 } from "remotion";
 import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
-import { TopPlayer, validateTopPlayers } from "./types/schema";
-import { DoubleCard } from "./components/DoubleCardv1";
+import { rawData, validateRawDatas } from "./types/schema";
+import { Carding } from "./components/Card";
 import { CONFIG } from "./config";
 
 // import rawTopPlayers from "../public/data/alter_ego.json";
@@ -22,13 +22,15 @@ import { CONFIG } from "./config";
 // import rawTopPlayers from "../public/data/geek_fam_id.json";
 // import rawTopPlayers from "../public/data/onic.json";
 // import rawTopPlayers from "../public/data/evos.json";
-// import rawTopPlayers from "../public/data/rrq_hoshi.json";
+import rawTopPlayers from "../public/data/rrq_hoshi.json";
+// import rawTopPlayers from "../public/data/test.json";
 
 // import rawTopPlayers from "../public/data/mlbb_exp_laner.json";
 // import rawTopPlayers from "../public/data/mlbb_gold_laner.json";
 // import rawTopPlayers from "../public/data/mlbb_mid_laner.json";
 // import rawTopPlayers from "../public/data/mlbb_jungle.json";
-import rawTopPlayers from "../public/data/mlbb_roam.json";
+// import rawTopPlayers from "../public/data/mlbb_roam.json";
+// import rawTopPlayers from "../public/data/mlbb_all_role.json";
 
 import Intro from "./components/Intro";
 import Ending from "./components/Ending";
@@ -40,14 +42,13 @@ const { fontFamily: rubikFont } = loadRubik();
  * Fungsi untuk menghitung posisi statis kartu berdasarkan indeks dan lebar layar
  * @param index - Indeks kartu dalam array
  * @param screenWidth - Lebar layar video
+ * @param cardsToShow - Jumlah kartu yang akan ditampilkan
  * @returns Posisi horizontal kartu dalam piksel
  */
 const getStaticCardPosition = (index: number, screenWidth: number) => {
   const startPosition = screenWidth / 2 - 1300;
   return startPosition + index * 650;
 };
-
-// HAPUS: IntroTitle dan EndingSequence
 
 type PlayerListProps = {
   cardsToShow: number;
@@ -73,7 +74,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
   const { fps, width, height, } = useVideoConfig();
   // Delay render dengan timeout 60 detik untuk memastikan data ter-load
   const [handle] = useState(() => delayRender("timeout-60000"));
-  const [validatedData, setValidatedData] = useState<TopPlayer[]>([]);
+  const [validatedData, setValidatedData] = useState<rawData[]>([]);
 
   /**
    * Effect untuk memproses dan memvalidasi data pemain
@@ -82,8 +83,8 @@ export const PlayerList: React.FC<PlayerListProps> = ({
   useEffect(() => {
     const processData = async () => {
       try {
-        const data = validateTopPlayers(rawTopPlayers)
-          .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+        const data = validateRawDatas(rawTopPlayers)
+          .sort((a: rawData, b: rawData) => new Date(a.date).getTime() - new Date(b.date).getTime())
           .reverse(); // Reverse untuk mendapatkan yang terlama di atas
         setValidatedData(data);
         continueRender(handle);
@@ -148,22 +149,34 @@ export const PlayerList: React.FC<PlayerListProps> = ({
     <AbsoluteFill>
       {/* Sequence Intro - Menampilkan komponen Intro */}
       <Sequence from={0} durationInFrames={introDelay}>
-        <div className="grass">
-          <Intro person={memoizedData[0]} />
+        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "black" }}>
+          <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 0 }} />
+          <div
+            className="w-full flex justify-center"
+            style={{
+              // height: '100%',
+              // backgroundColor: "#434343",
+              // backgroundImage: "linear-gradient(#434343, #282828)",
+            }}
+          >
+
+          <Intro person={memoizedData[0]} colorText="#FFF" />
+        </div>
         </div>
       </Sequence>
 
       {/* Sequence Player List Animation - Animasi daftar pemain */}
       <Sequence from={introDelay} durationInFrames={totalDuration}>
-        <div
-          className="grass"
-          style={{
-            // height: '100%',
-            // backgroundColor: "#434343",
-            // backgroundImage: "linear-gradient(#434343, #282828)",
-          }}
-        >
-          <div className="w-full flex items-center justify-center">
+        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "#212121" }}>
+          <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
+          <div
+            className="w-full flex items-center justify-center"
+            style={{
+              // height: '100%',
+              // backgroundColor: "#434343",
+              // backgroundImage: "linear-gradient(#434343, #282828)",
+            }}
+          >
             {/* SVG Watermark - Logo berputar di background */}
             <div
               style={{
@@ -190,7 +203,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
               >
                 <path
                   d="m240 240 160-80v-.7A79.8 79.8 0 0 0 320.7 80h-.7l-80 160ZM240 240 160 80h-.7A79.8 79.8 0 0 0 80 159.3v.7l160 80ZM240 240l80 160h.7a79.8 79.8 0 0 0 79.3-79.3v-.7l-160-80ZM240 240 80 320v.7a79.8 79.8 0 0 0 79.3 79.3h.7l80-160ZM240 240l169.7 56.6.5-.5a79.8 79.8 0 0 0 0-112.2l-.5-.5L240 240ZM240 240l56.6-169.7-.5-.5a79.8 79.8 0 0 0-112.2 0l-.5.5L240 240ZM240 240l-56.6 169.7.5.5a79.8 79.8 0 0 0 112.2 0l.5-.5L240 240ZM240 240 70.3 183.4l-.5.5a79.8 79.8 0 0 0 0 112.2l.5.5L240 240Z"
-                  fill="gray"
+                  fill="yellow"
                 />
               </svg>
             </div>
@@ -280,72 +293,62 @@ export const PlayerList: React.FC<PlayerListProps> = ({
               style={{
                 transform: `translateX(${scrollX}px)`,
                 position: "relative",
-                zIndex: 1,
+                zIndex: 2,
               }}
             >
               {memoizedData.map((person, index) => {
-                // Tentukan apakah kartu termasuk dalam 4 kartu utama
-                const isMainCard = index < 4;
-                // Hitung delay animasi berdasarkan jenis kartu
-                const delay = isMainCard
-                  ? initialDelay + index * cardEntryDuration
-                  : mainCardsAnimationDuration + (index - 4) * staggerDelay;
-
-                // Posisi awal kartu
                 const initialPosition = getStaticCardPosition(index, width);
-
-                /**
-                 * Efek slide up untuk kartu utama
-                 * Kartu akan slide dari bawah ke posisi normal
-                 */
-                const slideUpOffset = isMainCard
-                  ? interpolate(
-                      frame - delay - introDelay,
-                      [15, 30],
-                      [200, 0],
-                      {
-                        extrapolateLeft: "clamp",
-                        extrapolateRight: "clamp",
-                      }
-                    )
-                  : 0;
-
-                /**
-                 * Efek bounce menggunakan spring animation
-                 * Memberikan efek pantulan saat kartu muncul
-                 */
-                const bounceEffect = spring({
-                  frame: frame - delay - introDelay,
-                  from: 1,
-                  to: 0,
+                
+                // Frame trigger untuk animasi bounce per card
+                const getTriggerFrame = (cardIndex: number): number => {
+                  if (cardIndex === 0) return introDelay;
+                  if (cardIndex === 1) return introDelay + 60;
+                  // Card 2–4: gap 350
+                  if (cardIndex >= 2) {
+                    return introDelay + 200 + (cardIndex - 2) * 370;
+                  }
+                  // Card 5–10: gap 330
+                  if (cardIndex >= 5) {
+                    return introDelay + 200 + 3 * 370 + (cardIndex - 5) * 420;
+                  }
+                  // Card 11 dst: gap 300
+                  if (cardIndex >= 11) {
+                    return introDelay + 200 + 3 * 370 + 6 * 420 + (cardIndex - 11) * 440;
+                  }
+                  return introDelay;
+                };
+                
+                const triggerFrame = getTriggerFrame(index);
+                
+                // Bounce Effect: animasi masuk dengan spring sesuai triggerFrame
+                const isFast = index < 2;
+                const bounce = spring({
+                  frame: Math.max(0, frame - triggerFrame),
                   fps,
                   config: {
-                    damping: 10,
-                    stiffness: 90,
-                    mass: 0.5,
+                    damping: isFast ? 13 : 15,
+                    mass: isFast ? 1.1 : 1.4,
+                    stiffness: isFast ? 110 : 90,
                   },
                 });
-
+                
+                // Kartu muncul dari bawah (translateY), lalu mantul ke posisi
+                const translateY = interpolate(bounce, [0, 1], [120, 0]);
+                const opacity = interpolate(bounce, [0, 0.1, 1], [0, 0.7, 1]);
+                
                 return (
                   <div
-                    key={person.date_of_birth}
+                    key={person.date}
                     className="absolute pt-10"
                     style={{
                       left: initialPosition,
-                      // Animasi opacity untuk fade in
-                      opacity: interpolate(
-                        frame - delay - introDelay,
-                        [0, opacityTransitionDuration],
-                        [0, 1],
-                        { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-                      ),
-                      // Kombinasi slide up dan bounce effect
-                      transform: `translateY(${
-                        slideUpOffset + bounceEffect * 20
-                      }px)`,
+                      transform: `translateY(${translateY}px)`,
+                      opacity,
+                      transition: "transform 0.5s, opacity 0.5s",
+                      willChange: "transform, opacity",
                     }}
                   >
-                    <DoubleCard person={person} style={{ height: cardHeight }} index={index} />
+                    <Carding person={person} style={{ height: cardHeight }} index={index} triggerFrame={triggerFrame} />
                   </div>
                 );
               })}
@@ -370,8 +373,18 @@ export const PlayerList: React.FC<PlayerListProps> = ({
 
       {/* Sequence Ending - Muncul setelah Player List Animation selesai */}
       <Sequence from={endingStartFrame} durationInFrames={endingDuration}>
-        <div className="grass">
-          <Ending />
+        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "black" }}>
+            <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
+            <div
+              className="w-full flex justify-center"
+              style={{
+                // height: '100%',
+                // backgroundColor: "#434343",
+                // backgroundImage: "linear-gradient(#434343, #282828)",
+              }}
+            >
+            <Ending textColor="white" />
+            </div>
         </div>
       </Sequence>
     </AbsoluteFill>

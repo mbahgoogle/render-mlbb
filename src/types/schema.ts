@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 // Schema untuk data pemain bola
-export const TopPlayerSchema = z.object({
+export const rawDataSchema = z.object({
   // rank: z.number(), // Bisa kosong
   name: z.string().optional(),
   full_name: z.string().optional(),
@@ -17,16 +17,16 @@ export const TopPlayerSchema = z.object({
 });
 
 // Type yang dihasilkan dari schema
-export type TopPlayer = z.infer<typeof TopPlayerSchema>;
+export type rawData = z.infer<typeof rawDataSchema>;
 
 // Schema untuk array data pemain bola
-export const TopPlayersSchema = z.array(TopPlayerSchema);
+export const rawDatasSchema = z.array(rawDataSchema);
 
 // Fungsi untuk memvalidasi data dengan debugging
-export const validateTopPlayers = (data: unknown) => {
+export const validateRawDatas = (data: unknown) => {
   try {
     console.log("Validating data:", data);
-    const validatedData = TopPlayersSchema.parse(data);
+    const validatedData = rawDatasSchema.parse(data);
     console.log("Validation successful:", validatedData);
     return validatedData;
   } catch (error) {

@@ -28,7 +28,7 @@ export const CONFIG = {
 
   // Content Settings
   cardTitle: "Mobile Legends Cosplay Edition",
-  cardsToShow: 20,           // Jumlah kartu yang akan ditampilkan
+  cardsToShow: 10,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
 
   // Timing Settings

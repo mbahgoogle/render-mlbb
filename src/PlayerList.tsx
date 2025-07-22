@@ -208,45 +208,6 @@ export const PlayerList: React.FC<PlayerListProps> = ({
               </svg>
             </div>
 
-            {/* Watermark Text - Teks watermark dengan efek getar */}
-            {(() => {
-              // Deterministic shake and opacity (no Math.random)
-              const shakeX = Math.sin(frame * 0.8) * 2 + Math.sin(frame * 1.23) * 1.5;
-              const shakeY = Math.cos(frame * 1.1) * 2 + Math.cos(frame * 0.77) * 1.5;
-              const shakeRotate = Math.sin(frame * 0.3) * 1.5;
-              const shakeOpacity = 0.18 + Math.abs(Math.sin(frame * 0.7 + 3.14)) * 0.07;
-              return (
-                <div
-                  style={{
-                    position: "absolute",
-                    width: "30%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    alignItems: "center",
-                    fontSize: "5rem",
-                    fontWeight: 900,
-                    color: "rgba(251, 255, 0, 0.7)",
-                    pointerEvents: "none",
-                    zIndex: 0,
-                    fontFamily: rubikFont,
-                    textShadow: "4px 4px 8px rgba(0,0,0,0.2)",
-                    whiteSpace: "nowrap",
-                    userSelect: "none",
-                    left: 0,
-                    top: -20,
-                    paddingLeft: "1rem",
-                    // Efek getar (shake) menggunakan sin dan cos deterministik
-                    transform: `translate(${shakeX}px, ${shakeY}px) rotate(${shakeRotate}deg)`,
-                    // Efek noise pada opacity untuk variasi deterministik
-                    opacity: shakeOpacity,
-                  }}
-                >
-                  yt@sinauvideo
-                </div>
-              );
-            })()}
-
             {/* Watermark Overlay - Muncul setiap 30 detik selama 3 detik */}
             {(() => {
               const watermarkInterval = 30 * fps;
@@ -259,7 +220,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                 <div
                   style={{
                     position: "absolute",
-                    top: 40,
+                    top: 90,
                     left: "50%",
                     transform: `translate(-50%, ${
                       interpolate(
@@ -270,7 +231,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                       )
                     }px)`,
                     zIndex: 10,
-                    background: "rgba(0,0,0,0.85)",
+                    background: "rgba(71, 71, 71, 0.29)",
                     color: "#fff",
                     fontWeight: 900,
                     fontSize: "3rem",
@@ -292,6 +253,27 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                 </div>
               );
             })()}
+
+            {/* Watermark Text - Statis di kiri tengah, di belakang card */}
+            <div
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: 20,
+                transform: "translateY(-50%)",
+                fontSize: "4rem",
+                fontWeight: 900,
+                color: "rgba(221, 221, 221, 0.23)",
+                fontFamily: rubikFont,
+                textShadow: "4px 4px 8px rgba(0,0,0,0.2)",
+                zIndex: 1,
+                pointerEvents: "none",
+                userSelect: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
+              yt@sinauvideo
+            </div>
 
             {/* Container Kartu dengan Efek Scroll - Container utama untuk semua kartu */}
             <div

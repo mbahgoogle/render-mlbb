@@ -139,7 +139,7 @@
   background-image:
     linear-gradient(to right, var(--grid-color) 0.12em, transparent 0.12em),
     linear-gradient(to bottom, var(--grid-color) 0.12em, transparent 0.12em);
-  background-size: 5.15em 5.6em;
+  background-size: 5.157em 5.6em;
   -webkit-mask-image: radial-gradient(
     ellipse 60% 60% at 50% 50%,
     #000 80%,

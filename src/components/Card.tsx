@@ -100,7 +100,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
         <div className="pt-8 px-6 pb-4">
           <div className="flex flex-col items-center text-center">
             <div className="flex-grow">
-              <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: triggerFrame ?? 0, delayPerCard: 1 })} duration={10}>
+              <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 1 })} duration={20}>
                 <div className="flex justify-center mt-4">
                   <span className="bg-gray-900 text-white px-6 py-3 font-bold rounded-full flex items-center gap-3 text-4xl" style={{ fontFamily: RubikFont }}>
                     {displayedName}
@@ -127,8 +127,8 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
 
         {/* Full Name */}
         <FadeInOnFrame
-          triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: triggerFrame ?? 0, delayPerCard: 1 })}
-          duration={10}
+          triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 1 })}
+          duration={20}
         >
           <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-5 px-5 mx-5">
             <div className="flex items-center justify-center">
@@ -139,8 +139,8 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
               }}>
                 <TypingOnFrame
                   text={fullName}
-                  triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: 10 + (triggerFrame ?? 0), delayPerCard: 1 })}
-                  duration={20}
+                  triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 40, delayPerCard: 1 })}
+                  duration={30}
                   style={{ fontFamily: robotoMonoFont }}
                 />
               </p>
@@ -150,7 +150,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
 
         <div className="grid grid-cols-2 gap-8 p-5">
           {/* year */}
-          <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: triggerFrame ?? 0, delayPerCard: 5 })} duration={10}>
+          <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 5 })} duration={20}>
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
               <Calendar className="h-9 w-9 text-gray-200" />
               <div>
@@ -161,7 +161,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
           </FadeInOnFrame>
 
           {/* Birth Date */}
-          <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: triggerFrame ?? 0, delayPerCard: 5 })} duration={10}>
+          <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 5 })} duration={20}>
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
               <Birthday className="h-9 w-9 text-gray-200" />
               <div>
@@ -173,8 +173,8 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
 
           {/* Team */}
           <FadeInOnFrame
-            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: triggerFrame ?? 0, delayPerCard: 10 })}
-            duration={10}
+            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 10 })}
+            duration={20}
             style={{ gridColumn: "1 / -1", width: "100%" }}
           >
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
@@ -187,13 +187,15 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
 
           {/* Roles */}
           <FadeInOnFrame
-            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: triggerFrame ?? 0, delayPerCard: 13 })}
-            duration={10}
+            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 13 })}
+            duration={20}
             style={{ gridColumn: "1 / -1", width: "100%" }}
           >
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div className="flex-grow">
-                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>Roles</p>
+                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>
+                  Roles
+                </p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {person.roles?.map((role: string, index: number) => (
                     <span 
@@ -211,13 +213,15 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
           
           {/* Heroes */}
           <FadeInOnFrame
-            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: triggerFrame ?? 0, delayPerCard: 15 })}
-            duration={10}
+            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 15 })}
+            duration={20}
             style={{ gridColumn: "1 / -1", width: "100%" }}
           >
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div className="flex-grow">
-                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>Signature Heroes</p>
+                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>
+                  Signature Heroes
+                </p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {person.heros?.map((hero: string, index: number) => (
                     <div key={index} className="flex flex-col items-center">

@@ -286,6 +286,8 @@ export const PlayerList: React.FC<PlayerListProps> = ({
             >
               {memoizedData.map((person, index) => {
                 const initialPosition = getStaticCardPosition(index, width);
+                
+                // Frame trigger untuk animasi bounce per card
                 const getTriggerFrame = (cardIndex: number): number => {
                   if (cardIndex >= 11) {
                     return introDelay + 200 + 3 * 370 + 6 * 420 + (cardIndex - 11) * staggerDelay;
@@ -299,30 +301,31 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                   if (cardIndex === 1) return introDelay + 60;
                   return introDelay;
                 };
+                
                 const triggerFrame = getTriggerFrame(index);
-                const progress = Math.min(1, Math.max(0, (frame - triggerFrame) / 20));
-                const translateY = interpolate(progress, [0, 1], [120, 0]);
-                let opacityCard = interpolate(progress, [0, 1], [0, 1]);
-                let translateX = 0;
-                const durasiTampilPerCard = durationPerCard;
-                const exitBuffer = 30; // frame animasi keluar
-                const isActive = frame >= triggerFrame && frame < triggerFrame + durasiTampilPerCard + exitBuffer;
-                if (!isActive) return null;
-                // Animasi keluar
-                if (frame >= triggerFrame + durasiTampilPerCard) {
-                  const exitProgress = (frame - (triggerFrame + durasiTampilPerCard)) / exitBuffer;
-                  translateX = interpolate(exitProgress, [0, 1], [0, -200]); // geser ke kiri 200px
-                  opacityCard = interpolate(exitProgress, [0, 1], [1, 0]);
-                }
+                const animationDuration = 40; // Durasi animasi masuk yang smooth
+
+                // Progress animasi dari 0 ke 1 selama durasi
+                const progress = interpolate(
+                  frame - triggerFrame,
+                  [0, animationDuration],
+                  [0, 1],
+                  { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+                );
+                
+                // Kartu muncul dari bawah (translateY)
+                const translateY = interpolate(progress, [0, 1], [100, 0]);
+                // Opacity fade in dengan smooth
+                const opacity = interpolate(progress, [0, 1], [0, 1]);
+                
                 return (
                   <div
                     key={person.date}
                     className="absolute pt-10"
                     style={{
                       left: initialPosition,
-                      transform: `translateY(${translateY}px) translateX(${translateX}px)`,
-                      opacity: opacityCard,
-                      transition: "transform 0.5s, opacity 0.5s",
+                      transform: `translateY(${translateY}px)`,
+                      opacity,
                       willChange: "transform, opacity",
                     }}
                   >

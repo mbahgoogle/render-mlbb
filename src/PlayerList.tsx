@@ -209,37 +209,43 @@ export const PlayerList: React.FC<PlayerListProps> = ({
             </div>
 
             {/* Watermark Text - Teks watermark dengan efek getar */}
-            <div
-              style={{
-                position: "absolute",
-                width: "30%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                fontSize: "5rem",
-                fontWeight: 900,
-                color: "rgba(0, 0, 0, 0.7)",
-                pointerEvents: "none",
-                zIndex: 0,
-                fontFamily: rubikFont,
-                textShadow: "4px 4px 8px rgba(0,0,0,0.2)",
-                whiteSpace: "nowrap",
-                userSelect: "none",
-                left: 0,
-                top: -20,
-                paddingLeft: "1rem",
-                // Efek getar (shake) menggunakan sin dan cos
-                transform: `translate(
-                  ${Math.sin(frame * 0.8) * 2 + (Math.random() - 0.5) * 1.5}px,
-                  ${Math.cos(frame * 1.1) * 2 + (Math.random() - 0.5) * 1.5}px
-                ) rotate(${Math.sin(frame * 0.3) * 1.5}deg)`,
-                // Efek noise pada opacity untuk variasi
-                opacity: 0.18 + Math.abs(Math.sin(frame * 0.7 + Math.random() * 10)) * 0.07,
-              }}
-            >
-              yt@sinauvideo
-            </div>
+            {(() => {
+              // Deterministic shake and opacity (no Math.random)
+              const shakeX = Math.sin(frame * 0.8) * 2 + Math.sin(frame * 1.23) * 1.5;
+              const shakeY = Math.cos(frame * 1.1) * 2 + Math.cos(frame * 0.77) * 1.5;
+              const shakeRotate = Math.sin(frame * 0.3) * 1.5;
+              const shakeOpacity = 0.18 + Math.abs(Math.sin(frame * 0.7 + 3.14)) * 0.07;
+              return (
+                <div
+                  style={{
+                    position: "absolute",
+                    width: "30%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                    fontSize: "5rem",
+                    fontWeight: 900,
+                    color: "rgba(251, 255, 0, 0.7)",
+                    pointerEvents: "none",
+                    zIndex: 0,
+                    fontFamily: rubikFont,
+                    textShadow: "4px 4px 8px rgba(0,0,0,0.2)",
+                    whiteSpace: "nowrap",
+                    userSelect: "none",
+                    left: 0,
+                    top: -20,
+                    paddingLeft: "1rem",
+                    // Efek getar (shake) menggunakan sin dan cos deterministik
+                    transform: `translate(${shakeX}px, ${shakeY}px) rotate(${shakeRotate}deg)`,
+                    // Efek noise pada opacity untuk variasi deterministik
+                    opacity: shakeOpacity,
+                  }}
+                >
+                  yt@sinauvideo
+                </div>
+              );
+            })()}
 
             {/* Watermark Overlay - Muncul setiap 30 detik selama 3 detik */}
             {(() => {

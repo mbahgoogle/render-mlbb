@@ -167,7 +167,9 @@ export const PlayerList: React.FC<PlayerListProps> = ({
 
       {/* Sequence Player List Animation - Animasi daftar pemain */}
       <Sequence from={introDelay} durationInFrames={totalDuration}>
-        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "#212121" }}>
+        {/* <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "#212121" }}>
+          <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 1 }} /> */}
+        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "#212121", overflow: "hidden" }}>
           <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
           <div
             className="w-full flex items-center justify-center"

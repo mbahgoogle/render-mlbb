@@ -289,20 +289,16 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                 
                 // Frame trigger untuk animasi bounce per card
                 const getTriggerFrame = (cardIndex: number): number => {
-                  if (cardIndex === 0) return introDelay;
-                  if (cardIndex === 1) return introDelay + 60;
-                  // Card 2–4: gap 350
-                  if (cardIndex >= 2) {
-                    return introDelay + 200 + (cardIndex - 2) * 370;
+                  if (cardIndex >= 11) {
+                    return introDelay + 200 + 3 * 370 + 6 * 420 + (cardIndex - 11) * staggerDelay;
                   }
-                  // Card 5–10: gap 330
                   if (cardIndex >= 5) {
                     return introDelay + 200 + 3 * 370 + (cardIndex - 5) * 420;
                   }
-                  // Card 11 dst: gap 300
-                  if (cardIndex >= 11) {
-                    return introDelay + 200 + 3 * 370 + 6 * 420 + (cardIndex - 11) * 440;
+                  if (cardIndex >= 2) {
+                    return introDelay + 200 + (cardIndex - 2) * 370;
                   }
+                  if (cardIndex === 1) return introDelay + 60;
                   return introDelay;
                 };
                 

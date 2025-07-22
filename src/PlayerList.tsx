@@ -310,15 +310,16 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                   frame: Math.max(0, frame - triggerFrame),
                   fps,
                   config: {
-                    damping: isFast ? 13 : 15,
-                    mass: isFast ? 1.1 : 1.4,
-                    stiffness: isFast ? 110 : 90,
+                    damping: 18,
+                    mass: 1.5,
+                    stiffness: 80,
                   },
                 });
                 
                 // Kartu muncul dari bawah (translateY), lalu mantul ke posisi
-                const translateY = interpolate(bounce, [0, 1], [120, 0]);
-                const opacity = interpolate(bounce, [0, 0.1, 1], [0, 0.7, 1]);
+                const progress = Math.min(1, Math.max(0, (frame - triggerFrame) / 20));
+                const translateY = interpolate(progress, [0, 1], [120, 0]);
+                const opacity = interpolate(progress, [0, 1], [0, 1]);
                 
                 return (
                   <div

@@ -86,7 +86,9 @@ jobs:
       - name: Render Video
         run: |
           echo "Starting video render..."
-          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage
+          # --frame-715-943 is not a valid flag for remotion render.
+          # The correct flag is --frames, and the value should be in the format start-end (e.g., 715-943).
+          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=715-943
           echo "Render finished!"
 
       - name: Upload Artifact

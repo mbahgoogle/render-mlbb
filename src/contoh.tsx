@@ -101,6 +101,8 @@ export const PlayerList: React.FC<PlayerListProps> = ({
   const initialDelay = CONFIG.initialDelay;
   const cardEntryDuration = CONFIG.cardEntryDuration;
   const staggerDelay = CONFIG.staggerDelay;
+  const mainCardsAnimationDuration = initialDelay + 4 * cardEntryDuration;
+  const scrollDuration = totalDuration - mainCardsAnimationDuration;
   const opacityTransitionDuration = CONFIG.opacityTransitionDuration;
 
   // Hitung frame mulai ending sequence
@@ -116,13 +118,11 @@ export const PlayerList: React.FC<PlayerListProps> = ({
    */
   const scrollX = useMemo(
     () =>
-      interpolate(
-        Math.max(0, frame - (introDelay + totalDuration - 60)), // Adjusted to start scrolling after all cards finish bouncing
-        [0, totalDuration - 60], // Total duration minus buffer
-        [0, -650 * (cardsToShow - 1)],
-        { extrapolateRight: "clamp", extrapolateLeft: "clamp" }
-      ),
-    [frame, introDelay, totalDuration, cardsToShow]
+      interpolate(frame - mainCardsAnimationDuration, [0, scrollDuration], [0, -650 * (cardsToShow - 1)], {
+        extrapolateRight: "clamp",
+        extrapolateLeft: "clamp",
+      }),
+    [frame, mainCardsAnimationDuration, scrollDuration, cardsToShow]
   );
 
   // Sesuaikan tinggi kartu berdasarkan resolusi video
@@ -278,87 +278,77 @@ export const PlayerList: React.FC<PlayerListProps> = ({
             <div
               className="flex gap-4"
               style={{
+                transform: `translateX(${scrollX}px)`,
                 position: "relative",
-                width: "100%",
-                height: "100%",
-                overflow: "visible",
+                zIndex: 1,
               }}
             >
-              <div
-                style={{
-                  transform: `translateX(${scrollX}px)`,
-                  position: "relative",
-                  width: "100%",
-                  height: "100%",
-                }}
-              >
-                {memoizedData.map((person, index) => {
-                  // Tentukan apakah kartu termasuk dalam 4 kartu utama
-                  const isMainCard = index < 4;
-                  // Hitung delay animasi berdasarkan jenis kartu
-                  const delay = isMainCard
-                    ? initialDelay + index * cardEntryDuration
-                    : mainCardsAnimationDuration + (index - 4) * staggerDelay;
+              {memoizedData.map((person, index) => {
+                // Tentukan apakah kartu termasuk dalam 4 kartu utama
+                const isMainCard = index < 4;
+                // Hitung delay animasi berdasarkan jenis kartu
+                const delay = isMainCard
+                  ? initialDelay + index * cardEntryDuration
+                  : mainCardsAnimationDuration + (index - 4) * staggerDelay;
 
-                  // Posisi awal kartu
-                  const initialPosition = getStaticCardPosition(index, width);
+                // Posisi awal kartu
+                const initialPosition = getStaticCardPosition(index, width);
 
-                  /**
-                   * Efek slide up untuk kartu utama
-                   * Kartu akan slide dari bawah ke posisi normal
-                   */
-                  const slideUpOffset = isMainCard
-                    ? interpolate(
+                /**
+                 * Efek slide up untuk kartu utama
+                 * Kartu akan slide dari bawah ke posisi normal
+                 */
+                const slideUpOffset = isMainCard
+                  ? interpolate(
+                      frame - delay - introDelay,
+                      [15, 30],
+                      [200, 0],
+                      {
+                        extrapolateLeft: "clamp",
+                        extrapolateRight: "clamp",
+                      }
+                    )
+                  : 0;
+
+                /**
+                 * Efek bounce menggunakan spring animation
+                 * Memberikan efek pantulan saat kartu muncul
+                 */
+                const bounceEffect = spring({
+                  frame: frame - delay - introDelay,
+                  from: 1,
+                  to: 0,
+                  fps,
+                  config: {
+                    damping: 10,
+                    stiffness: 90,
+                    mass: 0.5,
+                  },
+                });
+
+                return (
+                  <div
+                    key={person.date_of_birth}
+                    className="absolute pt-10"
+                    style={{
+                      left: initialPosition,
+                      // Animasi opacity untuk fade in
+                      opacity: interpolate(
                         frame - delay - introDelay,
-                        [15, 30],
-                        [200, 0],
-                        {
-                          extrapolateLeft: "clamp",
-                          extrapolateRight: "clamp",
-                        }
-                      )
-                    : 0;
-
-                  /**
-                   * Efek bounce menggunakan spring animation
-                   * Memberikan efek pantulan saat kartu muncul
-                   */
-                  const bounceEffect = spring({
-                    frame: frame - delay - introDelay,
-                    from: 1,
-                    to: 0,
-                    fps,
-                    config: {
-                      damping: 10,
-                      stiffness: 90,
-                      mass: 0.5,
-                    },
-                  });
-
-                  return (
-                    <div
-                      key={person.date_of_birth}
-                      className="absolute pt-10"
-                      style={{
-                        left: initialPosition,
-                        // Animasi opacity untuk fade in
-                        opacity: interpolate(
-                          frame - delay - introDelay,
-                          [0, opacityTransitionDuration],
-                          [0, 1],
-                          { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-                        ),
-                        // Kombinasi slide up dan bounce effect
-                        transform: `translateY(${
-                          slideUpOffset + bounceEffect * 20
-                        }px)`,
-                      }}
-                    >
-                      <DoubleCard person={person} style={{ height: cardHeight }} index={index} />
-                    </div>
-                  );
-                })}
-              </div>
+                        [0, opacityTransitionDuration],
+                        [0, 1],
+                        { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+                      ),
+                      // Kombinasi slide up dan bounce effect
+                      transform: `translateY(${
+                        slideUpOffset + bounceEffect * 20
+                      }px)`,
+                    }}
+                  >
+                    <DoubleCard person={person} style={{ height: cardHeight }} index={index} />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

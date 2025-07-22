@@ -292,53 +292,22 @@ export const PlayerList: React.FC<PlayerListProps> = ({
             >
               {memoizedData.map((person, index) => {
                 const initialPosition = getStaticCardPosition(index, width);
-                
-                // Frame trigger untuk animasi bounce per card
-                const getTriggerFrame = (cardIndex: number): number => {
-                  if (cardIndex === 0) return introDelay;
-                  if (cardIndex === 1) return introDelay + 60;
-                  // Card 2–4: gap 350
-                  if (cardIndex >= 2) {
-                    return introDelay + 200 + (cardIndex - 2) * 370;
-                  }
-                  // Card 5–10: gap 330
-                  if (cardIndex >= 5) {
-                    return introDelay + 200 + 3 * 370 + (cardIndex - 5) * 420;
-                  }
-                  // Card 11 dst: gap 300
-                  if (cardIndex >= 11) {
-                    return introDelay + 200 + 3 * 370 + 6 * 420 + (cardIndex - 11) * 440;
-                  }
-                  return introDelay;
-                };
-                
-                const triggerFrame = getTriggerFrame(index);
-                
-                // Bounce Effect: animasi masuk dengan spring sesuai triggerFrame
-                const isFast = index < 2;
-                const bounce = spring({
-                  frame: Math.max(0, frame - triggerFrame),
-                  fps,
-                  config: {
-                    damping: isFast ? 13 : 15,
-                    mass: isFast ? 1.1 : 1.4,
-                    stiffness: isFast ? 110 : 90,
-                  },
-                });
-                
-                // Kartu muncul dari bawah (translateY), lalu mantul ke posisi
-                const translateY = interpolate(bounce, [0, 1], [1500, 0]);
-                
+
+                // --- Trigger frame & bounce animation dipindahkan ke komponen, tidak digunakan di sini ---
+                // import { getTriggerFrame, bounceSpring } from './components/CardTrigger'; // jika ingin
+
+                // Kartu tampil statis, tanpa animasi bounce/trigger frame
                 return (
                   <div
                     key={person.date}
                     className="absolute pt-10"
                     style={{
                       left: initialPosition,
-                      transform: `translateY(${translateY}px)`,
+                      transform: `translateY(0px)`, // Tidak ada animasi masuk
+                      opacity: 1, // Selalu tampil penuh
                     }}
                   >
-                    <Carding person={person} style={{ height: cardHeight }} index={index} triggerFrame={triggerFrame} />
+                    <Carding person={person} style={{ height: cardHeight }} index={index} />
                   </div>
                 );
               })}

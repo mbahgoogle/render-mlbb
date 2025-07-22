@@ -130,6 +130,10 @@
   );
 }
 
+.grid-mask1 {
+  background-color: yellowgreen;
+}
+
 .grid-mask {
   inset: 0;
   height: 100%;

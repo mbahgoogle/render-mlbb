@@ -100,81 +100,97 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
         <div className="pt-8 px-6 pb-4">
           <div className="flex flex-col items-center text-center">
             <div className="flex-grow">
-              {/* HAPUS FadeInOnFrame, langsung render konten */}
-              <div className="flex justify-center mt-4">
-                <span className="bg-gray-900 text-white px-6 py-3 font-bold rounded-full flex items-center gap-3 text-4xl" style={{ fontFamily: RubikFont }}>
-                  {displayedName}
-                  {(() => {
-                    const code = getCountryCode(person.nation_code ?? "");
-                    if (code) {
-                      return (
-                        <CircleFlag
-                          countryCode={code}
-                          height="50"
-                          width="50"
-                        />
-                      );
-                    } else {
-                      return "🌍";
-                    }
-                  })()}
-                </span>
-              </div>
+              <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 1 })} duration={20}>
+                <div className="flex justify-center mt-4">
+                  <span className="bg-gray-900 text-white px-6 py-3 font-bold rounded-full flex items-center gap-3 text-4xl" style={{ fontFamily: RubikFont }}>
+                    {displayedName}
+                    {(() => {
+                      const code = getCountryCode(person.nation_code ?? "");
+                      if (code) {
+                        return (
+                          <CircleFlag
+                            countryCode={code}
+                            height="50"
+                            width="50"
+                          />
+                        );
+                      } else {
+                        return "🌍";
+                      }
+                    })()}
+                  </span>
+                </div>
+              </FadeInOnFrame>
             </div>
           </div>
         </div>
 
         {/* Full Name */}
-        {/* HAPUS FadeInOnFrame, langsung render konten */}
-        <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-5 px-5 mx-5">
-          <div className="flex items-center justify-center">
-            <p className="text-gray-200 font-bold text-center" style={{ 
-              fontFamily: robotoMonoFont,
-              minWidth: '300px',
-              whiteSpace: 'nowrap',
-            }}>
-              <TypingOnFrame
-                text={fullName}
-                triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 40, delayPerCard: 1 })}
-                duration={30}
-                style={{ fontFamily: robotoMonoFont }}
-              />
-            </p>
+        <FadeInOnFrame
+          triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 1 })}
+          duration={20}
+        >
+          <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-5 px-5 mx-5">
+            <div className="flex items-center justify-center">
+              <p className="text-gray-200 font-bold text-center" style={{ 
+                fontFamily: robotoMonoFont,
+                minWidth: '300px',
+                whiteSpace: 'nowrap',
+              }}>
+                <TypingOnFrame
+                  text={fullName}
+                  triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 40, delayPerCard: 1 })}
+                  duration={30}
+                  style={{ fontFamily: robotoMonoFont }}
+                />
+              </p>
+            </div>
           </div>
-        </div>
+        </FadeInOnFrame>
 
         <div className="grid grid-cols-2 gap-8 p-5">
           {/* year */}
-          {/* HAPUS FadeInOnFrame, langsung render konten */}
-          <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
-            <Calendar className="h-9 w-9 text-gray-200" />
-            <div>
-              <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Join</p>
-              <p className="text-[26px] font-extrabold text-gray-200" style={{ fontFamily: interFont}}>{person.date || "N/A"}</p>
+          <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 5 })} duration={20}>
+            <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
+              <Calendar className="h-9 w-9 text-gray-200" />
+              <div>
+                <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Join</p>
+                <p className="text-[26px] font-extrabold text-gray-200" style={{ fontFamily: interFont}}>{person.date || "N/A"}</p>
+              </div>
             </div>
-          </div>
+          </FadeInOnFrame>
 
           {/* Birth Date */}
-          <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
-            <Birthday className="h-9 w-9 text-gray-200" />
-            <div>
-              <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Birthday</p>
-              <p className="text-[26px] font-extrabold text-gray-200" style={{ fontFamily: interFont}}>{person.date_of_birth || "N/A"}</p>
+          <FadeInOnFrame triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 5 })} duration={20}>
+            <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
+              <Birthday className="h-9 w-9 text-gray-200" />
+              <div>
+                <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Birthday</p>
+                <p className="text-[26px] font-extrabold text-gray-200" style={{ fontFamily: interFont}}>{person.date_of_birth || "N/A"}</p>
+              </div>
             </div>
-          </div>
+          </FadeInOnFrame>
 
           {/* Team */}
-          <div style={{ gridColumn: "1 / -1", width: "100%" }}>
+          <FadeInOnFrame
+            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 10 })}
+            duration={20}
+            style={{ gridColumn: "1 / -1", width: "100%" }}
+          >
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div>
                 <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont }}>Team</p>
                 <p className="text-3xl text-gray-50 font-bold">{person.team || "N/A"}</p>
               </div>
             </div>
-          </div>
+          </FadeInOnFrame>
 
           {/* Roles */}
-          <div style={{ gridColumn: "1 / -1", width: "100%" }}>
+          <FadeInOnFrame
+            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 13 })}
+            duration={20}
+            style={{ gridColumn: "1 / -1", width: "100%" }}
+          >
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div className="flex-grow">
                 <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>
@@ -193,10 +209,14 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                 </div>
               </div>
             </div>
-          </div>
+          </FadeInOnFrame>
           
           {/* Heroes */}
-          <div style={{ gridColumn: "1 / -1", width: "100%" }}>
+          <FadeInOnFrame
+            triggerFrame={getAutoTriggerFrame({ index: index ?? 0, baseFrame: (triggerFrame ?? 0) + 20, delayPerCard: 15 })}
+            duration={20}
+            style={{ gridColumn: "1 / -1", width: "100%" }}
+          >
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div className="flex-grow">
                 <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>
@@ -217,7 +237,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                 </div>
               </div>
             </div>
-          </div>
+          </FadeInOnFrame>
         </div>
       </div>
     </div>

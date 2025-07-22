@@ -190,9 +190,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                 zIndex: 0,
                 top: -90,
                 left: "50%",
-                // Percepat putaran watermark: kalikan sudut rotasi dengan 2
-                transform: `translateX(-50%) rotate(${watermarkRotation * 10}deg)`,
-                transition: "transform 0.1s linear",
+                transform: "translateX(-50%)", // watermark statis, tidak berputar
               }}
             >
               <svg
@@ -208,8 +206,37 @@ export const PlayerList: React.FC<PlayerListProps> = ({
               </svg>
             </div>
 
+            {/* Watermark Text - Teks watermark statis */}
+            <div
+              style={{
+                position: "absolute",
+                width: "30%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                fontSize: "5rem",
+                fontWeight: 900,
+                color: "rgba(0, 0, 0, 0.7)",
+                pointerEvents: "none",
+                zIndex: 0,
+                fontFamily: rubikFont,
+                textShadow: "4px 4px 8px rgba(0,0,0,0.2)",
+                whiteSpace: "nowrap",
+                userSelect: "none",
+                left: 0,
+                top: -20,
+                paddingLeft: "1rem",
+                // watermark statis, tanpa animasi
+                transform: "none",
+                opacity: 0.18,
+              }}
+            >
+              yt@sinauvideo
+            </div>
+
             {/* Watermark Overlay - Muncul setiap 30 detik selama 3 detik */}
-            {(() => {
+            {/* {(() => {
               const watermarkInterval = 30 * fps;
               const watermarkDuration = 3 * fps;
               const watermarkStart = introDelay + 16 * fps; // mulai di detik ke-16 setelah intro
@@ -220,7 +247,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                 <div
                   style={{
                     position: "absolute",
-                    top: 90,
+                    top: 40,
                     left: "50%",
                     transform: `translate(-50%, ${
                       interpolate(
@@ -231,7 +258,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                       )
                     }px)`,
                     zIndex: 10,
-                    background: "rgba(71, 71, 71, 0.29)",
+                    background: "rgba(0,0,0,0.85)",
                     color: "#fff",
                     fontWeight: 900,
                     fontSize: "3rem",
@@ -252,28 +279,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                   yt@sinauvideo
                 </div>
               );
-            })()}
-
-            {/* Watermark Text - Statis di kiri tengah, di belakang card */}
-            <div
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: 20,
-                transform: "translateY(-50%)",
-                fontSize: "4rem",
-                fontWeight: 900,
-                color: "rgba(221, 221, 221, 0.23)",
-                fontFamily: rubikFont,
-                textShadow: "4px 4px 8px rgba(0,0,0,0.2)",
-                zIndex: 1,
-                pointerEvents: "none",
-                userSelect: "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              yt@sinauvideo
-            </div>
+            })()} */}
 
             {/* Container Kartu dengan Efek Scroll - Container utama untuk semua kartu */}
             <div
@@ -289,34 +295,39 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                 
                 // Frame trigger untuk animasi bounce per card
                 const getTriggerFrame = (cardIndex: number): number => {
-                  if (cardIndex >= 11) {
-                    return introDelay + 200 + 3 * 370 + 6 * 420 + (cardIndex - 11) * staggerDelay;
-                  }
-                  if (cardIndex >= 5) {
-                    return introDelay + 200 + 3 * 370 + (cardIndex - 5) * 420;
-                  }
+                  if (cardIndex === 0) return introDelay;
+                  if (cardIndex === 1) return introDelay + 60;
+                  // Card 2–4: gap 350
                   if (cardIndex >= 2) {
                     return introDelay + 200 + (cardIndex - 2) * 370;
                   }
-                  if (cardIndex === 1) return introDelay + 60;
+                  // Card 5–10: gap 330
+                  if (cardIndex >= 5) {
+                    return introDelay + 200 + 3 * 370 + (cardIndex - 5) * 420;
+                  }
+                  // Card 11 dst: gap 300
+                  if (cardIndex >= 11) {
+                    return introDelay + 200 + 3 * 370 + 6 * 420 + (cardIndex - 11) * 440;
+                  }
                   return introDelay;
                 };
                 
                 const triggerFrame = getTriggerFrame(index);
-                const animationDuration = 40; // Durasi animasi masuk yang smooth
-
-                // Progress animasi dari 0 ke 1 selama durasi
-                const progress = interpolate(
-                  frame - triggerFrame,
-                  [0, animationDuration],
-                  [0, 1],
-                  { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-                );
                 
-                // Kartu muncul dari bawah (translateY)
-                const translateY = interpolate(progress, [0, 1], [100, 0]);
-                // Opacity fade in dengan smooth
-                const opacity = interpolate(progress, [0, 1], [0, 1]);
+                // Bounce Effect: animasi masuk dengan spring sesuai triggerFrame
+                const isFast = index < 2;
+                const bounce = spring({
+                  frame: Math.max(0, frame - triggerFrame),
+                  fps,
+                  config: {
+                    damping: isFast ? 13 : 15,
+                    mass: isFast ? 1.1 : 1.4,
+                    stiffness: isFast ? 110 : 90,
+                  },
+                });
+                
+                // Kartu muncul dari bawah (translateY), lalu mantul ke posisi
+                const translateY = interpolate(bounce, [0, 1], [1500, 0]);
                 
                 return (
                   <div
@@ -325,8 +336,6 @@ export const PlayerList: React.FC<PlayerListProps> = ({
                     style={{
                       left: initialPosition,
                       transform: `translateY(${translateY}px)`,
-                      opacity,
-                      willChange: "transform, opacity",
                     }}
                   >
                     <Carding person={person} style={{ height: cardHeight }} index={index} triggerFrame={triggerFrame} />

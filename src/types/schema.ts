@@ -4,6 +4,7 @@ import { z } from 'zod';
 export const rawDataSchema = z.object({
   // rank: z.number(), // Bisa kosong
   name: z.string().optional(),
+  date: z.string(),
   full_name: z.string().optional(),
   heros: z.array(z.string()).optional(),
   image: z.string().optional(),
@@ -13,7 +14,9 @@ export const rawDataSchema = z.object({
   date_of_birth: z.string().optional(),
   roles: z.array(z.string()).optional(),
   description: z.string().optional(),
-  date: z.string(),
+  league: z.string().optional(),
+  logo_league: z.string().optional(),
+  tier: z.string().optional(),
 });
 
 // Type yang dihasilkan dari schema

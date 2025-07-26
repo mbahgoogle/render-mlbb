@@ -13,8 +13,9 @@ import {
 import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { rawData, validateRawDatas } from "./types/schema";
-import { Carding } from "./components/Card";
+import { Carding } from "./components/CardTeamMLBB";
 import { CONFIG } from "./config";
+import { getTriggerFrame } from "./utils/triggerFrame";
 
 // import rawTopPlayers from "../public/data/alter_ego.json";
 // import rawTopPlayers from "../public/data/bigetron_esports.json";
@@ -22,7 +23,7 @@ import { CONFIG } from "./config";
 // import rawTopPlayers from "../public/data/geek_fam_id.json";
 // import rawTopPlayers from "../public/data/onic.json";
 // import rawTopPlayers from "../public/data/evos.json";
-import rawTopPlayers from "../public/data/rrq_hoshi.json";
+// import rawTopPlayers from "../public/data/rrq_hoshi.json";
 // import rawTopPlayers from "../public/data/test.json";
 
 // import rawTopPlayers from "../public/data/mlbb_exp_laner.json";
@@ -32,8 +33,16 @@ import rawTopPlayers from "../public/data/rrq_hoshi.json";
 // import rawTopPlayers from "../public/data/mlbb_roam.json";
 // import rawTopPlayers from "../public/data/mlbb_all_role.json";
 
+
+// import rawTopPlayers from "../public/gaming/mpl_id.json";
+// import rawTopPlayers from "../public/gaming/mpl_ph.json";
+import rawTopPlayers from "../public/gaming/mpl_my.json";
+
 import Intro from "./components/Intro";
 import Ending from "./components/Ending";
+import { EffectWatermarkOverlay } from "./utils/effectWatermarkOverlay";
+import { EffectWatermarkText } from "./utils/effectWatermarkText";
+import { EffectWatermarkSVG } from "./utils/effectWatermarkSVG";
 
 
 const { fontFamily: rubikFont } = loadRubik();
@@ -129,27 +138,13 @@ export const PlayerList: React.FC<PlayerListProps> = ({
   // Sesuaikan tinggi kartu berdasarkan resolusi video
   const cardHeight = height * 0.5; // Setengah dari tinggi video
 
-  /**
-   * Perhitungan rotasi watermark untuk efek berputar
-   * Watermark akan berputar 360 derajat selama durasi video
-   */
-  const watermarkRotation = useMemo(() => {
-    return interpolate(
-      frame,
-      [0, totalDuration],
-      [0, 360],
-      {
-        extrapolateRight: 'clamp',
-        extrapolateLeft: 'clamp',
-      }
-    );
-  }, [frame, totalDuration]);
+ 
 
   return (
     <AbsoluteFill>
       {/* Sequence Intro - Menampilkan komponen Intro */}
       <Sequence from={0} durationInFrames={introDelay}>
-        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "black" }}>
+        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "#212121", overflow: "hidden" }}>
           <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 0 }} />
           <div
             className="w-full flex justify-center"
@@ -180,108 +175,13 @@ export const PlayerList: React.FC<PlayerListProps> = ({
             }}
           >
             {/* SVG Watermark - Logo berputar di background */}
-            <div
-              style={{
-                position: "absolute",
-                width: "300px",
-                height: "300px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                opacity: 0.5,
-                zIndex: 0,
-                top: -90,
-                left: "50%",
-                transform: "translateX(-50%)", // watermark statis, tidak berputar
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 480 480"
-                width="100%"
-                height="100%"
-              >
-                <path
-                  d="m240 240 160-80v-.7A79.8 79.8 0 0 0 320.7 80h-.7l-80 160ZM240 240 160 80h-.7A79.8 79.8 0 0 0 80 159.3v.7l160 80ZM240 240l80 160h.7a79.8 79.8 0 0 0 79.3-79.3v-.7l-160-80ZM240 240 80 320v.7a79.8 79.8 0 0 0 79.3 79.3h.7l80-160ZM240 240l169.7 56.6.5-.5a79.8 79.8 0 0 0 0-112.2l-.5-.5L240 240ZM240 240l56.6-169.7-.5-.5a79.8 79.8 0 0 0-112.2 0l-.5.5L240 240ZM240 240l-56.6 169.7.5.5a79.8 79.8 0 0 0 112.2 0l.5-.5L240 240ZM240 240 70.3 183.4l-.5.5a79.8 79.8 0 0 0 0 112.2l.5.5L240 240Z"
-                  fill="yellow"
-                />
-              </svg>
-            </div>
+            <EffectWatermarkSVG />
 
             {/* Watermark Text - Teks watermark statis */}
-            <div
-              style={{
-                position: "absolute",
-                width: "30%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                fontSize: "5rem",
-                fontWeight: 900,
-                color: "rgba(0, 0, 0, 0.7)",
-                pointerEvents: "none",
-                zIndex: 0,
-                fontFamily: rubikFont,
-                textShadow: "4px 4px 8px rgba(0,0,0,0.2)",
-                whiteSpace: "nowrap",
-                userSelect: "none",
-                left: 0,
-                top: -20,
-                paddingLeft: "1rem",
-                // watermark statis, tanpa animasi
-                transform: "none",
-                opacity: 0.18,
-              }}
-            >
-              yt@sinauvideo
-            </div>
+            <EffectWatermarkText rubikFont={rubikFont} />
 
             {/* Watermark Overlay - Muncul setiap 30 detik selama 3 detik */}
-            {/* {(() => {
-              const watermarkInterval = 30 * fps;
-              const watermarkDuration = 3 * fps;
-              const watermarkStart = introDelay + 16 * fps; // mulai di detik ke-16 setelah intro
-              const watermarkFrame = frame - watermarkStart >= 0 ? (frame - watermarkStart) % watermarkInterval : -1;
-              const showWatermark = (frame >= watermarkStart) && (watermarkFrame >= 0) && (watermarkFrame < watermarkDuration);
-              if (!showWatermark) return null;
-              return (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 40,
-                    left: "50%",
-                    transform: `translate(-50%, ${
-                      interpolate(
-                        watermarkFrame,
-                        [0, 10, watermarkDuration - 10, watermarkDuration],
-                        [-60, 0, 0, -60], // Animasi slide dari atas ke posisi normal, lalu keluar ke atas lagi
-                        { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-                      )
-                    }px)`,
-                    zIndex: 10,
-                    background: "rgba(0,0,0,0.85)",
-                    color: "#fff",
-                    fontWeight: 900,
-                    fontSize: "3rem",
-                    padding: "0.7em 2em",
-                    borderRadius: "2em",
-                    boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
-                    fontFamily: rubikFont,
-                    opacity: interpolate(
-                      watermarkFrame,
-                      [0, 10, watermarkDuration - 10, watermarkDuration],
-                      [0, 1, 1, 0],
-                      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-                    ),
-                    pointerEvents: "none",
-                    transition: "opacity 0.2s, transform 0.2s"
-                  }}
-                >
-                  yt@sinauvideo
-                </div>
-              );
-            })()} */}
+            <EffectWatermarkOverlay frame={frame} fps={fps} introDelay={introDelay} rubikFont={rubikFont} />
 
             {/* Container Kartu dengan Efek Scroll - Container utama untuk semua kartu */}
             <div
@@ -295,21 +195,38 @@ export const PlayerList: React.FC<PlayerListProps> = ({
               {memoizedData.map((person, index) => {
                 const initialPosition = getStaticCardPosition(index, width);
 
-                // --- Trigger frame & bounce animation dipindahkan ke komponen, tidak digunakan di sini ---
-                // import { getTriggerFrame, bounceSpring } from './components/CardTrigger'; // jika ingin
+                // Animasi bounce dan trigger frame
+                const triggerFrame = getTriggerFrame(index);
+                const bounce = spring({
+                  frame: Math.max(0, frame - triggerFrame),
+                  fps,
+                  config: {
+                    damping: index < 2 ? 13 : 15,
+                    mass: index < 2 ? 1.1 : 1.4,
+                    stiffness: index < 2 ? 110 : 90,
+                  },
+                });
 
-                // Kartu tampil statis, tanpa animasi bounce/trigger frame
+                const translateY = interpolate(bounce, [0, 1], [120, 0]);
+                const opacity = interpolate(bounce, [0, 0.1, 1], [0, 0.7, 1]);
+
                 return (
                   <div
                     key={person.date}
                     className="absolute pt-10"
                     style={{
                       left: initialPosition,
-                      transform: `translateY(0px)`, // Tidak ada animasi masuk
-                      opacity: 1, // Selalu tampil penuh
+                      transform: `translateY(${translateY}px)`,
+                      opacity,
+                      willChange: "transform, opacity",
                     }}
                   >
-                    <Carding person={person} style={{ height: cardHeight }} index={index} />
+                    <Carding
+                      person={person}
+                      style={{ height: cardHeight }}
+                      index={index}
+                      triggerFrame={triggerFrame}
+                    />
                   </div>
                 );
               })}
@@ -334,7 +251,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
 
       {/* Sequence Ending - Muncul setelah Player List Animation selesai */}
       <Sequence from={endingStartFrame} durationInFrames={endingDuration}>
-        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "black" }}>
+        <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor: "#212121", overflow: "hidden" }}>
             <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
             <div
               className="w-full flex justify-center"
@@ -348,6 +265,7 @@ export const PlayerList: React.FC<PlayerListProps> = ({
             </div>
         </div>
       </Sequence>
+      
     </AbsoluteFill>
   );
 };

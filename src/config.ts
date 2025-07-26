@@ -27,8 +27,8 @@ export const CONFIG = {
   HEIGHT: 1440,
 
   // Content Settings
-  cardTitle: "Mobile Legends Cosplay Edition",
-  cardsToShow: 10,           // Jumlah kartu yang akan ditampilkan
+  cardTitle: "Mobile Legends Edition",
+  cardsToShow: 45,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
 
   // Timing Settings
@@ -38,7 +38,7 @@ export const CONFIG = {
   // Animation Settings
   initialDelay: 30,          // Delay awal animasi kartu
   cardEntryDuration: 42,     // Durasi entry per kartu
-  staggerDelay: 100,         // Delay antar kartu
+  staggerDelay: 200,         // Delay antar kartu
   opacityTransitionDuration: 40, // Durasi transisi opacity
 };
 
@@ -55,4 +55,4 @@ export const getTotalVideoDuration = () => {
 
 export const getDurationInSeconds = (frames: number) => {
   return frames / CONFIG.FPS;
-}; 
+};

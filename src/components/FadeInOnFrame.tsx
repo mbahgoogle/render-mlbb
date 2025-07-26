@@ -13,7 +13,7 @@ type FadeInOnFrameProps = {
 export const FadeInOnFrame: React.FC<FadeInOnFrameProps> = ({
   triggerFrame,
   duration = 20,
-  fromY = 100,
+  fromY = 50,
   toY = 0,
   style,
   children,
@@ -43,16 +43,3 @@ export const FadeInOnFrame: React.FC<FadeInOnFrameProps> = ({
     </div>
   );
 };
-
-// Utility: Hitung triggerFrame otomatis berdasarkan index dan delay
-export function getAutoTriggerFrame({
-  index,
-  baseFrame = 0,
-  delayPerCard = 100,
-}: {
-  index: number;
-  baseFrame?: number;
-  delayPerCard?: number;
-}): number {
-  return baseFrame + index * delayPerCard;
-}

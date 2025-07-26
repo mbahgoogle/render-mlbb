@@ -7,10 +7,6 @@ import {
   FaCalendar as Calendar,
 } from "react-icons/fa";
 
-import { BsPSquareFill as Position
-} from "react-icons/bs";
-import { MdStadium as Stadium
- } from "react-icons/md";
 
 import { getLogoCode } from "../utils/getLogoClub";
 import { getCountryCode } from "../utils/getCountryCode";
@@ -52,8 +48,8 @@ interface CardingProps {
 
 export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerFrame }) => {
   const HeightConfig = useVideoConfig().height * 0.94;
-  const displayedName = person.name || "";
-  const fullName = person.full_name || "";
+  const nationName = person.nation || "";
+  const Name = person.name || "";
 
   const fadeInDuration = 20;
 
@@ -68,28 +64,34 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
       }}
     >
       <div
-        className="w-[620px] rounded-lx shadow-2xl glass overflow-hidden"
+        className="w-[620px] rounded-lx shadow-2xl overflow-hidden"
         style={{
           height: HeightConfig,
           boxShadow: "0 0.5em 2em 0 rgba(31, 38, 135, 0.18)",
           backdropFilter: "blur(5em)",
           WebkitBackdropFilter: "blur(5em)",
+          backgroundColor: "rgb(255, 255, 255)",
         }}
       >
         {/* Header */}
         <div
           className="relative h-140 rounded-t-xl overflow-hidden"
-          style={{ borderBottom: '1em solid rgba(36, 60, 90, 0.33)' }}
+          style={{ borderBottom: '1em solid rgba(131, 110, 110, 0)' }}
         >
           {/* Image */}
-          <div className="absolute top-0 left-0 h-150 flex items-center justify-center overflow-hidden bg-transparent" style={{ position: 'relative' }}>
+          <div className="absolute top-0 left-0 h-150 flex items-center justify-center overflow-hidden" style={{ position: 'relative', padding: '1.5em' }}>
             <img
               src={getImageSource(person.image || "")}
               alt={person.name}
-              className="w-full h-full object-cover bg-transparent"
+              className="w-full h-full object-contain bg-white rounded-lg"
               style={{
-                background: 'transparent',
+                background: 'rgba(59, 59, 59, 0)',
                 zIndex: 1,
+                padding: '0.5em',
+                borderRadius: '1em',
+                maxHeight: '500px',
+                maxWidth: '99%',
+                objectFit: 'contain',
               }}
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
@@ -99,9 +101,9 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
           </div>
 
           {/* Sequence Number */}
-          <div className="absolute top-4 left-4 bg-gray-800 text-white text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center">
+          {/* <div className="absolute top-4 left-4 bg-gray-800 text-white text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center">
             {index !== undefined ? index + 1 : ""}
-          </div>
+          </div> */}
         </div>
 
         {/* Player info */}
@@ -111,7 +113,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
              <FadeInOnFrame triggerFrame={(triggerFrame ?? 0) + 0} duration={fadeInDuration}>
                 <div className="flex justify-center mt-4">
                   <span className="bg-gray-900 text-white px-6 py-3 font-bold rounded-full flex items-center gap-3 text-4xl" style={{ fontFamily: RubikFont }}>
-                    {displayedName}
+                    {nationName}
                     {(() => {
                       const code = getCountryCode(person.nation_code ?? "");
                       if (code) {
@@ -145,7 +147,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                 whiteSpace: 'nowrap',
               }}>
                 <TypingOnFrame
-                  text={fullName}
+                  text={Name}
                   triggerFrame={triggerFrame + 39}
                   duration={30}
                   style={{ fontFamily: robotoMonoFont }}
@@ -156,42 +158,46 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
         </FadeInOnFrame>
 
         <div className="grid grid-cols-2 gap-8 p-5">
-          {/* year */}
-          <FadeInOnFrame triggerFrame={triggerFrame + 4}  duration={fadeInDuration}>
-            <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
-              <Calendar className="h-9 w-9 text-gray-200" />
-              <div>
-                <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Join</p>
-                <p className="text-[26px] font-extrabold text-gray-200" style={{ fontFamily: interFont}}>{person.date || "N/A"}</p>
-              </div>
-            </div>
-          </FadeInOnFrame>
-
-          {/* Birth Date */}
-          <FadeInOnFrame triggerFrame={triggerFrame + 4} duration={fadeInDuration}>
-            <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md">
-              <Birthday className="h-9 w-9 text-gray-200" />
-              <div>
-                <p className="text-1xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: PoppinsFont}}>Birthday</p>
-                <p className="text-[26px] font-extrabold text-gray-200" style={{ fontFamily: interFont}}>{person.date_of_birth || "N/A"}</p>
-              </div>
-            </div>
-          </FadeInOnFrame>
-
-          {/* Team */}
+          
+          {/* Date */}
           <FadeInOnFrame triggerFrame={triggerFrame + 4} 
             duration={fadeInDuration}
             style={{ gridColumn: "1 / -1", width: "100%" }}
           >
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div>
-                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont }}>Team</p>
-                <p className="text-3xl text-gray-50 font-bold">{person.team || "N/A"}</p>
+                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont }}>Date</p>
+                <p className="text-4xl text-gray-50 font-bold">
+                  {person.date
+                    ? (() => {
+                        // If date is in YYYY-MM-DD, convert to M/D/YYYY
+                        if (/^\d{4}-\d{2}-\d{2}$/.test(person.date)) {
+                          const [year, month, day] = person.date.split("-");
+                          return `${parseInt(month, 10)}/${parseInt(day, 10)}/${year}`;
+                        }
+                        // If date is in M/D/YYYY or M/D/YY, return as is
+                        return person.date;
+                      })()
+                    : "N/A"}
+                </p>
               </div>
             </div>
           </FadeInOnFrame>
 
-          {/* Roles */}
+          {/* Tier */}
+          <FadeInOnFrame triggerFrame={triggerFrame + 4} 
+            duration={fadeInDuration}
+            style={{ gridColumn: "1 / -1", width: "100%" }}
+          >
+            <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
+              <div>
+                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont }}>Tier</p>
+                <p className="text-4xl text-gray-50 font-bold">{person.tier || "N/A"}</p>
+              </div>
+            </div>
+          </FadeInOnFrame>
+
+          {/* Serie */}
           <FadeInOnFrame triggerFrame={triggerFrame + 4} 
             duration={fadeInDuration}
             style={{ gridColumn: "1 / -1", width: "100%" }}
@@ -199,18 +205,10 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div className="flex-grow">
                 <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>
-                  Roles
+                  Serie
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  {person.roles?.map((role: string, index: number) => (
-                    <span 
-                      key={index}
-                      className="bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-2xl font-bold"
-                      style={{ fontFamily: RubikFont }}
-                    >
-                      {role}
-                    </span>
-                  ))}
+                  <p className="text-4xl text-gray-50 font-bold">{person.league || "N/A"}</p>
                 </div>
               </div>
             </div>
@@ -221,26 +219,15 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             duration={fadeInDuration}
             style={{ gridColumn: "1 / -1", width: "100%" }}
           >
-            <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
-              <div className="flex-grow">
-                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>
-                  Signature Heroes
-                </p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {person.heros?.map((hero: string, index: number) => (
-                    <div key={index} className="flex flex-col items-center">
-                      <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-200 border-10 border-[#243c5a]">
-                        <img
-                          src={getImageSource(herosIcon(hero))}
-                          alt={hero}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            {person.logo_league && (
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
+                <img
+                  src={`https://ce880219c.cloudimg.io/v7/${person.logo_league?.replace(/^https?:\/\//, "")}`}
+                  alt="League"
+                  style={{ width: "10em", height: "10em", objectFit: "contain" }}
+                />
               </div>
-            </div>
+            )}
           </FadeInOnFrame>
         </div>
       </div>

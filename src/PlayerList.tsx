@@ -34,8 +34,8 @@ import { getTriggerFrame } from "./utils/triggerFrame";
 // import rawTopPlayers from "../public/data/mlbb_all_role.json";
 
 
-// import rawTopPlayers from "../public/gaming/mpl_id.json";
-import rawTopPlayers from "../public/gaming/mpl_ph.json";
+import rawTopPlayers from "../public/gaming/mpl_id.json";
+// import rawTopPlayers from "../public/gaming/mpl_ph.json";
 // import rawTopPlayers from "../public/gaming/mpl_my.json";
 
 import Intro from "./components/Intro";

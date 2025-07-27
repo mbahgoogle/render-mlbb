@@ -29,7 +29,7 @@ def simpan_hasil(hasil, output_file='counting_field.txt'):
             f.write(baris + '\n')
 
 def main():
-    folder_list = ['data', 'folder_2', 'folder_3']
+    folder_list = ['data', 'gaming', 'folder_3']
 
     semua_hasil = []
 

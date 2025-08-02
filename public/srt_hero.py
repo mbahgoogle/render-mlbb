@@ -4,7 +4,7 @@ import re
 from datetime import datetime, timedelta
 
 # Configuration to match TypeScript/TSX settings from config.ts
-JSON_FOLDER = "gaming"
+JSON_FOLDER = "data"
 SRT_FOLDER = "srt_output"
 
 # Video settings matching config.ts
@@ -22,89 +22,51 @@ INTRO_DELAY_SECONDS = INTRO_DELAY_FRAMES / FPS  # 2 seconds
 
 os.makedirs(SRT_FOLDER, exist_ok=True)
 
-# Tambahkan mapping alias field agar lebih fleksibel
-FIELD_ALIASES = {
-    "name": ["name", "nama", "player_name"],
-    "full_name": ["full_name", "nama_lengkap", "fullname"],
-    "nation": ["nation", "negara", "country"],
-    "nation_code": ["nation_code", "kode_negara", "country_code"],
-    "date": ["date", "date_of_join", "join_date", "tanggal_masuk"],
-    "date_of_birth": ["date_of_birth", "dob", "tanggal_lahir"],
-    "team": ["team", "tim", "club"],
-    "roles": ["roles", "role", "posisi"],
-    "image": ["image", "img", "foto"],
-    "description": ["description", "deskripsi", "desc"],
-    "league": ["league", "liga"],
-    "logo_league": ["logo_league", "logo_liga"],
-    "tier": ["tier", "tingkatan"],
-    "heros": ["heros", "heroes", "hero"]
-}
-
-def get_field(data, key, default=""):
-    for alias in FIELD_ALIASES.get(key, [key]):
-        if alias in data and data[alias]:
-            return data[alias]
-    return default
-
 def validate_and_sort_players(raw_players):
     """
-    Validates player data and sorts by date (oldest first), following schema.ts (rawDataSchema).
+    Validates player data and sorts by date_of_join (oldest first).
     Returns validated and sorted player list matching TypeScript logic.
     """
     def validate_player(player):
-        """Ensure player has required fields with defaults if missing, following schema.ts, dan gunakan mapping alias."""
-        name = clean_text(get_field(player, "name", ""))
-        full_name = clean_text(get_field(player, "full_name", ""))
-        nation = clean_text(get_field(player, "nation", ""))
-        nation_code = clean_text(get_field(player, "nation_code", ""))
-        date = get_field(player, "date", "")
-        date_of_birth = get_field(player, "date_of_birth", "")
-        team = clean_text(get_field(player, "team", ""))
-        roles = get_field(player, "roles", [])
-        image = clean_text(get_field(player, "image", ""))
-        description = clean_text(get_field(player, "description", ""))
-        league = clean_text(get_field(player, "league", ""))
-        logo_league = clean_text(get_field(player, "logo_league", ""))
-        tier = clean_text(get_field(player, "tier", ""))
-        heros = get_field(player, "heros", [])
-        # Clean roles and heros array
+        """Ensure player has required fields with defaults if missing."""
+        # Handle different field names and clean data
+        name = clean_text(player.get("name", "Unknown"))
+        full_name = clean_text(player.get("full_name", "Unknown"))
+        nation = clean_text(player.get("nation", "Unknown"))
+        date_of_join = player.get("date_of_join", "1900-01-01")
+        team = clean_text(player.get("team", "Unknown Team"))
+        roles = player.get("roles", [])
+        
+        # Clean roles array
         if isinstance(roles, list):
             roles = [clean_text(role) for role in roles if role and clean_text(role) != "no data"]
         else:
             roles = [clean_text(roles)] if roles and clean_text(roles) != "no data" else []
-        if isinstance(heros, list):
-            heros = [clean_text(hero) for hero in heros if hero and clean_text(hero) != "no data"]
-        else:
-            heros = [clean_text(heros)] if heros and clean_text(heros) != "no data" else []
+        
+        
         return {
             "name": name,
             "full_name": full_name,
             "nation": nation,
-            "nation_code": nation_code,
-            "date": date,
-            "date_of_birth": date_of_birth,
+            "date_of_join": date_of_join,
             "team": team,
-            "roles": roles,
-            "image": image,
-            "description": description,
-            "league": league,
-            "logo_league": logo_league,
-            "tier": tier,
-            "heros": heros
+            "roles": roles
         }
+
     # Validate each player and filter out invalid ones
     validated_players = []
     for player in raw_players:
-        if isinstance(player, dict) and (get_field(player, "name") or get_field(player, "full_name")):
+        if isinstance(player, dict) and player.get("name") and player.get("name") != "no data":
             validated_player = validate_player(player)
-            if validated_player["name"] != "" and validated_player["name"] != "no data":
+            if validated_player["name"] != "Unknown" and validated_player["name"] != "no data":
                 validated_players.append(validated_player)
-    # Sort by date (oldest first) - matching TypeScript logic
+    
+    # Sort by date_of_join (oldest first) - matching TypeScript logic
     validated_players.sort(
-        key=lambda x: parse_date(x["date"]) if x.get("date") else datetime(1900, 1, 1)
+        key=lambda x: parse_date(x["date_of_join"])
     )
-    # Reverse: date paling lama paling terakhir
-    validated_players.reverse()
+    validated_players.reverse()  # Reverse to get oldest first
+    
     return validated_players
 
 def format_time(seconds):
@@ -125,12 +87,10 @@ def clean_text(text):
     text = text.replace("no data", "").strip()
     return text.strip()
 
-# Perluas parse_date agar lebih fleksibel
-import dateparser
-
 def parse_date(date_str):
     if not isinstance(date_str, str):
         return datetime(1900, 1, 1)
+    
     # Handle various date formats
     date_formats = [
         "%Y-%m-%d",
@@ -138,15 +98,13 @@ def parse_date(date_str):
         "%d/%m/%Y",
         "%Y/%m/%d"
     ]
+    
     for fmt in date_formats:
         try:
             return datetime.strptime(date_str, fmt)
         except ValueError:
             continue
-    # Coba parsing otomatis (termasuk bulan Indonesia)
-    dt = dateparser.parse(date_str, languages=['id', 'en'])
-    if dt:
-        return dt
+    
     # If no format matches, return default date
     return datetime(1900, 1, 1)
 
@@ -232,15 +190,10 @@ def generate_srt_flexible(json_file):
             if isinstance(roles, list) and roles:
                 roles_str = ", ".join(clean_text(r) for r in roles if r and clean_text(r))
             else:
-                roles_str = ""
-            # Format heros string (optional)
-            heros = player.get("heros", [])
-            if isinstance(heros, list) and heros:
-                heros_str = ", ".join(clean_text(h) for h in heros if h and clean_text(h))
-            else:
-                heros_str = ""
+                roles_str = "Tidak diketahui"
+            
             # Clean up the date display
-            join_date = player.get("date", "")
+            join_date = player.get("date_of_join", "")
             if join_date and join_date != "1900-01-01" and join_date != "no data":
                 # Try to format the date nicely
                 try:
@@ -252,30 +205,14 @@ def generate_srt_flexible(json_file):
                 except:
                     formatted_date = join_date
             else:
-                formatted_date = ""
-            # Compose subtitle entry lines
-            lines = []
-            if player['name']:
-                if player['nation']:
-                    lines.append(f"{player['name']} ({player['nation']})")
-                    lines.append(f"({player['league']})")
-                else:
-                    lines.append(f"{player['name']}")
-            info_parts = []
-            if player['full_name']:
-                info_parts.append(f"Name: {player['full_name']}")
-            if formatted_date:
-                info_parts.append(f"Maagang pagpasok sa MPL PH : {team_name}: {formatted_date}")
-            if roles_str:
-                info_parts.append(f"Roles: [{roles_str}]")
-            if heros_str:
-                info_parts.append(f"Heros: [{heros_str}]")
-            if info_parts:
-                lines.append(" | ".join(info_parts))
+                formatted_date = "Tidak diketahui"
+            
+            # Write subtitle entry
             srt_file.write(
                 f"{index}\n"
                 f"{format_time(start_seconds)} --> {format_time(end_seconds)}\n"
-                + "\n".join(lines) + "\n\n"
+                f"{player['name']} ({player['nation']})\n"
+                f"Nama: {player['full_name']} | Tanggal masuk {team_name}: {formatted_date} | Roles: [{roles_str}]\n\n"
             )
             index += 1
 

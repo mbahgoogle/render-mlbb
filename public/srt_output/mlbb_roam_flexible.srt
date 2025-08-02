@@ -1,131 +1,156 @@
 1
 00:00:00,000 --> 00:00:02,000
-Riwayat Pemain Unknown Team 2017-2025
+Riwayat Pemain  2017-2025
 
 2
 00:00:02,000 --> 00:00:08,000
-Tigreal (Moniyan)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Kalea (Vonetis Sea)
+()
+Awal masuk MPL ID : : 19 March 2025
 
 3
 00:00:08,000 --> 00:00:14,000
-Selena (Azrya Woodlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Chip (Agelta Drylands)
+()
+Awal masuk MPL ID : : 16 March 2024
 
 4
 00:00:14,000 --> 00:00:20,000
-Rafaela (Moniyan)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Floryn (Agelta Drylands)
+()
+Awal masuk MPL ID : : 22 September 2021
 
 5
 00:00:20,000 --> 00:00:26,000
-Natalia (Monastery of Light)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Mathilda (Agelta Drylands)
+()
+Awal masuk MPL ID : : 12 December 2020
 
 6
 00:00:26,000 --> 00:00:32,000
-Minotaur (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Atlas (Northern Vale)
+()
+Awal masuk MPL ID : : 20 March 2020
 
 7
 00:00:32,000 --> 00:00:38,000
-Mathilda (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Carmilla (Moniyan)
+()
+Awal masuk MPL ID : : 17 January 2020
 
 8
 00:00:38,000 --> 00:00:44,000
-Lolita (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Khufra (Agelta Drylands)
+()
+Awal masuk MPL ID : : 01 January 2019
 
 9
 00:00:44,000 --> 00:00:50,000
-Khufra (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Belerick (Oasis)
+()
+Awal masuk MPL ID : : 17 August 2018
 
 10
 00:00:50,000 --> 00:00:56,000
-Kalea (Vonetis Sea)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Selena (Azrya Woodlands)
+()
+Awal masuk MPL ID : : 18 July 2018
 
 11
 00:00:56,000 --> 00:01:02,000
-Kaja (Vonetis Sea)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Angela (Agelta Drylands)
+()
+Awal masuk MPL ID : : 02 June 2018
 
 12
 00:01:02,000 --> 00:01:08,000
-Johnson (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Kaja (Vonetis Sea)
+()
+Awal masuk MPL ID : : 25 April 2018
 
 13
 00:01:08,000 --> 00:01:14,000
-Hylos (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Johnson (Agelta Drylands)
+()
+Awal masuk MPL ID : : 31 December 2017
 
 14
 00:01:14,000 --> 00:01:20,000
-Hilda (Northern Vale)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Hylos (Agelta Drylands)
+()
+Awal masuk MPL ID : : 31 December 2017
 
 15
 00:01:20,000 --> 00:01:26,000
-Grock (The Barren Lands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Hilda (Northern Vale)
+()
+Awal masuk MPL ID : : 31 December 2017
 
 16
 00:01:26,000 --> 00:01:32,000
-Gatotkaca (Nebula Chronorift)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Grock (The Barren Lands)
+()
+Awal masuk MPL ID : : 31 December 2017
 
 17
 00:01:32,000 --> 00:01:38,000
-Franco (Northern Vale)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Diggie (Agelta Drylands)
+()
+Awal masuk MPL ID : : 19 November 2017
 
 18
 00:01:38,000 --> 00:01:44,000
-Floryn (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Estes (Azrya Woodlands)
+()
+Awal masuk MPL ID : : 12 April 2017
 
 19
 00:01:44,000 --> 00:01:50,000
-Estes (Azrya Woodlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Gatotkaca (Nebula Chronorift)
+()
+Awal masuk MPL ID : : 07 January 2017
 
 20
 00:01:50,000 --> 00:01:56,000
-Diggie (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Natalia (Monastery of Light)
+()
+Awal masuk MPL ID : : 31 December 2016
 
 21
 00:01:56,000 --> 00:02:02,000
-Chip (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Franco (Northern Vale)
+()
+Awal masuk MPL ID : : 31 December 2016
 
 22
 00:02:02,000 --> 00:02:08,000
-Carmilla (Moniyan)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Tigreal (Moniyan)
+()
+Awal masuk MPL ID : : 01 January 2016
 
 23
 00:02:08,000 --> 00:02:14,000
-Belerick (Oasis)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Rafaela (Moniyan)
+()
+Awal masuk MPL ID : : 01 January 2016
 
 24
 00:02:14,000 --> 00:02:20,000
-Atlas (Northern Vale)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Minotaur (Agelta Drylands)
+()
+Awal masuk MPL ID : : 01 January 2016
 
 25
 00:02:20,000 --> 00:02:26,000
-Angela (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Lolita (Agelta Drylands)
+()
+Awal masuk MPL ID : : 01 January 2016
 
 26
 00:02:26,000 --> 00:02:32,000
 Akai (Cadia Riverlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+()
+Awal masuk MPL ID : : 01 January 2016
 
 27
 00:02:32,000 --> 00:02:37,000

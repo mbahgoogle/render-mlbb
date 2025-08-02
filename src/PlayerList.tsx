@@ -13,7 +13,7 @@ import {
 import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { rawData, validateRawDatas } from "./types/schema";
-import { Carding } from "./components/CardTeamMLBB";
+import { Carding } from "./components/CardYouTube";
 import { CONFIG } from "./config";
 import { getTriggerFrame } from "./utils/triggerFrame";
 
@@ -34,9 +34,13 @@ import { getTriggerFrame } from "./utils/triggerFrame";
 // import rawTopPlayers from "../public/data/mlbb_all_role.json";
 
 
-import rawTopPlayers from "../public/gaming/mpl_id.json";
+// import rawTopPlayers from "../public/gaming/mpl_id.json";
 // import rawTopPlayers from "../public/gaming/mpl_ph.json";
 // import rawTopPlayers from "../public/gaming/mpl_my.json";
+
+
+
+import rawTopPlayers from "../public/youtube/youtube-example.json";
 
 import Intro from "./components/Intro";
 import Ending from "./components/Ending";

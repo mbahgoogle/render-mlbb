@@ -1,136 +1,162 @@
 1
 00:00:00,000 --> 00:00:02,000
-Riwayat Pemain Unknown Team 2017-2025
+Riwayat Pemain  2017-2025
 
 2
 00:00:02,000 --> 00:00:08,000
-Zhuxin (Cadia Riverlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Zetian (Cadia Riverlands)
+()
+Awal masuk MPL ID : : 18 June 2025
 
 3
 00:00:08,000 --> 00:00:14,000
-Zhask (Vonetis Sea)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Zhuxin (Cadia Riverlands)
+()
+Awal masuk MPL ID : : 29 June 2024
 
 4
 00:00:14,000 --> 00:00:20,000
-Zetian (Cadia Riverlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Novaria (Agelta Drylands)
+()
+Awal masuk MPL ID : : 16 May 2023
 
 5
 00:00:20,000 --> 00:00:26,000
-Yve (Vonetis Sea)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Xavier (Moniyan)
+()
+Awal masuk MPL ID : : 22 March 2022
 
 6
 00:00:26,000 --> 00:00:32,000
-Xavier (Moniyan)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Yve (Vonetis Sea)
+()
+Awal masuk MPL ID : : 02 December 2021
 
 7
 00:00:32,000 --> 00:00:38,000
-Vexana (Vexana Gaius)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Valentina (Moniyan)
+()
+Awal masuk MPL ID : : 01 January 2021
 
 8
 00:00:38,000 --> 00:00:44,000
-Valir (Wind Fort & Fire Throat)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Cecilion (Moniyan)
+()
+Awal masuk MPL ID : : 02 December 2020
 
 9
 00:00:44,000 --> 00:00:50,000
-Valentina (Moniyan)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Luo Yi (Cadia Riverlands)
+()
+Awal masuk MPL ID : : 16 May 2020
 
 10
 00:00:50,000 --> 00:00:56,000
-Vale (Wind Fort & Fire Throat)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Lylia (Northern Vale)
+()
+Awal masuk MPL ID : : 23 July 2019
 
 11
 00:00:56,000 --> 00:01:02,000
-Pharsa (The Barren Lands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Faramis (The Barren Lands)
+()
+Awal masuk MPL ID : : 18 May 2019
 
 12
 00:01:02,000 --> 00:01:08,000
-Odette (Moniyan)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Vale (Wind Fort & Fire Throat)
+()
+Awal masuk MPL ID : : 29 January 2019
 
 13
 00:01:08,000 --> 00:01:14,000
-Novaria (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Lunox (Agelta Drylands)
+()
+Awal masuk MPL ID : : 31 December 2018
 
 14
 00:01:14,000 --> 00:01:20,000
-Nana (Azrya Woodlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Kadita (Vonetis Sea)
+()
+Awal masuk MPL ID : : 31 December 2018
 
 15
 00:01:20,000 --> 00:01:26,000
-Lylia (Northern Vale)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Harith (Moniyan)
+()
+Awal masuk MPL ID : : 30 November 2018
 
 16
 00:01:26,000 --> 00:01:32,000
-Luo Yi (Cadia Riverlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Valir (Wind Fort & Fire Throat)
+()
+Awal masuk MPL ID : : 03 June 2018
 
 17
 00:01:32,000 --> 00:01:38,000
-Lunox (Agelta Drylands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Chang'e (Cadia Riverlands)
+()
+Awal masuk MPL ID : : 30 May 2018
 
 18
 00:01:38,000 --> 00:01:44,000
-Kagura (Cadia Riverlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Zhask (Vonetis Sea)
+()
+Awal masuk MPL ID : : 27 November 2017
 
 19
 00:01:44,000 --> 00:01:50,000
-Kadita (Vonetis Sea)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Odette (Moniyan)
+()
+Awal masuk MPL ID : : 29 September 2017
 
 20
 00:01:50,000 --> 00:01:56,000
-Harith (Moniyan)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Aurora (Northern Vale)
+()
+Awal masuk MPL ID : : 09 May 2017
 
 21
 00:01:56,000 --> 00:02:02,000
-Gord (Northern Vale)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Vexana (Vexana Gaius)
+()
+Awal masuk MPL ID : : 01 January 2017
 
 22
 00:02:02,000 --> 00:02:08,000
-Faramis (The Barren Lands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Pharsa (The Barren Lands)
+()
+Awal masuk MPL ID : : 01 January 2017
 
 23
 00:02:08,000 --> 00:02:14,000
-Eudora (Northern Vale)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Cyclops (Nebula Chronorift)
+()
+Awal masuk MPL ID : : 01 January 2017
 
 24
 00:02:14,000 --> 00:02:20,000
-Cyclops (Nebula Chronorift)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Nana (Azrya Woodlands)
+()
+Awal masuk MPL ID : : 31 December 2016
 
 25
 00:02:20,000 --> 00:02:26,000
-Chang'e (Cadia Riverlands)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Kagura (Cadia Riverlands)
+()
+Awal masuk MPL ID : : 31 December 2016
 
 26
 00:02:26,000 --> 00:02:32,000
-Cecilion (Moniyan)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Gord (Northern Vale)
+()
+Awal masuk MPL ID : : 31 December 2016
 
 27
 00:02:32,000 --> 00:02:38,000
-Aurora (Northern Vale)
-Nama: Unknown | Tanggal masuk Unknown Team: Tidak diketahui | Roles: [Tidak diketahui]
+Eudora (Northern Vale)
+()
+Awal masuk MPL ID : : 31 December 2016
 
 28
 00:02:38,000 --> 00:02:43,000

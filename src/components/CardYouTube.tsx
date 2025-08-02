@@ -85,17 +85,25 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
           className="relative h-140 rounded-t-xl overflow-hidden"
           style={{ borderBottom: '1em solid rgba(131, 110, 110, 0)' }}
         >
-          {/* Image */}
-          <div className="absolute top-0 left-0 h-150 flex items-center justify-center overflow-hidden" style={{ position: 'relative', padding: '1.5em' }}>
+            {/* Image */}
+            <div
+            className="absolute left-0 flex items-center justify-center overflow-hidden"
+            style={{
+              top: '1em', // Geser lebih ke atas
+              position: 'absolute',
+              padding: '1.5em',
+              height: '550px',
+              width: '100%',
+            }}
+            >
             <AnimatedProfileImage
               src={getImageSource(person.image || "")}
               alt={person.name || ""}
               triggerFrame={triggerFrame}
               duration={90}
-              size={400}
-              className="shadow-2xl"
+              size={500}
             />
-          </div>
+            </div>
 
           {/* Animated Sequence Number Counter - Pojok Kanan Atas */}
           <div className="absolute top-0 left-0 p-4">

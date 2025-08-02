@@ -73,7 +73,7 @@ export const AnimatedProfileImage: React.FC<AnimatedProfileImageProps> = ({
         height: size,
         opacity,
         transform: `scale(${scale})`,
-        boxShadow: `0 0 20px rgba(0,0,0,0.3)`,
+        // boxShadow: `0 0 20px rgba(0,0,0,0.3)`,
       }}
     >
       {/* Image container - tidak berputar */}
@@ -101,14 +101,14 @@ export const AnimatedProfileImage: React.FC<AnimatedProfileImageProps> = ({
         {/* Animasi sapuan gradient */}
         <div
           className="absolute inset-0 rounded-full"
-          style={{
-            background: `linear-gradient(90deg, 
-              transparent 0%, 
-              rgba(255,255,255,0.3) ${gradientPosition}%, 
-              rgba(255,255,255,0.5) ${gradientPosition + 5}%, 
-              transparent 100%)`,
-            zIndex: 2,
-          }}
+          // style={{
+          //   background: `linear-gradient(90deg, 
+          //     transparent 0%, 
+          //     rgba(255,255,255,0.3) ${gradientPosition}%, 
+          //     rgba(255,255,255,0.5) ${gradientPosition + 5}%, 
+          //     transparent 100%)`,
+          //   zIndex: 2,
+          // }}
         />
       </div>
 

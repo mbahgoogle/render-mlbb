@@ -1,5 +1,9 @@
 import React from "react";
 import { useCurrentFrame, interpolate, spring } from "remotion";
+import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
+
+const { fontFamily: RubikFont } = loadRubik();
+
 
 interface AnimatedNumberCounterAdvancedProps {
   number: number;
@@ -61,12 +65,11 @@ export const AnimatedNumberCounterAdvanced: React.FC<AnimatedNumberCounterAdvanc
         }}
       >
         <span style={{ 
-          fontFamily: "Arial, sans-serif",
+          fontFamily: RubikFont, // Use the correct variable
           fontWeight: "bold",
-          textShadow: "0 2px 4px rgba(0,0,0,0.5)",
           position: "relative",
           zIndex: 2,
-          fontSize: "3.2em",
+          fontSize: "4em",
           color: "black",
         }}>
           {Math.round(animatedNumber)}

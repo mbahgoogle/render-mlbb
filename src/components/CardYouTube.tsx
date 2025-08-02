@@ -71,23 +71,24 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
       }}
     >
       <div
-        className="w-[620px] rounded-lx shadow-2xl overflow-hidden"
+        className="w-[620px] rounded-lx shadow-2xl"
         style={{
           height: HeightConfig,
           boxShadow: "0 0.5em 2em 0 rgba(31, 38, 135, 0.18)",
           backdropFilter: "blur(5em)",
           WebkitBackdropFilter: "blur(5em)",
           backgroundColor: "rgb(255, 255, 255)",
+          // clipPath: "inset(0 round 10px)", // Replace overflow-hidden with clip-path
         }}
       >
         {/* Header */}
         <div
-          className="relative h-140 rounded-t-xl overflow-hidden"
+          className="relative h-140 rounded-t-xl"
           style={{ borderBottom: '1em solid rgba(131, 110, 110, 0)' }}
         >
             {/* Image */}
             <div
-            className="absolute left-0 flex items-center justify-center overflow-hidden"
+            className="absolute left-0 flex items-center justify-center"
             style={{
               top: '1em', // Geser lebih ke atas
               position: 'absolute',

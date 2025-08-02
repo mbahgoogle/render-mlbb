@@ -47,7 +47,7 @@ export const AnimatedNumberCounterAdvanced: React.FC<AnimatedNumberCounterAdvanc
 
   return (
     <div
-      className={`relative rounded-full overflow-hidden text-white font-bold flex items-center justify-center ${className}`}
+      className={`relative rounded-full text-white font-bold flex items-center justify-center ${className}`}
       style={{
         width: "3.5em",
         height: "3.5em",

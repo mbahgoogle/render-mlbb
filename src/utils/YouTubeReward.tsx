@@ -1,24 +1,27 @@
 import React from 'react';
 
 interface YouTubeRewardProps {
-  subscribers: number;
+  followers_count: number;
 }
 
-const YouTubeReward: React.FC<YouTubeRewardProps> = ({ subscribers }) => {
+const YouTubeReward: React.FC<YouTubeRewardProps> = ({ followers_count }) => {
   let logo = '';
 
-  if (subscribers >= 100_000_000) {
+  if (followers_count >= 100_000_000) {
     logo =
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/YouTube_Red_Diamond_Play_Button.svg/512px-YouTube_Red_Diamond_Play_Button.svg.png';
-  } else if (subscribers >= 10_000_000) {
+  } else if (followers_count >= 50_000_000) {
     logo =
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/YouTube_Diamond_Play_Button.svg/512px-YouTube_Diamond_Play_Button.svg.png';
-  } else if (subscribers >= 1_000_000) {
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/YouTube_Ruby_Play_Button_2.svg/512px-YouTube_Ruby_Play_Button_2.svg.png';
+  } else if (followers_count >= 10_000_000) {
     logo =
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/YouTube_Gold_Play_Button.svg/512px-YouTube_Gold_Play_Button.svg.png';
-  } else if (subscribers >= 100_000) {
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/YouTube_Diamond_Play_Button.svg/512px-YouTube_Diamond_Play_Button.svg.png';
+  } else if (followers_count >= 1_000_000) {
     logo =
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/YouTube_Silver_Play_Button.svg/512px-YouTube_Silver_Play_Button.svg.png';
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/YouTube_Gold_Play_Button_2.svg/512px-YouTube_Gold_Play_Button_2.svg.png';
+  } else if (followers_count >= 100_000) {
+    logo =
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/YouTube_Silver_Play_Button_2.svg/512px-YouTube_Silver_Play_Button_2.svg.png';
   } else {
     logo = 'https://via.placeholder.com/100?text=None';
   }

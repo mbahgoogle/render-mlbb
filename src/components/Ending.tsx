@@ -9,7 +9,7 @@ const Ending: React.FC<{ endingDuration?: number; textColor?: string }> = ({ end
   const frame = useCurrentFrame();
   const duration = endingDuration;
 
-  const text = 'Terima Kasih...';
+  const text = 'See Ya Next...';
   const characters = text.split('').map((char, index) => {
     if (char === ' ' && index < text.length - 1) {
       return '  ';

@@ -45,20 +45,32 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
   const totalCards = CONFIG.cardsToShow; // Use cardsToShow from config.ts
   const nationName = getCountryName(person.nation_code || "");
   const Name = person.name || "";
-  const Subscribes = person.subscribers?.toString() || "N/A";
+  const Subscribes = person.followers_count?.toString() || "N/A";
 
   const fadeInDuration = 20;
 
+  // Add CSS animation for scrolling text
+  const scrollAnimationStyle = `
+    @keyframes scrollText {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(0); }
+      75% { transform: translateX(calc(-100% + 80%)); }
+      100% { transform: translateX(0); }
+    }
+  `;
+
   return (
-    <div
-      className="flex justify-center items-center p-0 card-container"
-      style={{
-        ...style,
-        height: "100%",
-        fontFamily: `${robotoFont}, Arial, sans-serif`,
-        boxShadow: `0 24px 48px rgba(80,0,80,0.18)`,
-      }}
-    >
+    <>
+      <style>{scrollAnimationStyle}</style>
+      <div
+        className="flex justify-center items-center p-0 card-container"
+        style={{
+          ...style,
+          height: "100%",
+          fontFamily: `${robotoFont}, Arial, sans-serif`,
+          boxShadow: `0 24px 48px rgba(80,0,80,0.18)`,
+        }}
+      >
       <div
         className="w-[620px] rounded-lx shadow-2xl"
         style={{
@@ -96,7 +108,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             </div>
 
           {/* Animated Sequence Number Counter - Pojok Kanan Atas */}
-          <div className="absolute top-0 left-0 p-4">
+          <div className="absolute top-0 left-10 p-4">
             <AnimatedNumberCounterAdvanced
               number={index !== undefined ? totalCards - index : totalCards}
               triggerFrame={triggerFrame}
@@ -105,7 +117,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
           </div>
         </div>
 
-        {/* Full Name Above Player Info */}
+        {/* Username Above Player Info */}
         <FadeInOnFrame triggerFrame={triggerFrame + 2} duration={fadeInDuration}>
             <div
             className="text-center text-gray-900 flex items-center justify-center font-bold"
@@ -115,18 +127,26 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
               width: '80%',
               margin: '0 auto',
               overflow: 'hidden',
-              display: '-webkit-box',
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical',
               height: '2.850em',
-              fontSize: '2.5rem', // Ganti ukuran font dengan rem
+              fontSize: '2.5rem',
+              position: 'relative',
             }}
+            >
+            <div
+              style={{
+                wordBreak: 'break-all',
+                whiteSpace: 'nowrap',
+                animation: Name.length > 20 ? 'scrollText 8s linear infinite' : 'none',
+                display: 'inline-block',
+                minWidth: '100%',
+              }}
             >
             <TypingOnFrame
               text={Name}
               triggerFrame={triggerFrame + 39}
               duration={60}
             />
+            </div>
             </div>
         </FadeInOnFrame>
 
@@ -206,10 +226,16 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                 <p className="text-4xl text-gray-50 font-black mt-2">
                     {person.date
                     ? (() => {
-                      // If date is in YYYY-MM-DD, convert to M-D-YYYY
+                      // Handle ISO 8601 date format (e.g., 2023-05-03T20:46:34.789205Z)
+                      if (person.date.includes('T')) {
+                        const datePart = person.date.split('T')[0];
+                        const [year, month, day] = datePart.split("-");
+                        return `${parseInt(day, 10)}-${parseInt(month, 10)}-${year}`;
+                      }
+                      // If date is in YYYY-MM-DD, convert to D-M-YYYY
                       if (/^\d{4}-\d{2}-\d{2}$/.test(person.date)) {
                         const [year, month, day] = person.date.split("-");
-                        return `${parseInt(month, 10)}-${parseInt(day, 10)}-${year}`;
+                        return `${parseInt(day, 10)}-${parseInt(month, 10)}-${year}`;
                       }
                       // If date is in M/D/YYYY or M/D/YY, replace / with -
                       return person.date.replace(/\//g, "-");
@@ -302,14 +328,14 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                      willChange: "transform",
                      backfaceVisibility: "hidden",
                    }}>
-                     <YouTubeReward subscribers={Number(Subscribes.replace(/,/g, "")) || 0} />
+                     <YouTubeReward followers_count={Number(Subscribes.replace(/,/g, "")) || 0} />
                    </div>
                  </FadeInOnFrame>
               </div>
             </div>
           </FadeInOnFrame>
 
-          {/* Category */}
+          {/* Views Count */}
           <FadeInOnFrame triggerFrame={triggerFrame + 4} 
             duration={fadeInDuration}
             style={{ gridColumn: "1 / -1", width: "100%" }}
@@ -317,10 +343,21 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div className="flex-grow">
                 <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>
-                  Category
+                  Total Views
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  <p className="text-4xl text-gray-50 font-black">{person.category || "N/A"}</p>
+                  <p className="text-4xl text-gray-50 font-black">
+                    {(() => {
+                      const views = person.views_count?.toString() || "N/A";
+                      if (views === "N/A") return views;
+                      const num = Number(views.replace(/,/g, ""));
+                      if (isNaN(num)) return views;
+                      if (num >= 1_000_000_000) return `${(num / 1_000_000_000).toFixed(num % 1_000_000_000 === 0 ? 0 : 1)} Billion`;
+                      if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(num % 1_000_000 === 0 ? 0 : 1)} Million`;
+                      if (num >= 1_000) return `${(num / 1_000).toFixed(num % 1_000 === 0 ? 0 : 1)}K`;
+                      return num.toString();
+                    })()}
+                  </p>
                 </div>
               </div>
             </div>
@@ -330,6 +367,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
         </div>
       </div>
     </div>
+    </>
   );
 };
 

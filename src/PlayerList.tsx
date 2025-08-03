@@ -40,7 +40,8 @@ import { getTriggerFrame } from "./utils/triggerFrame";
 
 
 
-import rawTopPlayers from "../public/youtube/youtube-example.json";
+// import rawTopPlayers from "../public/youtube/youtube-example.json";
+import rawTopPlayers from "../public/youtube/global.json";
 
 import Intro from "./components/Intro";
 import Ending from "./components/Ending";
@@ -91,14 +92,34 @@ export const PlayerList: React.FC<PlayerListProps> = ({
 
   /**
    * Effect untuk memproses dan memvalidasi data pemain
-   * Mengurutkan berdasarkan tanggal bergabung (terlama di atas)
+   * Mengurutkan berdasarkan: followers_count (terbanyak di akhir), date (terlama di atas), name (opsi lain jika keduanya sama)
    */
   useEffect(() => {
     const processData = async () => {
       try {
         const data = validateRawDatas(rawTopPlayers)
-          .sort((a: rawData, b: rawData) => new Date(a.date).getTime() - new Date(b.date).getTime())
-          .reverse(); // Reverse untuk mendapatkan yang terlama di atas
+          .sort((a: rawData, b: rawData) => {
+            // Utamakan followers_count (ascending - terbanyak di akhir)
+            const aFollowers = a.followers_count || 0;
+            const bFollowers = b.followers_count || 0;
+            
+            if (aFollowers !== bFollowers) {
+              return aFollowers - bFollowers; // Ascending order
+            }
+            
+            // Jika followers_count sama, urutkan berdasarkan date (terlama di atas)
+            const aDate = new Date(a.date).getTime();
+            const bDate = new Date(b.date).getTime();
+            
+            if (aDate !== bDate) {
+              return aDate - bDate; // Ascending order (terlama di atas)
+            }
+            
+            // Jika date sama, urutkan berdasarkan name
+            const aName = a.name || '';
+            const bName = b.name || '';
+            return aName.localeCompare(bName);
+          });
         setValidatedData(data);
         continueRender(handle);
       } catch (error) {

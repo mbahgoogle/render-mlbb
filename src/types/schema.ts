@@ -17,7 +17,9 @@ export const rawDataSchema = z.object({
   league: z.string().optional(),
   logo_league: z.string().optional(),
   tier: z.string().optional(),
-  subscribers: z.number().optional(),
+  followers_count: z.number().optional(),
+  views_count: z.number().optional(),
+  video_count: z.number().optional(),
   category: z.string().optional(),
 });
 

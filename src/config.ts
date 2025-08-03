@@ -27,8 +27,8 @@ export const CONFIG = {
   HEIGHT: 1440,
 
   // Content Settings
-  cardTitle: "Mobile Legends Edition",
-  cardsToShow: 9,           // Jumlah kartu yang akan ditampilkan
+  cardTitle: "Inside YouTube",
+  cardsToShow: 10,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
 
   // Timing Settings

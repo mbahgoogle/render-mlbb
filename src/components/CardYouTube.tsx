@@ -136,7 +136,8 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
               style={{
                 wordBreak: 'break-all',
                 whiteSpace: 'nowrap',
-                animation: Name.length > 20 ? 'scrollText 15s linear forwards' : 'none',
+                // Perbaiki animasi agar berjalan terus-menerus (infinite) dan bisa diulang
+                animation: Name.length > 20 ? 'scrollText 10s linear 2' : 'none',
                 display: 'inline-block',
                 minWidth: '100%',
               }}

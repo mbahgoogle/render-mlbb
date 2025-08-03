@@ -145,7 +145,7 @@ const Intro: React.FC<{ person: rawData; colorText?: string }> = ({ person, colo
       <h2 style={getTextStyle({ fontSize: '4rem', fontWeight: 700, transform: `translateY(${subtitleSlideUp}%)`, maxWidth: '60%', textAlign: 'center', margin: '0 auto', lineHeight: '1.4' })}>
         {displayedTypingText}
       </h2>
-      <h3 style={getTextStyle({ fontSize: '3rem', fontWeight: 600, transform: `translateY(${presenetBySlideUp}%)` })}>Present by: SINAU VIDEO</h3>
+      <h3 style={getTextStyle({ fontSize: '3rem', fontWeight: 600, transform: `translateY(${presenetBySlideUp}%)` })}>Present by: @SINAUVIDEO</h3>
     </div>
   );
 };

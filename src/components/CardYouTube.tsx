@@ -53,8 +53,8 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
   const scrollAnimationStyle = `
     @keyframes scrollText {
       0% { transform: translateX(0); }
-      25% { transform: translateX(0); }
-      75% { transform: translateX(calc(-100% + 80%)); }
+      20% { transform: translateX(0); }
+      80% { transform: translateX(calc(-100% + 80%)); }
       100% { transform: translateX(0); }
     }
   `;
@@ -136,7 +136,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
               style={{
                 wordBreak: 'break-all',
                 whiteSpace: 'nowrap',
-                animation: Name.length > 20 ? 'scrollText 8s linear infinite' : 'none',
+                animation: Name.length > 20 ? 'scrollText 15s linear forwards' : 'none',
                 display: 'inline-block',
                 minWidth: '100%',
               }}

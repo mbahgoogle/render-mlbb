@@ -18,6 +18,7 @@ export const rawDataSchema = z.object({
   logo_league: z.string().optional(),
   tier: z.string().optional(),
   subscribers: z.number().optional(),
+  category: z.string().optional(),
 });
 
 // Type yang dihasilkan dari schema

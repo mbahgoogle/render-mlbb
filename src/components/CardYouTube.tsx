@@ -1,29 +1,20 @@
 import React from "react";
 import { rawData } from "../types/schema";
 import { CircleFlag } from "react-circle-flags";
-import {
-  FaFutbol as Football,
-  FaBirthdayCake as Birthday,
-  FaCalendar as Calendar,
-} from "react-icons/fa";
 
+import { getCountryCode, getCountryName } from "../utils/getCountryCode";
 
-import { getLogoCode } from "../utils/getLogoClub";
-import { getCountryCode } from "../utils/getCountryCode";
-import { herosIcon } from "../utils/getHeros";
 import { loadFont as loadRoboto } from "@remotion/google-fonts/Roboto";
 import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
-import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
-import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
+
 import { useVideoConfig, staticFile } from "remotion";
 import { FadeInOnFrame } from "./FadeInOnFrame";
 import { TypingOnFrame } from "./TypingOnFrame";
 import { AnimatedProfileImage } from "./AnimatedProfileImage";
-import { AnimatedNumberCounter } from "./AnimatedNumberCounterAdvenced";
 import { AnimatedNumberCounterAdvanced } from "./AnimatedNumberCounterAdvanced";
-import { getTriggerFrame } from "../utils/triggerFrame";
 import { CONFIG } from "../config";
+import YouTubeReward from "../utils/YouTubeReward";
 
 
 // Add helper function to check if URL is local or remote
@@ -40,9 +31,7 @@ const getImageSource = (url: string | undefined) => {
 // Load fonts
 const { fontFamily: robotoFont } = loadRoboto();
 const { fontFamily: robotoMonoFont } = loadRobotoMono();
-const { fontFamily: interFont } = loadInter();
 const { fontFamily: RubikFont } = loadRubik();
-const { fontFamily: PoppinsFont } = loadPoppins();
 
 interface CardingProps {
   person: rawData & { club_logo?: string };
@@ -54,7 +43,7 @@ interface CardingProps {
 export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerFrame }) => {
   const HeightConfig = useVideoConfig().height * 0.94;
   const totalCards = CONFIG.cardsToShow; // Use cardsToShow from config.ts
-  const nationName = person.nation || "";
+  const nationName = getCountryName(person.nation_code || "");
   const Name = person.name || "";
   const Subscribes = person.subscribers?.toString() || "N/A";
 
@@ -111,16 +100,41 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             <AnimatedNumberCounterAdvanced
               number={index !== undefined ? totalCards - index : totalCards}
               triggerFrame={triggerFrame}
-              duration={600}
+              duration={900}
             />
           </div>
         </div>
 
-        {/* Player info */}
-        <div className="pt-8 px-6 pb-4">
+        {/* Full Name Above Player Info */}
+        <FadeInOnFrame triggerFrame={triggerFrame + 2} duration={fadeInDuration}>
+            <div
+            className="text-center text-gray-900 flex items-center justify-center font-bold"
+            style={{
+              fontFamily: robotoMonoFont,
+              fontWeight: 900,
+              width: '80%',
+              margin: '0 auto',
+              overflow: 'hidden',
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              height: '2.850em',
+              fontSize: '2.5rem', // Ganti ukuran font dengan rem
+            }}
+            >
+            <TypingOnFrame
+              text={Name}
+              triggerFrame={triggerFrame + 39}
+              duration={60}
+            />
+            </div>
+        </FadeInOnFrame>
+
+        {/* Country Section */}
+        <div className="pt-0 px-6 pb-4">
           <div className="flex flex-col items-center text-center">
             <div className="flex-grow">
-             <FadeInOnFrame triggerFrame={(triggerFrame ?? 0) + 0} duration={fadeInDuration}>
+             <FadeInOnFrame triggerFrame={(triggerFrame ?? 0) + 100} duration={fadeInDuration}>
                 <div className="flex justify-center mt-4">
                   <span className="bg-gray-900 text-white px-6 py-3 font-bold rounded-full flex items-center gap-3 text-4xl" style={{ fontFamily: RubikFont }}>
                     {nationName}
@@ -130,8 +144,8 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                         return (
                           <CircleFlag
                             countryCode={code}
-                            height="50"
-                            width="50"
+                            height="70"
+                            width="70"
                           />
                         );
                       } else {
@@ -149,22 +163,34 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
         <FadeInOnFrame triggerFrame={triggerFrame + 2} 
           duration={fadeInDuration}
         >
-          <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-5 px-5 mx-5">
-            <div className="flex items-center justify-center">
-              <p className="text-gray-200 font-bold text-center" style={{ 
-                fontFamily: robotoMonoFont,
-                minWidth: '300px',
-                whiteSpace: 'nowrap',
+            <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-7 px-5 mx-5">
+            <div>
+              <p className="text-gray-200 font-bold" style={{ 
+              fontFamily: robotoMonoFont,
+              minWidth: '300px',
+              whiteSpace: 'nowrap', 
               }}>
+              <div
+                style={{
+                  maxWidth: '100%',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                  fontFamily: robotoMonoFont,
+                  minWidth: '300px',
+                }}
+                title={person.full_name || "Unknown"}
+              >
                 <TypingOnFrame
-                  text={Name}
+                  text={person.full_name || "Unknown"}
                   triggerFrame={triggerFrame + 39}
                   duration={30}
                   style={{ fontFamily: robotoMonoFont }}
                 />
+              </div>
               </p>
             </div>
-          </div>
+            </div>
         </FadeInOnFrame>
 
         <div className="grid grid-cols-2 gap-8 p-5">
@@ -176,17 +202,17 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
           >
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div>
-                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont }}>Date</p>
-                <p className="text-4xl text-gray-50 font-bold">
-                  {person.date
+                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont }}>Join</p>
+                <p className="text-4xl text-gray-50 font-black mt-2">
+                    {person.date
                     ? (() => {
-                        // If date is in YYYY-MM-DD, convert to M/D/YYYY
-                        if (/^\d{4}-\d{2}-\d{2}$/.test(person.date)) {
-                          const [year, month, day] = person.date.split("-");
-                          return `${parseInt(month, 10)}/${parseInt(day, 10)}/${year}`;
-                        }
-                        // If date is in M/D/YYYY or M/D/YY, return as is
-                        return person.date;
+                      // If date is in YYYY-MM-DD, convert to M-D-YYYY
+                      if (/^\d{4}-\d{2}-\d{2}$/.test(person.date)) {
+                        const [year, month, day] = person.date.split("-");
+                        return `${parseInt(month, 10)}-${parseInt(day, 10)}-${year}`;
+                      }
+                      // If date is in M/D/YYYY or M/D/YY, replace / with -
+                      return person.date.replace(/\//g, "-");
                       })()
                     : "N/A"}
                 </p>
@@ -199,15 +225,91 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             duration={fadeInDuration}
             style={{ gridColumn: "1 / -1", width: "100%" }}
           >
-            <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
-              <div>
-                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont }}>Tier</p>
-                <p className="text-4xl text-gray-50 font-bold">{Subscribes}</p>
+            <div className="flex w-full rounded-md overflow-hidden" style={{ minHeight: 110 }}>
+              {/* Left: Subscribes info */}
+              <div
+                className="flex flex-col justify-center flex-1 p-3"
+                style={{
+                  background: "linear-gradient(90deg, #111827 80%, #18181b 100%)",
+                  borderTopLeftRadius: 8,
+                  borderBottomLeftRadius: 8,
+                }}
+              >
+                <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont }}>
+                  Subscribes
+                </p>
+                <p className="text-4xl text-gray-50 font-black mt-2">
+                  {(() => {
+                    const num = Number(Subscribes.replace(/,/g, ""));
+                    if (isNaN(num)) return Subscribes;
+                    if (num >= 1_000_000_000) return `${(num / 1_000_000_000).toFixed(num % 1_000_000_000 === 0 ? 0 : 1)} Billion`;
+                    if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(num % 1_000_000 === 0 ? 0 : 1)} Million`;
+                    if (num >= 1_000) return `${(num / 1_000).toFixed(num % 1_000 === 0 ? 0 : 1)}K`;
+                    return num.toString();
+                  })()}
+                </p>
+              </div>
+                             {/* Right: YouTube Reward */}
+               <div
+                 className="flex items-center justify-center px-5"
+                 style={{
+                   background: "linear-gradient(135deg, rgba(255,0,70,0.7) 0%, rgba(255,100,0,0.5) 60%, rgba(255,255,255,0.2) 100%)",
+                   borderTopRightRadius: 16,
+                   borderBottomRightRadius: 16,
+                   minWidth: 120,
+                   position: "relative",
+                   overflow: "hidden",
+                   transform: "translateZ(0)",
+                   willChange: "transform",
+                   backfaceVisibility: "hidden",
+                   perspective: 1000,
+                 }}
+               >
+                                 <svg
+                   style={{
+                     position: "absolute",
+                     top: 0,
+                     left: 0,
+                     width: "100%",
+                     height: "100%",
+                     zIndex: 0,
+                     pointerEvents: "none",
+                     transform: "translateZ(0)",
+                     willChange: "transform",
+                     backfaceVisibility: "hidden",
+                   }}
+                   viewBox="0 0 120 110"
+                   fill="none"
+                   xmlns="http://www.w3.org/2000/svg"
+                   preserveAspectRatio="none"
+                 >
+                  <defs>
+                    <radialGradient id="glassGradient" cx="60%" cy="40%" r="80%">
+                      <stop offset="0%" stopColor="#ff0046" stopOpacity="0.25" />
+                      <stop offset="60%" stopColor="#ffb347" stopOpacity="0.12" />
+                      <stop offset="100%" stopColor="#ffffff" stopOpacity="0.05" />
+                    </radialGradient>
+                  </defs>
+                  <rect width="120" height="110" fill="url(#glassGradient)" />
+                  <ellipse cx="90" cy="20" rx="30" ry="18" fill="#fff" fillOpacity="0.12" />
+                  <ellipse cx="30" cy="90" rx="20" ry="10" fill="#ff0046" fillOpacity="0.10" />
+                </svg>
+                                 <FadeInOnFrame triggerFrame={triggerFrame + 390} duration={fadeInDuration}>
+                   <div style={{ 
+                     position: "relative", 
+                     zIndex: 10,
+                     transform: "translateZ(0)",
+                     willChange: "transform",
+                     backfaceVisibility: "hidden",
+                   }}>
+                     <YouTubeReward subscribers={Number(Subscribes.replace(/,/g, "")) || 0} />
+                   </div>
+                 </FadeInOnFrame>
               </div>
             </div>
           </FadeInOnFrame>
 
-          {/* Serie */}
+          {/* Category */}
           <FadeInOnFrame triggerFrame={triggerFrame + 4} 
             duration={fadeInDuration}
             style={{ gridColumn: "1 / -1", width: "100%" }}
@@ -215,30 +317,16 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             <div className="flex items-center text-left gap-4 p-3 bg-gray-900 rounded-md w-full">
               <div className="flex-grow">
                 <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont}}>
-                  Serie
+                  Category
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  <p className="text-4xl text-gray-50 font-bold">{person.league || "N/A"}</p>
+                  <p className="text-4xl text-gray-50 font-black">{person.category || "N/A"}</p>
                 </div>
               </div>
             </div>
           </FadeInOnFrame>
           
-          {/* Heroes */}
-          <FadeInOnFrame triggerFrame={triggerFrame + 4} 
-            duration={fadeInDuration}
-            style={{ gridColumn: "1 / -1", width: "100%" }}
-          >
-            {person.logo_league && (
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
-                <img
-                  src={`https://ce880219c.cloudimg.io/v7/${person.logo_league?.replace(/^https?:\/\//, "")}`}
-                  alt="League"
-                  style={{ width: "10em", height: "10em", objectFit: "contain" }}
-                />
-              </div>
-            )}
-          </FadeInOnFrame>
+         
         </div>
       </div>
     </div>

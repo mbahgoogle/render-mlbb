@@ -15,6 +15,7 @@ import { AnimatedProfileImage } from "./AnimatedProfileImage";
 import { AnimatedNumberCounterAdvanced } from "./AnimatedNumberCounterAdvanced";
 import { CONFIG } from "../config";
 import YouTubeReward from "../utils/YouTubeReward";
+import { ScrollText } from "./ScrollText";
 
 
 // Add helper function to check if URL is local or remote
@@ -49,19 +50,8 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
 
   const fadeInDuration = 20;
 
-  // Add CSS animation for scrolling text
-  const scrollAnimationStyle = `
-    @keyframes scrollText {
-      0% { transform: translateX(0); }
-      20% { transform: translateX(0); }
-      80% { transform: translateX(calc(-100% + 80%)); }
-      100% { transform: translateX(0); }
-    }
-  `;
-
   return (
     <>
-      <style>{scrollAnimationStyle}</style>
       <div
         className="flex justify-center items-center p-0 card-container"
         style={{
@@ -120,34 +110,26 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
         {/* Username Above Player Info */}
         <FadeInOnFrame triggerFrame={triggerFrame + 2} duration={fadeInDuration}>
             <div
-            className="text-center text-gray-900 flex items-center justify-center font-bold"
+            className="text-center text-gray-900 flex items-center justify-center font-bold p-10"
             style={{
               fontFamily: robotoMonoFont,
-              fontWeight: 900,
-              width: '80%',
               margin: '0 auto',
               overflow: 'hidden',
-              height: '2.850em',
-              fontSize: '2.5rem',
+              width: '100%',
+              height: '8rem',
               position: 'relative',
             }}
             >
-            <div
-              style={{
-                wordBreak: 'break-all',
-                whiteSpace: 'nowrap',
-                // Perbaiki animasi agar berjalan terus-menerus (infinite) dan bisa diulang
-                animation: Name.length > 20 ? 'scrollText 3s linear 2 alternate' : 'none',
-                display: 'inline-block',
-                minWidth: '100%',
-              }}
-            >
-            <TypingOnFrame
+            <ScrollText
               text={Name}
               triggerFrame={triggerFrame + 39}
-              duration={60}
+              duration={300}
+              style={{
+                fontFamily: robotoMonoFont,
+                fontWeight: 900,
+                fontSize: '2.5rem',
+              }}
             />
-            </div>
             </div>
         </FadeInOnFrame>
 

@@ -86,7 +86,9 @@ jobs:
       - name: Render Images
         run: |
           echo "Starting image render..."
-          npx remotion render PlayerListCard out/frame-%d.png --verbose --disable-dev-shm-usage --frames=1-600 --image-format=png
+          for i in {1..600}; do
+            npx remotion still PlayerListCard out/frame-$i.png --verbose --disable-dev-shm-usage --frame=$i
+          done
           echo "Render finished!"
 
       - name: Upload Artifact

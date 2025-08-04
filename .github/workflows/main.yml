@@ -89,8 +89,8 @@ jobs:
           # --frame-715-943 is not a valid flag for remotion render.
           # The correct flag is --frames, and the value should be in the format start-end (e.g., 715-943).
           # 36419 (10:06:59) (100 Cards)
-          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=0-4999
-          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=5000-9999
+          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=0-4999
+          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=5000-9999
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=10000-14999
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=10000-14999
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=15000-19999

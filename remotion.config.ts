@@ -19,7 +19,6 @@ Config.overrideWebpackConfig((config) => {
 })
 Config.setConcurrency(1)
 Config.setVideoImageFormat("png")
-// Config.setCodec("png")
 Config.setBeepOnFinish(true)
 Config.setScale(1)
 Config.setCachingEnabled(true);

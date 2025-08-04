@@ -5,7 +5,7 @@ import { useVideoConfig, staticFile, useCurrentFrame, interpolate } from "remoti
 
 // Helper untuk gambar
 const getImageSource = (url: string | undefined) => {
-  if (!url) return staticFile('default-player.png');
+  if (!url) return staticFile('default.svg');
   if (url.startsWith('http://') || url.startsWith('https://')) return url;
   return staticFile(url);
 };
@@ -98,7 +98,7 @@ const PlayerCardBlock: React.FC<{ person: TopPlayer; height: number; frameOffset
             transition: 'opacity 0.3s, transform 0.3s',
             display: 'block',
           }}
-          onError={e => { (e.target as HTMLImageElement).src = staticFile('default-player.png'); }}
+          onError={e => { (e.target as HTMLImageElement).src = staticFile('default.svg'); }}
         />
       </div>
       {/* Footer */}

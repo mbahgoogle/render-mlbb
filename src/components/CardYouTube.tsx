@@ -20,7 +20,7 @@ import { ScrollText } from "./ScrollText";
 
 // Add helper function to check if URL is local or remote
 const getImageSource = (url: string | undefined) => {
-  if (!url) return staticFile('default-player.png'); // Add a default image
+  if (!url) return staticFile('default.svg'); // Add a default image
   // Check if the URL is remote (starts with http:// or https://)
   if (url.startsWith('http://') || url.startsWith('https://')) {
     return url;

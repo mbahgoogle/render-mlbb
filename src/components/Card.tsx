@@ -27,7 +27,7 @@ import { getTriggerFrame } from "../utils/triggerFrame";
 
 // Add helper function to check if URL is local or remote
 const getImageSource = (url: string | undefined) => {
-  if (!url) return staticFile('default-player.png'); // Add a default image
+  if (!url) return staticFile('default.svg'); // Add a default image
   // Check if the URL is remote (starts with http:// or https://)
   if (url.startsWith('http://') || url.startsWith('https://')) {
     return url;
@@ -93,7 +93,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
               }}
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.src = staticFile('default-player.png');
+                target.src = staticFile('default.svg');
               }}
             />
           </div>

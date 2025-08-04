@@ -86,7 +86,7 @@ export const AnimatedProfileImage: React.FC<AnimatedProfileImageProps> = ({
       >
         {/* Image */}
         <img
-          src={src}
+          src={`https://ce880219c.cloudimg.io/v7/${src}`}
           alt={alt}
           className="w-full h-full object-cover rounded-full"
           style={{

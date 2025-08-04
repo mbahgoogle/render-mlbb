@@ -2,13 +2,7 @@ import React from "react";
 import { TopPlayer } from "../types/schema";
 import { heros } from "../utils/getHeros";
 import { useVideoConfig, staticFile, useCurrentFrame, interpolate } from "remotion";
-
-// Helper untuk gambar
-const getImageSource = (url: string | undefined) => {
-  if (!url) return staticFile('default.svg');
-  if (url.startsWith('http://') || url.startsWith('https://')) return url;
-  return staticFile(url);
-};
+import { getImageSource } from "../utils/imageProxy";
 
 // Warna ungu utama
 const PURPLE = "green";

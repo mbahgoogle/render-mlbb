@@ -28,7 +28,7 @@ export const CONFIG = {
 
   // Content Settings
   cardTitle: "Inside YouTube",
-  cardsToShow: 3,           // Jumlah kartu yang akan ditampilkan
+  cardsToShow: 4,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
 
   // Timing Settings

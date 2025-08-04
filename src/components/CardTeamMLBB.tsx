@@ -20,17 +20,7 @@ import { useVideoConfig, staticFile } from "remotion";
 import { FadeInOnFrame } from "./FadeInOnFrame";
 import { TypingOnFrame } from "./TypingOnFrame";
 import { getTriggerFrame } from "../utils/triggerFrame";
-
-// Add helper function to check if URL is local or remote
-const getImageSource = (url: string | undefined) => {
-  if (!url) return staticFile('default.svg'); // Add a default image
-  // Check if the URL is remote (starts with http:// or https://)
-  if (url.startsWith('http://') || url.startsWith('https://')) {
-    return url;
-  }
-  // If it's a local file, use staticFile
-  return staticFile(url);
-};
+import { getImageSource } from "../utils/imageProxy";
 
 // Load fonts
 const { fontFamily: robotoFont } = loadRoboto();

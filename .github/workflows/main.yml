@@ -87,7 +87,7 @@ jobs:
         run: |
           echo "Starting video render..."
           # Use optimal concurrency for GitHub Actions runners
-          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --concurrency=1
+          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --concurrency=4
           echo "Render finished!"
 
       - name: Upload Artifact

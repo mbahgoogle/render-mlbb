@@ -5,10 +5,19 @@ import { getLogoCode } from '../utils/getLogoClub';
 import { staticFile } from 'remotion';
 import type { rawData } from '../types/schema';
 import { CONFIG } from '../config';
-import { getImageSource } from '../utils/imageProxy';
 
 // Optional: bisa menerima props jika ingin dinamis
 const { fontFamily: rubikFont } = loadRubik();
+
+const getImageSource = (url: string | undefined) => {
+  if (!url) return staticFile('default.svg'); // Add a default image
+  // Check if the URL is remote (starts with http:// or https://)
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  // If it's a local file, use staticFile
+  return staticFile(url);
+};
 
 const Intro: React.FC<{ person: rawData; colorText?: string }> = ({ person, colorText = '#fff' }) => {
   // Utility function to quickly apply consistent text styles (e.g., color)

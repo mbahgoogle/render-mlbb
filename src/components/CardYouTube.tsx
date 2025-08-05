@@ -7,6 +7,7 @@ import { getCountryCode, getCountryName } from "../utils/getCountryCode";
 import { loadFont as loadRoboto } from "@remotion/google-fonts/Roboto";
 import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
+import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
 
 import { useVideoConfig, staticFile } from "remotion";
 import { FadeInOnFrame } from "./FadeInOnFrame";
@@ -33,6 +34,11 @@ const getImageSource = (url: string | undefined) => {
 const { fontFamily: robotoFont } = loadRoboto();
 const { fontFamily: robotoMonoFont } = loadRobotoMono();
 const { fontFamily: RubikFont } = loadRubik();
+const { fontFamily: poppinsFont } = loadPoppins();
+
+// Update font loading to use staticFile for server compatibility
+const notoSansFontPath = staticFile("fonts/NotoSans-Regular.ttf");
+const notoSansFont = `url(${notoSansFontPath})`;
 
 interface CardingProps {
   person: rawData & { club_logo?: string };
@@ -112,7 +118,6 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             <div
             className="text-center text-gray-900 flex items-center justify-center font-bold p-10"
             style={{
-              fontFamily: robotoMonoFont,
               margin: '0 auto',
               overflow: 'hidden',
               width: '100%',
@@ -125,9 +130,9 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
               triggerFrame={triggerFrame + 39}
               duration={300}
               style={{
-                fontFamily: robotoMonoFont,
-                fontWeight: 900,
-                fontSize: '2.5rem',
+                fontFamily: poppinsFont,
+                fontWeight: 700, // Bold weight
+                fontSize: '3rem', // Slightly larger size
               }}
             />
             </div>
@@ -169,10 +174,10 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-7 px-5 mx-5">
             <div>
               <p className="text-gray-200 font-bold" style={{ 
-              fontFamily: robotoMonoFont,
-              minWidth: '300px',
-              whiteSpace: 'nowrap', 
-              }}>
+                fontFamily: `${robotoMonoFont}, ${notoSansFont}, Arial, sans-serif`,
+                minWidth: '300px',
+                whiteSpace: 'nowrap', 
+                }}>
               <div
                 style={{
                   maxWidth: '100%',

@@ -25,6 +25,12 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
+    "@fontsource-variable/noto-sans-devanagari": "^5.2.6",
+    "@fontsource-variable/noto-sans-jp": "^5.2.6",
+    "@fontsource-variable/noto-sans-khmer": "^5.2.6",
+    "@fontsource-variable/noto-sans-kr": "^5.2.6",
+    "@fontsource-variable/noto-sans-sc": "^5.2.6",
+    "@fontsource-variable/noto-sans-thai": "^5.2.6",
     "@remotion/animation-utils": "^4.0.273",
     "@remotion/bundler": "4.0.273",
     "@remotion/cli": "4.0.273",

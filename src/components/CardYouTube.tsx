@@ -20,6 +20,13 @@ import YouTubeReward from "../utils/YouTubeReward";
 import { ScrollText } from "./ScrollText";
 
 
+import '@fontsource-variable/noto-sans-khmer';
+import '@fontsource-variable/noto-sans-sc';
+import '@fontsource-variable/noto-sans-jp';
+import '@fontsource-variable/noto-sans-thai';
+import '@fontsource-variable/noto-sans-kr';
+import '@fontsource-variable/noto-sans-devanagari';
+
 // Add helper function to check if URL is local or remote
 const getImageSource = (url: string | undefined) => {
   if (!url) return staticFile('default.svg'); // Add a default image
@@ -35,12 +42,9 @@ const getImageSource = (url: string | undefined) => {
 const { fontFamily: robotoFont } = loadRoboto();
 const { fontFamily: robotoMonoFont } = loadRobotoMono();
 const { fontFamily: RubikFont } = loadRubik();
-const { fontFamily: poppinsFont } = loadPoppins();
+// const { fontFamily: poppinsFont } = loadPoppins();
 const { fontFamily: notoSansFont } = loadNotoSans();
 
-// Update font loading to use staticFile for server compatibility
-const notoSansFontPath = staticFile("fonts/NotoSans-Regular.ttf");
-const notoSansFontFallback = `url(${notoSansFontPath})`;
 
 interface CardingProps {
   person: rawData & { club_logo?: string };
@@ -175,8 +179,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
         >
             <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-7 px-5 mx-5">
             <div>
-              <p className="text-gray-200 font-bold" style={{ 
-                fontFamily: `${notoSansFont}, Arial, sans-serif`,
+              <p className="text-gray-200 font-bold" style={{
                 minWidth: '300px',
                 whiteSpace: 'nowrap', 
                 }}>
@@ -186,7 +189,12 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
-                  fontFamily: robotoMonoFont,
+                  fontFamily: `'Noto Sans KR Variable',
+                    'Noto Sans JP Variable',
+                    'Noto Sans SC Variable',
+                    'Noto Sans Thai Variable',
+                    'Noto Sans Khmer Variable',
+                    sans-serif`,
                   minWidth: '300px',
                 }}
                 title={person.full_name || "Unknown"}

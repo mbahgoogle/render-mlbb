@@ -8,6 +8,24 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/noto-sans-devanagari':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource-variable/noto-sans-jp':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource-variable/noto-sans-khmer':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource-variable/noto-sans-kr':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource-variable/noto-sans-sc':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource-variable/noto-sans-thai':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@remotion/animation-utils':
         specifier: ^4.0.273
         version: 4.0.273(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -554,6 +572,24 @@ packages:
   '@eslint/plugin-kit@0.2.7':
     resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource-variable/noto-sans-devanagari@5.2.6':
+    resolution: {integrity: sha512-Q1C5o4EnAepSm75j0VAQ+QygUh1h5f0gvvSoVPukNsstq/USfA3eRk3sorHnNT34u+BGehABCe+lpCueoppSTg==}
+
+  '@fontsource-variable/noto-sans-jp@5.2.6':
+    resolution: {integrity: sha512-YjN8UF1hX8ZFkYx95NMz8XeojsCIF5dGPu1htoWkbXyTZj3Z29cxDT8glaT/cOg1BstyOlmtvNC8crPF5Csj/w==}
+
+  '@fontsource-variable/noto-sans-khmer@5.2.6':
+    resolution: {integrity: sha512-hlk8o9C5FWxf1plpbIALuJIIZXJYHSzOy/6e+nG2Jwtb9eZ+IdEHE+yGtlHLkls09Gyp5K/KIv6y5ZmIQMJDog==}
+
+  '@fontsource-variable/noto-sans-kr@5.2.6':
+    resolution: {integrity: sha512-TxQjtsKPfyWv1Y2MmMlvURrHi0zDCix7XdCkvWiZD9YV03lDx0nW87wbCfuygLzJmvrNj0LplVjnnbyvtBUgog==}
+
+  '@fontsource-variable/noto-sans-sc@5.2.6':
+    resolution: {integrity: sha512-PbDg8YG05A/8mFiII8lqK0Nvn5gDbCcvDctwNQjIFaBptLFNXDofmnocvki+A4ss3VxdYCyG4xznauMPQi+/RA==}
+
+  '@fontsource-variable/noto-sans-thai@5.2.6':
+    resolution: {integrity: sha512-Lt0D2ga3e+v+//STaRz+4wMaRXn0G4tLZOxGXod68NGZAKYhzu6BkNIb/vzLedDAbUnMCZbNg7Kimjqz1fAA3A==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -2368,6 +2404,18 @@ snapshots:
     dependencies:
       '@eslint/core': 0.12.0
       levn: 0.4.1
+
+  '@fontsource-variable/noto-sans-devanagari@5.2.6': {}
+
+  '@fontsource-variable/noto-sans-jp@5.2.6': {}
+
+  '@fontsource-variable/noto-sans-khmer@5.2.6': {}
+
+  '@fontsource-variable/noto-sans-kr@5.2.6': {}
+
+  '@fontsource-variable/noto-sans-sc@5.2.6': {}
+
+  '@fontsource-variable/noto-sans-thai@5.2.6': {}
 
   '@humanfs/core@0.19.1': {}
 

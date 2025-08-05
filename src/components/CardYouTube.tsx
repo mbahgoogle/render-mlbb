@@ -176,7 +176,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                 minWidth: '300px',
                 whiteSpace: 'nowrap', 
                 }}>
-              <div
+                <div
                 style={{
                   maxWidth: '100%',
                   overflow: 'hidden',
@@ -185,14 +185,16 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                   minWidth: '300px',
                 }}
                 title={person.full_name || "Unknown"}
-              >
+                >
                 <TypingOnFrame
                   text={person.full_name || "Unknown"}
                   triggerFrame={triggerFrame + 39}
                   duration={30}
-                  style={{ fontFamily: notoSansFont }}
+                  style={{ 
+                  fontFamily: `${notoSansFont}, 'Noto Sans', 'Noto Sans CJK', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Devanagari', 'Noto Sans Khmer', sans-serif` 
+                  }}
                 />
-              </div>
+                </div>
               </p>
             </div>
             </div>

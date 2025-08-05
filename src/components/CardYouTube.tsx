@@ -7,7 +7,7 @@ import { getCountryCode, getCountryName } from "../utils/getCountryCode";
 import { loadFont as loadRoboto } from "@remotion/google-fonts/Roboto";
 import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
-import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
+// import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
 import { loadFont as loadNotoSans } from "@remotion/google-fonts/NotoSans";
 
 import { useVideoConfig, staticFile } from "remotion";
@@ -19,13 +19,6 @@ import { CONFIG } from "../config";
 import YouTubeReward from "../utils/YouTubeReward";
 import { ScrollText } from "./ScrollText";
 
-
-import '@fontsource-variable/noto-sans-khmer';
-import '@fontsource-variable/noto-sans-sc';
-import '@fontsource-variable/noto-sans-jp';
-import '@fontsource-variable/noto-sans-thai';
-import '@fontsource-variable/noto-sans-kr';
-import '@fontsource-variable/noto-sans-devanagari';
 
 // Add helper function to check if URL is local or remote
 const getImageSource = (url: string | undefined) => {
@@ -189,12 +182,6 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
-                  fontFamily: `'Noto Sans KR Variable',
-                    'Noto Sans JP Variable',
-                    'Noto Sans SC Variable',
-                    'Noto Sans Thai Variable',
-                    'Noto Sans Khmer Variable',
-                    sans-serif`,
                   minWidth: '300px',
                 }}
                 title={person.full_name || "Unknown"}
@@ -203,7 +190,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                   text={person.full_name || "Unknown"}
                   triggerFrame={triggerFrame + 39}
                   duration={30}
-                  style={{ fontFamily: robotoMonoFont }}
+                  style={{ fontFamily: notoSansFont }}
                 />
               </div>
               </p>

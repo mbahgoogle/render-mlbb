@@ -83,6 +83,11 @@ jobs:
             done
           fi
 
+      - name: Verify Fonts
+        run: |
+          ls -l public/fonts
+          echo "Fonts downloaded successfully!"
+
       - name: Render Video
         run: |
           echo "Starting video render..."
@@ -96,7 +101,7 @@ jobs:
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=20000-24999
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=25000-29999
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=30000-36418
-          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=0-200
+          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=683-932
           echo "Render finished!"
 
       - name: Upload Artifact

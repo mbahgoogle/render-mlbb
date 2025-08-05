@@ -96,7 +96,7 @@ jobs:
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=20000-24999
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=25000-29999
           # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=30000-36418
-          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage
+          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=0-200
           echo "Render finished!"
 
       - name: Upload Artifact

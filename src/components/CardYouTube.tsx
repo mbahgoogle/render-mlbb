@@ -8,6 +8,7 @@ import { loadFont as loadRoboto } from "@remotion/google-fonts/Roboto";
 import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
+import { loadFont as loadNotoSans } from "@remotion/google-fonts/NotoSans";
 
 import { useVideoConfig, staticFile } from "remotion";
 import { FadeInOnFrame } from "./FadeInOnFrame";
@@ -35,10 +36,11 @@ const { fontFamily: robotoFont } = loadRoboto();
 const { fontFamily: robotoMonoFont } = loadRobotoMono();
 const { fontFamily: RubikFont } = loadRubik();
 const { fontFamily: poppinsFont } = loadPoppins();
+const { fontFamily: notoSansFont } = loadNotoSans();
 
 // Update font loading to use staticFile for server compatibility
 const notoSansFontPath = staticFile("fonts/NotoSans-Regular.ttf");
-const notoSansFont = `url(${notoSansFontPath})`;
+const notoSansFontFallback = `url(${notoSansFontPath})`;
 
 interface CardingProps {
   person: rawData & { club_logo?: string };
@@ -130,7 +132,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
               triggerFrame={triggerFrame + 39}
               duration={300}
               style={{
-                fontFamily: poppinsFont,
+                fontFamily: notoSansFont,
                 fontWeight: 700, // Bold weight
                 fontSize: '3rem', // Slightly larger size
               }}
@@ -174,7 +176,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             <div className="bg-gray-900 border-t text-4xl border-b border-gray-700 gap-8 rounded-md p-7 px-5 mx-5">
             <div>
               <p className="text-gray-200 font-bold" style={{ 
-                fontFamily: `${robotoMonoFont}, ${notoSansFont}, Arial, sans-serif`,
+                fontFamily: `${notoSansFont}, Arial, sans-serif`,
                 minWidth: '300px',
                 whiteSpace: 'nowrap', 
                 }}>

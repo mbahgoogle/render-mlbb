@@ -97,14 +97,19 @@ jobs:
           # --frame-715-943 is not a valid flag for remotion render.
           # The correct flag is --frames, and the value should be in the format start-end (e.g., 715-943).
           # 36419 (10:06:59) (100 Cards)
-          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=0-4999
-          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=5000-9999
-          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=10000-14999
-          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=15000-19999
-          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=20000-24999
-          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=25000-29999
-          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=30000-36418
-          npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=683-932
+          # Bagian 1
+          npx remotion render PlayerListCard out/part1.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=0-9999
+
+          # Bagian 2
+          # npx remotion render PlayerListCard out/part2.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=10000-19999
+
+          # Bagian 3
+          # npx remotion render PlayerListCard out/part3.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=20000-29999
+
+          # Bagian 4
+          # npx remotion render PlayerListCard out/part4.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=30000-36418
+
+          # npx remotion render PlayerListCard out/video.mp4 --disable-audio --verbose --disable-dev-shm-usage
           echo "Render finished!"
 
       - name: Upload Artifact

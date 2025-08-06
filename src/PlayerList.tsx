@@ -40,8 +40,11 @@ import { getTriggerFrame } from "./utils/triggerFrame";
 
 
 
-import rawTopPlayers from "../public/youtube/youtube-example.json";
+// import rawTopPlayers from "../public/youtube/youtube-example.json";
 // import rawTopPlayers from "../public/youtube/global.json";
+// import rawTopPlayers from "../public/youtube/india.json";
+// import rawTopPlayers from "../public/youtube/usa.json";
+// import rawTopPlayers from "../public/youtube/indonesia.json";
 
 import Intro from "./components/Intro";
 import Ending from "./components/Ending";

@@ -26,7 +26,7 @@ export const ScrollText: React.FC<ScrollTextProps> = ({
   const finalFrame = returnFrame + scrollDuration; // Return animation duration
 
   // Only animate if text is long enough and we're past the trigger frame
-  if (text.length <= 20 || text.length > 30 || frame < startFrame) {
+  if (text.length <= 15 || text.length > 30 || frame < startFrame) {
     return (
       <div
         style={{
@@ -46,10 +46,9 @@ export const ScrollText: React.FC<ScrollTextProps> = ({
   // Calculate scroll position with return to beginning
   let scrollProgress = 0;
   
-  // Calculate how much to scroll based on text length
-  // Only scroll enough to show the full text, not completely out of view
-  const maxScroll = Math.min(70, Math.max(0, (text.length - 20) * 2)); // Max 70% scroll, or based on text length
-  
+  // Adjust maxScroll to ensure full text visibility
+  const maxScroll = Math.max(0, (text.length - 15) * 3); // Dynamically calculate scroll based on text length
+
   if (frame >= startFrame && frame <= endFrame) {
     // Scroll from left to right (0 to -maxScroll)
     scrollProgress = interpolate(
@@ -98,4 +97,4 @@ export const ScrollText: React.FC<ScrollTextProps> = ({
       </div>
     </div>
   );
-}; 
+};

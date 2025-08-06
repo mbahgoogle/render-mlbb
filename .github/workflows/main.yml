@@ -97,7 +97,7 @@ jobs:
           # --frame-715-943 is not a valid flag for remotion render.
           # The correct flag is --frames, and the value should be in the format start-end (e.g., 715-943).
           # 36419 (10:06:59) (100 Cards)
-          # Bagian 1
+          # Bagian 1.
           npx remotion render PlayerListCard out/part1.mp4 --disable-audio --verbose --disable-dev-shm-usage --frames=0-9999
 
           # Bagian 2

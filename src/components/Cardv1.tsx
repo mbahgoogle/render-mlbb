@@ -1,5 +1,5 @@
 import React from "react";
-import { TopPlayer } from "../types/schema";
+import { rawData } from "../types/schema";
 import { CircleFlag } from "react-circle-flags";
 import {
   FaFutbol as Football,
@@ -32,7 +32,7 @@ const { fontFamily: PoppinsFont } = loadPoppins();
 
 
 export const PlayerCard: React.FC<{
-  person: TopPlayer & { club_logo?: string };
+  person: rawData & { club_logo?: string };
   style?: React.CSSProperties;
 } > = ({ person, style }) => {
   console.log("Player data:", person);

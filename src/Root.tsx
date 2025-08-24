@@ -1,5 +1,5 @@
 import { Composition } from "remotion";
-import { PlayerList } from "./PlayerList";
+import { CardList } from "./CardList";
 import { CONFIG, getTotalDuration, getTotalVideoDuration, getDurationInSeconds } from "./config";
 import './index.css'; 
 
@@ -19,8 +19,8 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="PlayerListCard"
-        component={PlayerList}
+        id="DataListCard"
+        component={CardList}
         durationInFrames={Math.round(TOTAL_DURATION)}
         fps={CONFIG.FPS}
         width={CONFIG.WIDTH}
@@ -30,6 +30,8 @@ export const RemotionRoot: React.FC = () => {
           durasiPerCardDetik: CONFIG.durasiPerCardDetik,
           introDelay: CONFIG.introDelay,
           endingDuration: CONFIG.endingDuration * CONFIG.FPS,
+          backgroundColor: '#212121',
+          // backgroundColor: '#FFF',
         }}
       />
     </>

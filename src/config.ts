@@ -27,8 +27,8 @@ export const CONFIG = {
   HEIGHT: 1440,
 
   // Content Settings
-  cardTitle: "Inside YouTube",
-  cardsToShow: 100,           // Jumlah kartu yang akan ditampilkan
+  cardTitle: "Inside Twitch",
+  cardsToShow: 5,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
 
   // Timing Settings
@@ -40,6 +40,16 @@ export const CONFIG = {
   cardEntryDuration: 42,     // Durasi entry per kartu
   staggerDelay: 200,         // Delay antar kartu
   opacityTransitionDuration: 40, // Durasi transisi opacity
+  
+  // Theme Settings
+  theme: {
+    // mode: 'dark' | 'light'
+    mode: 'dark' as 'dark' | 'light',
+    background: {
+      dark: '#212121',
+      light: '#FFFFFF',
+    },
+  },
 };
 
 // Helper functions
@@ -55,4 +65,11 @@ export const getTotalVideoDuration = () => {
 
 export const getDurationInSeconds = (frames: number) => {
   return frames / CONFIG.FPS;
+};
+
+// Theme helpers
+export const getBackgroundColor = (): string => {
+  return CONFIG.theme.mode === 'dark'
+    ? CONFIG.theme.background.dark
+    : CONFIG.theme.background.light;
 };

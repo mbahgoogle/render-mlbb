@@ -240,7 +240,7 @@ const countryCodeMap: { [key: string]: string } = {
     've': 've', // Venezuela
     'vg': 'vg', // Virgin Islands, British
     'vi': 'vi', // Virgin Islands, U.S.
-    'vn': 'vn', // Viet Nam
+    'vn': 'vn', // Vietnam
     'vu': 'vu', // Vanuatu
     'wf': 'wf', // Wallis and Futuna
     'ws': 'ws', // Samoa
@@ -506,7 +506,7 @@ export const getCountryName = (countryCode: string): string => {
         've': 'Venezuela',
         'vg': 'Virgin Islands, British',
         'vi': 'Virgin Islands, U.S.',
-        'vn': 'Viet Nam',
+        'vn': 'Vietnam',
         'vu': 'Vanuatu',
         'wf': 'Wallis and Futuna',
         'ws': 'Samoa',

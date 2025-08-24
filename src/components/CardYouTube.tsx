@@ -5,19 +5,19 @@ import { CircleFlag } from "react-circle-flags";
 import { getCountryCode, getCountryName } from "../utils/getCountryCode";
 
 import { loadFont as loadRoboto } from "@remotion/google-fonts/Roboto";
-import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
+// import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 // import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
 import { loadFont as loadNotoSans } from "@remotion/google-fonts/NotoSans";
 
 import { useVideoConfig, staticFile } from "remotion";
-import { FadeInOnFrame } from "./FadeInOnFrame";
-import { TypingOnFrame } from "./TypingOnFrame";
-import { AnimatedProfileImage } from "./AnimatedProfileImage";
-import { AnimatedNumberCounterAdvanced } from "./AnimatedNumberCounterAdvanced";
+import { FadeInOnFrame } from "../plugin/FadeInOnFrame";
+import { TypingOnFrame } from "../plugin/TypingOnFrame";
+import { AnimatedProfileImage } from "../plugin/AnimatedProfileImage";
+import { AnimatedNumberCounterAdvanced } from "../plugin/AnimatedNumberCounterAdvanced";
 import { CONFIG } from "../config";
 import YouTubeReward from "../utils/YouTubeReward";
-import { ScrollText } from "./ScrollText";
+import { ScrollText } from "../plugin/ScrollText";
 
 
 // Add helper function to check if URL is local or remote
@@ -33,7 +33,7 @@ const getImageSource = (url: string | undefined) => {
 
 // Load fonts
 const { fontFamily: robotoFont } = loadRoboto();
-const { fontFamily: robotoMonoFont } = loadRobotoMono();
+// const { fontFamily: robotoMonoFont } = loadRobotoMono();
 const { fontFamily: RubikFont } = loadRubik();
 // const { fontFamily: poppinsFont } = loadPoppins();
 const { fontFamily: notoSansFont } = loadNotoSans();
@@ -255,9 +255,33 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                   {(() => {
                     const num = Number(Subscribes.replace(/,/g, ""));
                     if (isNaN(num)) return Subscribes;
-                    if (num >= 1_000_000_000) return `${(num / 1_000_000_000).toFixed(num % 1_000_000_000 === 0 ? 0 : 1)} Billion`;
-                    if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(num % 1_000_000 === 0 ? 0 : 1)} Million`;
-                    if (num >= 1_000) return `${(num / 1_000).toFixed(num % 1_000 === 0 ? 0 : 1)}K`;
+                    if (num >= 1_000_000_000) {
+                      const billions = num / 1_000_000_000;
+                      if (billions % 1 === 0) {
+                        return `${billions} Billion`;
+                      }
+                      // Gunakan Math.round untuk menghindari pembulatan yang tidak diinginkan
+                      const roundedBillions = Math.round(billions * 10) / 10;
+                      return `${roundedBillions} Billion`;
+                    }
+                    if (num >= 1_000_000) {
+                      const millions = num / 1_000_000;
+                      if (millions % 1 === 0) {
+                        return `${millions} Million`;
+                      }
+                      // Gunakan Math.floor untuk memastikan tidak membulatkan ke atas
+                      const flooredMillions = Math.floor(millions * 10) / 10;
+                      return `${flooredMillions} Million`;
+                    }
+                    if (num >= 1_000) {
+                      const thousands = num / 1_000;
+                      if (thousands % 1 === 0) {
+                        return `${thousands}K`;
+                      }
+                      // Gunakan Math.round untuk menghindari pembulatan yang tidak diinginkan
+                      const roundedThousands = Math.round(thousands * 10) / 10;
+                      return `${roundedThousands}K`;
+                    }
                     return num.toString();
                   })()}
                 </p>

@@ -4,7 +4,7 @@ import { z } from 'zod';
 export const rawDataSchema = z.object({
   // rank: z.number(), // Bisa kosong
   name: z.string().optional(),
-  date: z.string(),
+  date: z.string().optional(),
   full_name: z.string().optional(),
   heros: z.array(z.string()).optional(),
   image: z.string().optional(),
@@ -18,8 +18,10 @@ export const rawDataSchema = z.object({
   logo_league: z.string().optional(),
   tier: z.string().optional(),
   followers_count: z.number().optional(),
+  following_count: z.number().optional(),
   views_count: z.number().optional(),
   video_count: z.number().optional(),
+  liked_count: z.number().optional(),
   category: z.string().optional(),
 });
 

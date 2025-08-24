@@ -1,5 +1,5 @@
 import React from "react";
-import { TopPlayer } from "../types/schema";
+import { rawData } from "../types/schema";
 import { heros } from "../utils/getHeros";
 import { useVideoConfig, staticFile, useCurrentFrame, interpolate } from "remotion";
 import { getImageSource } from "../utils/imageProxy";
@@ -7,7 +7,7 @@ import { getImageSource } from "../utils/imageProxy";
 // Warna ungu utama
 const PURPLE = "green";
 
-const PlayerCardBlock: React.FC<{ person: TopPlayer; height: number; frameOffset?: number; isDividerOnly?: boolean }> = ({ person, height, frameOffset = 0, isDividerOnly = false }) => {
+const PlayerCardBlock: React.FC<{ person: rawData; height: number; frameOffset?: number; isDividerOnly?: boolean }> = ({ person, height, frameOffset = 0, isDividerOnly = false }) => {
   const frame = useCurrentFrame() - frameOffset;
 
   // Animasi untuk card masuk (slide + fade)
@@ -107,7 +107,7 @@ const PlayerCardBlock: React.FC<{ person: TopPlayer; height: number; frameOffset
 };
 
 export const Carding: React.FC<{
-  person: TopPlayer;
+  person: rawData;
   style?: React.CSSProperties;
   index?: number; // Tambahkan index
 }> = ({ person, style, index = 0 }) => {

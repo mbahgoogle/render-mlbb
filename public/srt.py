@@ -4,7 +4,7 @@ import re
 from datetime import datetime, timedelta
 
 # Configuration to match TypeScript/TSX settings from config.ts
-JSON_FOLDER = "gaming"
+JSON_FOLDER = "youtube"
 SRT_FOLDER = "srt_output"
 
 # Video settings matching config.ts

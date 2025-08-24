@@ -10,7 +10,7 @@ import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 // import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
 import { loadFont as loadNotoSans } from "@remotion/google-fonts/NotoSans";
 
-import { useVideoConfig, staticFile } from "remotion";
+import { useVideoConfig, staticFile, useCurrentFrame } from "remotion";
 import { FadeInOnFrame } from "../plugin/FadeInOnFrame";
 import { TypingOnFrame } from "../plugin/TypingOnFrame";
 import { AnimatedProfileImage } from "../plugin/AnimatedProfileImage";
@@ -47,6 +47,7 @@ interface CardingProps {
 
 export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerFrame }) => {
   const HeightConfig = useVideoConfig().height * 0.94;
+  const currentFrame = useCurrentFrame();
   const totalCards = CONFIG.cardsToShow; // Use cardsToShow from config.ts
   const nationName = getCountryName(person.nation_code || "");
   const Name = person.name || "";
@@ -56,18 +57,6 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
 
   return (
     <>
-      <style>
-        {`
-          @keyframes twitchBlink {
-            45%, 55% {
-              clip-path: polygon(7.5% 0%, 40% 0%, 40% 35%, 50% 35%, 50% 35%, 40% 35%, 40% 0%, 65% 0%, 65% 35%, 75% 35%, 75% 35%, 65% 35%, 65% 0%, 92.5% 0%, 92.5% 62.5%, 70% 82.5%, 50% 82.5%, 30% 100%, 30% 82.5%, 7.5% 82.5%);
-            }
-            40%, 50%, 60% {
-              clip-path: polygon(7.5% 0%, 40% 0%, 40% 50%, 50% 50%, 50% 20%, 40% 20%, 40% 0%, 65% 0%, 65% 50%, 75% 50%, 75% 20%, 65% 20%, 65% 0%, 92.5% 0%, 92.5% 62.5%, 70% 82.5%, 50% 82.5%, 30% 100%, 30% 82.5%, 7.5% 82.5%);
-            }
-          }
-        `}
-      </style>
       <div
         className="flex justify-center items-center p-0 card-container"
         style={{
@@ -136,7 +125,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             }}
             >
             <ScrollText
-              text={Name}
+              text={`@${Name}`}
               triggerFrame={triggerFrame + 39}
               duration={300}
               style={{
@@ -158,7 +147,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                     className="bg-gray-900 text-white px-6 py-6 font-bold rounded-full flex items-center gap-3 text-4xl"
                     style={{
                       fontFamily: RubikFont,
-                      border: '6px solid #9147ff',
+                      border: '0.3em solid #9147ff',
                       boxSizing: 'border-box',
                       // Optionally add a shadow for more pop:
                       // boxShadow: '0 0 0 4px #9147ff',
@@ -285,42 +274,65 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
             style={{ gridColumn: "1 / -1", width: "100%" }}
           >
             <div className="flex justify-center items-center p-4">
-              <div 
-                className="twitch-logo"
-                style={{
-                  width: '80px',
-                  height: '80px',
-                  position: 'relative',
-                  filter: 'drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff)',
-                }}
-              >
-                <div
-                  style={{
-                    content: '""',
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    top: '0%',
-                    left: '0%',
-                    clipPath: 'polygon(7.5% 0%, 92.5% 0%, 92.5% 62.5%, 70% 82.5%, 50% 82.5%, 30% 100%, 30% 82.5%, 7.5% 82.5%)',
-                    background: '#9147ff',
-                    transform: 'scale(1.25)',
-                  }}
-                />
-                <div
-                  style={{
-                    content: '""',
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    top: '0%',
-                    left: '0%',
-                    background: '#ffffff',
-                    clipPath: 'polygon(7.5% 0%, 40% 0%, 40% 50%, 50% 50%, 50% 20%, 40% 20%, 40% 0%, 65% 0%, 65% 50%, 75% 50%, 75% 20%, 65% 20%, 65% 0%, 92.5% 0%, 92.5% 62.5%, 70% 82.5%, 50% 82.5%, 30% 100%, 30% 82.5%, 7.5% 82.5%)',
-                    animation: 'twitchBlink 4s ease-in-out infinite',
-                  }}
-                />
-              </div>
+              {(() => {
+                // Gunakan triggerFrame untuk animasi yang teratur
+                const blinkStartDelay = 3.5; // Delay 3.5 detik setelah FadeInOnFrame
+                const FPS = 60; // Frame rate Remotion
+                const blinkStartFrame = (triggerFrame + 4 + (blinkStartDelay * FPS)); // Mulai kedip setelah delay
+                const blinkDuration = 5 * FPS; // 5 detik = 300 frame
+                const blinkLength = 8; // Durasi kedip dalam frame
+                
+                // Hitung frame relatif terhadap triggerFrame
+                const relativeFrame = currentFrame - blinkStartFrame;
+                const currentBlinkFrame = relativeFrame % blinkDuration;
+                const isBlink = relativeFrame >= 0 && currentBlinkFrame < blinkLength;
+
+                // Clip-path untuk mata yang berkedip (seperti CSS asli)
+                const eyeClipPath = isBlink 
+                  ? 'polygon(7.5% 0%, 40% 0%, 40% 35%, 50% 35%, 50% 35%, 40% 35%, 40% 0%, 65% 0%, 65% 35%, 75% 35%, 75% 35%, 65% 35%, 65% 0%, 92.5% 0%, 92.5% 62.5%, 70% 82.5%, 50% 82.5%, 30% 100%, 30% 82.5%, 7.5% 82.5%)'
+                  : 'polygon(7.5% 0%, 40% 0%, 40% 50%, 50% 50%, 50% 20%, 40% 20%, 40% 0%, 65% 0%, 65% 50%, 75% 50%, 75% 20%, 65% 20%, 65% 0%, 92.5% 0%, 92.5% 62.5%, 70% 82.5%, 50% 82.5%, 30% 100%, 30% 82.5%, 7.5% 82.5%)';
+
+                return (
+                  <div 
+                    className="twitch-logo"
+                    style={{
+                      width: '80px',
+                      height: '80px',
+                      position: 'relative',
+                      filter: 'drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff) drop-shadow(-1px 1px #9147ff)',
+                    }}
+                  >
+                    {/* Background layer - selalu terlihat */}
+                    <div
+                      style={{
+                        content: '""',
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
+                        top: '0%',
+                        left: '0%',
+                        clipPath: 'polygon(7.5% 0%, 92.5% 0%, 92.5% 62.5%, 70% 82.5%, 50% 82.5%, 30% 100%, 30% 82.5%, 7.5% 82.5%)',
+                        background: '#9147ff',
+                        transform: 'scale(1.25)',
+                      }}
+                    />
+                    {/* Foreground layer - mata yang berkedip dengan clip-path */}
+                    <div
+                      style={{
+                        content: '""',
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
+                        top: '0%',
+                        left: '0%',
+                        background: '#ffffff',
+                        clipPath: eyeClipPath,
+                        transition: 'clip-path 0.05s ease-in-out',
+                      }}
+                    />
+                  </div>
+                );
+              })()}
             </div>
           </FadeInOnFrame>
           

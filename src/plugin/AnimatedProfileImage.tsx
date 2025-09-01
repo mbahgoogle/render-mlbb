@@ -75,13 +75,11 @@ export const AnimatedProfileImage: React.FC<AnimatedProfileImageProps> = ({
           className="w-full h-full object-cover rounded-full"
           style={{
             zIndex: 1,
-            border: "1em solid transparent",
-            // background: "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)", // Instagram
-            background: "linear-gradient(45deg, #9147ff 0%, #772ce8 25%, #5a189a 50%, #3a0ca3 75%,rgb(53, 12, 148) 100%)",
+            border: "1em solid rgb(225, 48, 108)",
             backgroundClip: "padding-box",
             WebkitBackgroundClip: "padding-box",
             borderRadius: "50%",
-            padding: "1em",
+            padding: "0em",
           }}
           onLoad={() => {
             setHasLoaded(true);

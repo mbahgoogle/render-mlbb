@@ -13,7 +13,7 @@ import {
 import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { rawData, validateRawDatas } from "./types/schema";
-import { Carding } from "./components/CardTwitch";
+import { Carding } from "./components/CardInstagram";
 import { CONFIG } from "./config";
 import { getTriggerFrame } from "./utils/triggerFrame";
 
@@ -54,10 +54,24 @@ import { getTriggerFrame } from "./utils/triggerFrame";
 // import rawTopData from "../public/youtube/russia.json";
 // import rawTopData from "../public/youtube/vietnam.json";
 
-import rawTopData from "../public/twitch/twitch-100.json";
+// import rawTopData from "../public/twitch/twitch-100.json";
 
 // import rawTopData from "../public/tiktok/tiktok-tester.json";
 
+
+import rawTopData from "../public/instagram/ig-global.json";
+// import rawTopData from "../public/instagram/ig-bd.json";
+// import rawTopData from "../public/instagram/ig-br.json";
+// import rawTopData from "../public/instagram/ig-eg.json";
+// import rawTopData from "../public/instagram/ig-in.json";
+// import rawTopData from "../public/instagram/ig-jp.json";
+// import rawTopData from "../public/instagram/ig-id.json";
+// import rawTopData from "../public/instagram/ig-mx.json";
+// import rawTopData from "../public/instagram/ig-ng.json";
+// import rawTopData from "../public/instagram/ig-ph.json";
+// import rawTopData from "../public/instagram/ig-pk.json";
+// import rawTopData from "../public/instagram/ig-ru.json";
+// import rawTopData from "../public/instagram/ig-usa.json";
 // import rawTopData from "../public/instagram/instagram-tester.json";
 
 import Intro from "./plugin/Intro";

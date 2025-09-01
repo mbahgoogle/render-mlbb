@@ -157,7 +157,11 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                           />
                         );
                       } else {
-                        return "🌍";
+                        return (
+                          <span style={{ fontSize: '70px', lineHeight: '70px', display: 'inline-block', width: '70px', height: '70px' }}>
+                            🌍
+                          </span>
+                        );
                       }
                     })()}
                   </span>
@@ -215,10 +219,10 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                 <p className="text-2xl text-gray-200 uppercase font-extrabold tracking-widest" style={{ fontFamily: RubikFont, color: '#405DE6' }}>Posts</p>
                 <p className="text-4xl text-gray-50 font-black mt-2">
                   {(() => {
-                    const liked = person.liked_count;
-                    if (liked == null || liked === undefined) return "N/A";
-                    const num = Number(liked);
-                    if (isNaN(num)) return liked;
+                    const posts = person.posts_count;
+                    if (posts == null || posts === undefined) return "N/A";
+                    const num = Number(posts);
+                    if (isNaN(num)) return posts;
                     if (num >= 1_000_000_000) {
                       const billions = num / 1_000_000_000;
                       if (billions % 1 === 0) {
@@ -390,7 +394,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                     {(() => {
                       const views = person.following_count?.toString() || "N/A";
                       if (views === "N/A") return views;
-                      const num = Number(views.replace(/,/g, ""));
+                      const num = typeof views === "number" ? views : Number(String(views).replace(/,/g, ""));
                       if (isNaN(num)) return views;
                       if (num >= 1_000_000_000) return `${(num / 1_000_000_000).toFixed(num % 1_000_000_000 === 0 ? 0 : 1)} Billion`;
                       if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(num % 1_000_000 === 0 ? 0 : 1)} Million`;

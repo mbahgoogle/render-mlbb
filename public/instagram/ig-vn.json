@@ -194,7 +194,7 @@
         "name": "soobin.hoangson",
         "image": "https://scontent-cgk1-2.cdninstagram.com/v/t51.2885-19/534876663_18522449071018975_6329027117567776523_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmV4cGVyaW1lbnRhbCJ9&_nc_ht=scontent-cgk1-2.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2QFWSiXUiCJ0KixsT-y4bcS2lyj8urF89CptTmobwzFt7PfzR-pgruw3yeFPx5D-s_A&_nc_ohc=9j6M20ccWlEQ7kNvwEehy3U&_nc_gid=DZyEhKHtOPUpEzD4lv4zGA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfWVus5mZ4ZobWi45z9Yr6BWXAzYCC5nvvCA4v2BDQ8E8g&oe=68B6B2EB&_nc_sid=7a9f4b",
         "followers_count": 2900000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 22,
         "nation": "Vietnam",
         "nation_code": "vn"
@@ -234,7 +234,7 @@
         "name": "gardening.999",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/392913051_329108789770442_2300570002818711927_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby42MDAuZXhwZXJpbWVudGFsIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QGe4gvX25isU9Agk7zo4As7fz1rM4Vlqcb9L184JbbSYqIigRCqihw0Sew4cXFWk3s&_nc_ohc=WHP1LIlC4GEQ7kNvwFbm6Te&_nc_gid=dnd4CZV6XHKSCLUMCMr-Fg&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfV4hamaXc5B547I_IP2c0qMHFOTZzwl1xMwU7oHdxh1ig&oe=68B6B5F6&_nc_sid=7a9f4b",
         "followers_count": 2600000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 2359,
         "nation": "Vietnam",
         "nation_code": "vn"
@@ -324,7 +324,7 @@
         "name": "kimbingmei__",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/285037923_2113552912156532_6119266590532037888_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QGmAu1BdtSgfsPSlnJMLVm1Wx_mZtXalv0-HoAEsSlpXxrEY8yR7za_irHtn2ujqvo&_nc_ohc=chc9pldR5IoQ7kNvwF3I9gv&_nc_gid=9myLm-7Sk91XeEqR-pF_6Q&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfWFu9MU1K_LtM1xEcQRIu8R4qgxaXQF75eHh1F6AJ4AjQ&oe=68B6D394&_nc_sid=7a9f4b",
         "followers_count": 2400000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 4218,
         "nation": "Vietnam",
         "nation_code": "vn"
@@ -384,7 +384,7 @@
         "name": "happycatclub",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/15337291_176285289506077_2320742856353906688_a.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby43NjguYzIifQ&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QGgxpBDREEZICx8etOKNcSoM4BaUf94T_ygFQ2TD4O1lkn8lS8KQwd-onu9gsTFsEA&_nc_ohc=v0bWC2rsZaAQ7kNvwHadQOU&_nc_gid=p9ugR10l2b5TrAWEI9DVnA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfUjTjoaynqXjxmHfLfR1WjC0wtfzJYxzYtBPuOZ3TXDNg&oe=68B6CC6A&_nc_sid=7a9f4b",
         "followers_count": 2200000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 9382,
         "nation": "Vietnam",
         "nation_code": "vn"
@@ -560,7 +560,7 @@
         "nation_code": "vn"
     },
     {
-        "full_name": null,
+        "full_name": " ",
         "name": "wyn.anh",
         "image": "https://scontent-cgk2-2.cdninstagram.com/v/t51.2885-19/519469354_18086900482789661_541062531543005023_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk2-2.cdninstagram.com&_nc_cat=105&_nc_oc=Q6cZ2QEcCJX0bNFtkG6_R-kDX0VVDjWOTD-3MFSalJf1w8NPzflJfNTg7n9w5FAmiLaBRDo&_nc_ohc=LN_RVJnUJB4Q7kNvwH4WJdN&_nc_gid=AdI2P6nbpS0L-MB_DAVP7g&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfVpFO0Yb_ZjXPqxYpYdMwUKBE5LFdMsOKx6etB2bgjOZg&oe=68B6C501&_nc_sid=7a9f4b",
         "followers_count": 1600000,
@@ -624,7 +624,7 @@
         "name": "honghot.showbiz",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/497515157_18459484927075884_5270751489945772871_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QFWHs2Oe3TdRXYHk79QLneMR5eB12VRRtmOdfqRAXsvLtu3Sjf9g5jZIHI51DNcbKI&_nc_ohc=j1M_B-7iuCAQ7kNvwER0OU2&_nc_gid=C5IPwJzaP773XrrW6MqLcA&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AfV4D-2rUAjjWKdoFWZ7Zb-vC9SsNeTkV83EKyrvpzbgBg&oe=68B6C1CD&_nc_sid=7d3ac5",
         "followers_count": 1400000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 8799,
         "nation": "Vietnam",
         "nation_code": "vn"
@@ -784,7 +784,7 @@
         "name": "imdenisdang",
         "image": "https://scontent-cgk2-1.cdninstagram.com/v/t51.2885-19/536826152_18527938141038927_1744816725067855219_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk2-1.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2QEAXuzAiSfuvoPGyiRsh2XHKwFoAeSpcCJqqaQ613q3YU4fzz7qBIaD0Se7deVxpEE&_nc_ohc=5yUDXiW-DsIQ7kNvwFwbqmx&_nc_gid=kWAg7FaQ69s9w7YcykTA7g&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfVXbwxgYmKwK2otQu4YTPtsIlAdlQ43R9mCydnZhfa88Q&oe=68B6E368&_nc_sid=7a9f4b",
         "followers_count": 1000000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 22,
         "nation": "Vietnam",
         "nation_code": "vn"

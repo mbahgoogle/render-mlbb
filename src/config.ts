@@ -27,8 +27,8 @@ export const CONFIG = {
   HEIGHT: 1440,
 
   // Content Settings
-  cardTitle: "Inside Twitch",
-  cardsToShow: 100,           // Jumlah kartu yang akan ditampilkan
+  cardTitle: "Inside Instagram",
+  cardsToShow: 10,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
 
   // Timing Settings

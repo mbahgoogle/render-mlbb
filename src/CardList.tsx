@@ -13,7 +13,7 @@ import {
 import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { rawData, validateRawDatas } from "./types/schema";
-import { Carding } from "./components/CardInstagram";
+import { Carding } from "./components/CardPlayerMLBB";
 import { CONFIG } from "./config";
 import { getTriggerFrame } from "./utils/triggerFrame";
 
@@ -23,7 +23,7 @@ import { getTriggerFrame } from "./utils/triggerFrame";
 // import rawTopPlayers from "../public/data/geek_fam_id.json";
 // import rawTopPlayers from "../public/data/onic.json";
 // import rawTopPlayers from "../public/data/evos.json";
-// import rawTopPlayers from "../public/data/rrq_hoshi.json";
+// We'll load data at runtime from the public folder
 // import rawTopPlayers from "../public/data/test.json";
 
 // import rawTopPlayers from "../public/data/mlbb_exp_laner.json";
@@ -59,19 +59,19 @@ import { getTriggerFrame } from "./utils/triggerFrame";
 // import rawTopData from "../public/tiktok/tiktok-tester.json";
 
 
-import rawTopData from "../public/instagram/ig-global.json";
-// import rawTopData from "../public/instagram/ig-bd.json";
-// import rawTopData from "../public/instagram/ig-br.json";
-// import rawTopData from "../public/instagram/ig-eg.json";
-// import rawTopData from "../public/instagram/ig-in.json";
-// import rawTopData from "../public/instagram/ig-jp.json";
-// import rawTopData from "../public/instagram/ig-id.json";
-// import rawTopData from "../public/instagram/ig-mx.json";
-// import rawTopData from "../public/instagram/ig-ng.json";
-// import rawTopData from "../public/instagram/ig-ph.json";
-// import rawTopData from "../public/instagram/ig-pk.json";
-// import rawTopData from "../public/instagram/ig-ru.json";
-// import rawTopData from "../public/instagram/ig-usa.json";
+// import rawTopData from "../public/instagram/ig-global_updated.json";
+// import rawTopData from "../public/instagram/ig-bd_updated.json";
+// import rawTopData from "../public/instagram/ig-br_updated.json"; // ready
+// import rawTopData from "../public/instagram/ig-eg_updated.json";
+// import rawTopData from "../public/instagram/ig-in_updated.json";
+// import rawTopData from "../public/instagram/ig-jp_updated.json";
+// import rawTopData from "../public/instagram/ig-id_updated.json";
+// import rawTopData from "../public/instagram/ig-mx_updated.json";
+// import rawTopData from "../public/instagram/ig-ng_updated.json";
+// import rawTopData from "../public/instagram/ig-ph_updated.json";
+// import rawTopData from "../public/instagram/ig-pk_updated.json";
+// import rawTopData from "../public/instagram/ig-ru_updated.json";
+// import rawTopData from "../public/instagram/ig-usa_updated.json";
 // import rawTopData from "../public/instagram/instagram-tester.json";
 
 import Intro from "./plugin/Intro";
@@ -130,31 +130,32 @@ export const CardList: React.FC<PlayerListProps> = ({
   useEffect(() => {
     const processData = async () => {
       try {
-        const data = validateRawDatas(rawTopData)
+        // Load JSON from public using dynamic import with staticFile path
+        const jsonPath = staticFile("gaming/rrq_hoshi.json");
+        const response = await fetch(jsonPath);
+        const json = await response.json();
+        const data = validateRawDatas(json)
         .sort((a: rawData, b: rawData) => {
-          // Utamakan followers_count (ascending - terbanyak di akhir)
-          const aFollowers = a.followers_count || 0;
-          const bFollowers = b.followers_count || 0;
-          
-          if (aFollowers !== bFollowers) {
-            return aFollowers - bFollowers; // Ascending order
+          // 1) Utamakan followers_count (semakin besar semakin di akhir agar "terbanyak di akhir" seperti semula)
+          const aFollowers = typeof a.followers_count === 'number' ? a.followers_count : null;
+          const bFollowers = typeof b.followers_count === 'number' ? b.followers_count : null;
+          if (aFollowers !== null && bFollowers !== null && aFollowers !== bFollowers) {
+            return aFollowers - bFollowers; // ascending → terbanyak di akhir
           }
-          
-          // Jika followers_count sama, urutkan berdasarkan date (terlama di atas)
-          // Jika date tidak ada, gunakan name
-          if (a.date && b.date) {
-            const aDate = new Date(a.date).getTime();
-            const bDate = new Date(b.date).getTime();
-            
-            if (aDate !== bDate) {
-              return aDate - bDate; // Ascending order (terlama di atas)
-            }
-          } else if (a.date !== b.date) {
-            // Jika salah satu tidak punya date, yang punya date di atas
-            return a.date ? -1 : 1;
+
+          // 2) Jika followers_count tidak membedakan (sama atau salah satu/both tidak ada), pakai date ascending (terlama di atas)
+          const aHasDate = Boolean(a.date);
+          const bHasDate = Boolean(b.date);
+          if (aHasDate && bHasDate) {
+            const aTime = new Date(a.date as string).getTime();
+            const bTime = new Date(b.date as string).getTime();
+            if (aTime !== bTime) return bTime - aTime;
+          } else if (aHasDate !== bHasDate) {
+            // Yang punya date didahulukan
+            return aHasDate ? -1 : 1;
           }
-          
-          // Jika date sama atau keduanya tidak punya date, urutkan berdasarkan name
+
+          // 3) Fallback: urutkan berdasarkan name
           const aName = a.name || '';
           const bName = b.name || '';
           return aName.localeCompare(bName);
@@ -217,7 +218,9 @@ export const CardList: React.FC<PlayerListProps> = ({
             }}
           >
 
-          <Intro person={memoizedData[0]} colorText="#FFF" />
+          {memoizedData[0] && (
+            <Intro person={memoizedData[0]} colorText="#FFF" />
+          )}
         </div>
         </div>
       </Sequence>
@@ -286,7 +289,6 @@ export const CardList: React.FC<PlayerListProps> = ({
                     <Carding
                       person={person}
                       style={{ height: cardHeight }}
-                      index={index}
                       triggerFrame={triggerFrame}
                     />
                   </div>

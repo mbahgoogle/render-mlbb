@@ -104,7 +104,7 @@
         "name": "taylorswift",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/540554463_18591191023054956_6754914226914428969_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QE6dDRwHGEohk6o6I2H4yXxyVCA-daWkSAO-xu05Ka6eDJWf1cTF99k5k49LbUIthU&_nc_ohc=k5-pGtpZZzgQ7kNvwHzP5tG&_nc_gid=13WW3i-qDIWzLH7ikhFDQw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfXK0er5MuuddyYE8wWSf327an7zVyqZOiAGuEDuIACIZg&oe=68B6D9ED&_nc_sid=7a9f4b",
         "followers_count": 282000000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 687,
         "nation": "United States",
         "nation_code": "us"
@@ -144,7 +144,7 @@
         "name": "mileycyrus",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/486277039_643772535091475_8347667707701574216_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QGyv7igSS0IrXxXUrh2g-fYMi4mSFeSgzhn0-w958e26EHnhMLaHuAv6hWFVSNXKXE&_nc_ohc=8HEjRKiusMAQ7kNvwGIs121&_nc_gid=As3rITZUGJxEuKKX_s_BVQ&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfX9SasymNmlhNIMYhRvdJDm0teCmIa52da5NijD4Kl2rQ&oe=68B6D903&_nc_sid=7a9f4b",
         "followers_count": 212000000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 1450,
         "nation": "United States",
         "nation_code": "us"
@@ -234,7 +234,7 @@
         "name": "billieeilish",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/437016172_1473492009906153_6022841226243687809_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QGmNKLxIMoq1gQy6G656mpMlBw1RnTMafn6Bau7qdau3M88f7F3g0leaIkexrD2AYE&_nc_ohc=EKyW8i_VhuIQ7kNvwFTrYE9&_nc_gid=eKCQ6OG6R870Anm2VlALSg&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfWy05Q-m42HLdQDffB8ZCEw2JEq38VTOjLFJh1JxeKWHA&oe=68B6DAD6&_nc_sid=7a9f4b",
         "followers_count": 124000000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 1006,
         "nation": "United States",
         "nation_code": "us"
@@ -644,7 +644,7 @@
         "name": "eminem",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/532075297_18536415601033403_2998821746725938326_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDAwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QFNBnE1CtlAkc29UaWrbgLeuqIL26AJ_G4xIMrjfTfTdWYeB2VbiynVbolOVLzCbcg&_nc_ohc=JrYqkp1AxGwQ7kNvwHofHEU&_nc_gid=TqCRGSKrcVDYCRsitlSOyw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfXCD__kOMz4Yej77YS2kU9oQUYu4CUJ8_LpjzoVYrsiqA&oe=68B6C231&_nc_sid=7a9f4b",
         "followers_count": 45500000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 951,
         "nation": "United States",
         "nation_code": "us"
@@ -834,7 +834,7 @@
         "name": "oliviarodrigo",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/376563093_980501436499585_839510698765422923_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QF7JLRGHKaAGq-l3j5jrQ2Ztv_koGx9rndJEM7hIs5rPioAUqkEban-06W_J1aCNn4&_nc_ohc=OqdzCFfftcIQ7kNvwHNPtPa&_nc_gid=jfL7RUInvbOtXj4S_3CgXg&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AfVvev9oMDctrpjFu3lcKJHRZsG1xPym41qfCwSrHaC9bw&oe=68B6D629&_nc_sid=7d3ac5",
         "followers_count": 39500000,
-        "following_count": null,
+        "following_count": 0,
         "posts_count": 372,
         "nation": "United States",
         "nation_code": "us"

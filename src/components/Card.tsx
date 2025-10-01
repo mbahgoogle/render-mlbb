@@ -21,8 +21,8 @@ import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
 import { useVideoConfig, staticFile } from "remotion";
-import { FadeInOnFrame } from "./FadeInOnFrame";
-import { TypingOnFrame } from "./TypingOnFrame";
+import { FadeInOnFrame } from "../plugin/FadeInOnFrame";
+import { TypingOnFrame } from "../plugin/TypingOnFrame";
 import { getTriggerFrame } from "../utils/triggerFrame";
 import { getImageSource } from "../utils/imageProxy";
 

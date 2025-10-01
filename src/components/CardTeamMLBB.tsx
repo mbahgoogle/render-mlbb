@@ -1,42 +1,30 @@
 import React from "react";
 import { rawData } from "../types/schema";
 import { CircleFlag } from "react-circle-flags";
-import {
-  FaFutbol as Football,
-  FaBirthdayCake as Birthday,
-  FaCalendar as Calendar,
-} from "react-icons/fa";
+// Removed unused icons
 
 
-import { getLogoCode } from "../utils/getLogoClub";
 import { getCountryCode } from "../utils/getCountryCode";
-import { herosIcon } from "../utils/getHeros";
 import { loadFont as loadRoboto } from "@remotion/google-fonts/Roboto";
 import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
-import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
-import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
-import { useVideoConfig, staticFile } from "remotion";
-import { FadeInOnFrame } from "./FadeInOnFrame";
-import { TypingOnFrame } from "./TypingOnFrame";
-import { getTriggerFrame } from "../utils/triggerFrame";
+import { useVideoConfig, Img } from "remotion";
+import { FadeInOnFrame } from "../plugin/FadeInOnFrame";
+import { TypingOnFrame } from "../plugin/TypingOnFrame";
 import { getImageSource } from "../utils/imageProxy";
 
 // Load fonts
 const { fontFamily: robotoFont } = loadRoboto();
 const { fontFamily: robotoMonoFont } = loadRobotoMono();
-const { fontFamily: interFont } = loadInter();
 const { fontFamily: RubikFont } = loadRubik();
-const { fontFamily: PoppinsFont } = loadPoppins();
 
 interface CardingProps {
   person: rawData & { club_logo?: string };
   style?: React.CSSProperties;
-  index?: number;
   triggerFrame: number; // <-- wajib
 }
 
-export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerFrame }) => {
+export const Carding: React.FC<CardingProps> = ({ person, style, triggerFrame }) => {
   const HeightConfig = useVideoConfig().height * 0.94;
   const nationName = person.nation || "";
   const Name = person.name || "";
@@ -70,7 +58,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
         >
           {/* Image */}
           <div className="absolute top-0 left-0 h-150 flex items-center justify-center overflow-hidden" style={{ position: 'relative', padding: '1.5em' }}>
-            <img
+            <Img
               src={getImageSource(person.image || "")}
               alt={person.name}
               className="w-full h-full object-contain bg-white rounded-lg"
@@ -82,10 +70,6 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
                 maxHeight: '500px',
                 maxWidth: '99%',
                 objectFit: 'contain',
-              }}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = staticFile('default.svg');
               }}
             />
           </div>
@@ -211,7 +195,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, index, triggerF
           >
             {person.logo_league && (
               <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
-                <img
+                <Img
                   src={`https://ce880219c.cloudimg.io/v7/${person.logo_league?.replace(/^https?:\/\//, "")}`}
                   alt="League"
                   style={{ width: "10em", height: "10em", objectFit: "contain" }}

@@ -30,16 +30,6 @@
         "nation_code": "jp"
     },
     {
-        "full_name": "ARHAN",
-        "name": "pratamaarhan8",
-        "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/487807886_1706809693544594_6128276060086945161_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QETjVQeFCidhbuNsYJoaA4nKfvy8lO57xLkho2E-FDE4_wdUK6gUXvv4yvylOAR4Vo&_nc_ohc=HtOOFV4SKf4Q7kNvwGq6nan&_nc_gid=7hV0mrzSzLz_ldr-ku4d_w&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfUXChcgXYJw6Wxt3aP8c_3TzbfJ3snzNUNdv1L481NgVQ&oe=68B603FF&_nc_sid=7a9f4b",
-        "followers_count": 9000000,
-        "following_count": 746,
-        "posts_count": 129,
-        "nation": "Japan",
-        "nation_code": "jp"
-    },
-    {
         "full_name": "𝐑𝐎𝐋𝐀🇯🇵🇧🇩🇮🇳",
         "name": "rolaofficial",
         "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/136764075_877149369705929_6595104288974070705_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby45MzIuYzIifQ&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QEADv8Ww3Z33YwUyxhclF8WQq2uwCFSmzqS9iafaVmflJ32RpF9pa0X2IuVBVOqLPc&_nc_ohc=yDFwGhhgH-8Q7kNvwFMLSTF&_nc_gid=sW4d_oFZhL5oVSLKg1AkRA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfX64VglQH-2GtAHAFqzajhxjVC94ynBMokVz6w2QfC44w&oe=68B5F34A&_nc_sid=7a9f4b",
@@ -996,6 +986,16 @@
         "followers_count": 2300000,
         "following_count": null,
         "posts_count": 946,
+        "nation": "Japan",
+        "nation_code": "jp"
+    },
+    {
+        "full_name": "有吉弘行",
+        "name": "ariyoshihiroiki",
+        "image": "https://scontent-cgk1-1.cdninstagram.com/v/t51.2885-19/19761519_730148173837203_8663277802893606912_a.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cgk1-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QEN1wnD-CExzc-HbCDUU5AiAIlmc_jdN3CKS97OR-PkQOcfo8Q3l9robsZuxT9EJ0A&_nc_ohc=7o5Fxjyf25EQ7kNvwGxkB7t&_nc_gid=xdSAv1tG87mI4yuOqEg45Q&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfU7AK1cdIXlRyizDM5Eb8J8MPoEaRe3w8hg-0MfzkH1yQ&oe=68B5E4F6&_nc_sid=7a9f4b",
+        "followers_count": 2200000,
+        "following_count": 191,
+        "posts_count": 2898,
         "nation": "Japan",
         "nation_code": "jp"
     }

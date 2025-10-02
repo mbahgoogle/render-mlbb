@@ -2393,5 +2393,99 @@
         ],
         "date": "2025-03-13",
         "url": "https://liquipedia.net/mobilelegends/swaylow"
+    },
+    
+    {
+        "team": "EVOS Esports",
+        "name": "RoundeL",
+        "full_name": "Faiskal Khadafi",
+        "date_of_birth": "2004-05-21",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/player/EVOS_Roundel.png",
+        "heros": [
+            "no data"
+        ],
+        "roles": [
+            "no data"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "2025-08-04",
+        "url": "https://liquipedia.net/mobilelegends/roundel"
+    },
+    {
+        "team": "EVOS Esports",
+        "name": "Xorizo",
+        "full_name": "I  Dwipayana",
+        "date_of_birth": "2003-03-30",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "EVOS",
+        "status": "Active",
+        "image": "/player/EVOS_Xorizo.png",
+        "heros": [
+            "Gloo",
+            "Uranus",
+            "Esmeralda",
+            "Paquito",
+            "X.Borg"
+        ],
+        "roles": [
+            "EXP Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2021-02-12",
+                "team": "Bigetron Beta"
+            },
+            {
+                "date": "2021-08-26",
+                "team": "Bigetron Alpha"
+            },
+            {
+                "date": "2024-08-01",
+                "team": "Dewa United Esports"
+            },
+            {
+                "date": "2025-08-12",
+                "team": "EVOS"
+            }
+        ],
+        "date_of_join": "2025-08-12",
+        "url": "https://liquipedia.net/mobilelegends/xorizo"
+    },
+    {
+        "team": "EVOS Esports",
+        "name": "Rendyy",
+        "full_name": "Rendy Chandra Wijaya",
+        "date_of_birth": "no data",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/player/EVOS_RENDYY.png",
+        "heros": [
+            "Uranus",
+            "Lapu-Lapu",
+            "Esmeralda",
+            "Arlott",
+            "Hilda",
+            "Cici"
+        ],
+        "roles": [
+            "EXP Laner"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date_of_join": "2025-09-03",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
     }
 ]

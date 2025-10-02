@@ -14,7 +14,7 @@ import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { rawData, validateRawDatas } from "./types/schema";
 import { Carding } from "./components/CardPlayerMLBB";
-import { CONFIG } from "./config";
+import { CONFIG, getBackgroundColor } from "./config";
 import { getTriggerFrame } from "./utils/triggerFrame";
 
 // import rawTopPlayers from "../public/data/alter_ego.json";
@@ -111,11 +111,11 @@ type PlayerListProps = {
  * @param endingDuration - Durasi ending sequence
  */
 export const CardList: React.FC<PlayerListProps> = ({ 
-  cardsToShow = 10, 
-  durasiPerCardDetik = 6, 
-  introDelay = 120, 
-  endingDuration = 300,
-  backgroundColor = "#212121",
+  cardsToShow = CONFIG.cardsToShow, 
+  durasiPerCardDetik = CONFIG.durasiPerCardDetik, 
+  introDelay = CONFIG.introDelay, 
+  endingDuration = CONFIG.endingDuration * CONFIG.FPS, // Convert seconds to frames
+  backgroundColor = getBackgroundColor(),
 }) => {
   const frame = useCurrentFrame();
   const { fps, width, height, } = useVideoConfig();

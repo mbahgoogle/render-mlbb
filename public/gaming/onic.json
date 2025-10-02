@@ -1203,5 +1203,47 @@
         ],
         "date": "2025-03-13",
         "url": "https://liquipedia.net/mobilelegends/ryota"
+    },
+    {
+        "team": "ONIC",
+        "name": "Skylar",
+        "full_name": "Schevenko Tendean",
+        "date_of_birth": "2002-02-25",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "ONIC",
+        "status": "Active",
+        "image": "/player/ONIC_skylar.png",
+        "heros": [
+            "Claude",
+            "Beatrix",
+            "Brody",
+            "Bruno",
+            "Natan"
+        ],
+        "roles": [
+            "Gold Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2020-07-16",
+                "team": "RRQ Sena"
+            },
+            {
+                "date": "2021-03-03",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2025-02-05",
+                "team": "RRQ Hoshi"
+            },
+            {
+                "date": "2025-08-08",
+                "team": "ONIC"
+            }
+        ],
+        "date_of_join": "2025-08-08",
+        "url": "https://liquipedia.net/mobilelegends/skylar"
     }
 ]

@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
-import { interpolate, useCurrentFrame } from 'remotion';
+import { interpolate, useCurrentFrame, Img } from 'remotion';
 import { loadFont as loadRubik } from '@remotion/google-fonts/Rubik';
-import { getLogoCode } from '../utils/getLogoClub';
 import { staticFile } from 'remotion';
 import type { rawData } from '../types/schema';
 import { CONFIG } from '../config';
@@ -9,15 +8,6 @@ import { CONFIG } from '../config';
 // Optional: bisa menerima props jika ingin dinamis
 const { fontFamily: rubikFont } = loadRubik();
 
-const getImageSource = (url: string | undefined) => {
-  if (!url) return staticFile('default.svg'); // Add a default image
-  // Check if the URL is remote (starts with http:// or https://)
-  if (url.startsWith('http://') || url.startsWith('https://')) {
-    return url;
-  }
-  // If it's a local file, use staticFile
-  return staticFile(url);
-};
 
 const Intro: React.FC<{ person: rawData; colorText?: string }> = ({ person, colorText = '#fff' }) => {
   // Utility function to quickly apply consistent text styles (e.g., color)
@@ -124,8 +114,8 @@ const Intro: React.FC<{ person: rawData; colorText?: string }> = ({ person, colo
             transition: 'background 0.5s',
           }}
         >
-          <img
-            src={getImageSource(getLogoCode(person.team ?? "") || "default.svg")}
+          <Img
+            src={staticFile('default.svg')}
             alt="Club Logo"
             className="w-4/5 h-4/5 object-contain rounded-full bg-white shadow-lg"
             style={{

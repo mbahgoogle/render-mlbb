@@ -9,12 +9,12 @@ import { loadFont as loadRobotoMono } from "@remotion/google-fonts/RobotoMono";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 // import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
 // import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
-import { useVideoConfig, staticFile, Img } from "remotion";
+import { useVideoConfig, staticFile, Img, useCurrentFrame, interpolate } from "remotion";
 import { FadeInOnFrame } from "../plugin/FadeInOnFrame";
 import { ScrollText } from "../plugin/ScrollText";
 import { TypingOnFrame } from "../plugin/TypingOnFrame";
 
-// Load fonts
+// Load fonts - using default loading to avoid TypeScript errors
 const { fontFamily: robotoFont } = loadRoboto();
 const { fontFamily: robotoMonoFont } = loadRobotoMono();
 const { fontFamily: RubikFont } = loadRubik();
@@ -29,6 +29,7 @@ interface CardingProps {
 
 export const Carding: React.FC<CardingProps> = ({ person, style, triggerFrame }) => {
   const HeightConfig = useVideoConfig().height * 0.94;
+  const frame = useCurrentFrame();
 
   const getSrc = (url: string | undefined) => {
     if (!url) return staticFile('default.svg');
@@ -102,25 +103,45 @@ export const Carding: React.FC<CardingProps> = ({ person, style, triggerFrame })
 
           {/* Player Image */}
           <div className="absolute top-2 left-5 w-150 h-150 flex items-center justify-center overflow-hidden" style={{ position: 'relative' }}>
-            <FadeInOnFrame triggerFrame={(triggerFrame ?? 0) + 1} duration={20} style={{ display: 'contents' }}>
-              <Img
-                src={getSrc(person.image)}
-                alt={person.name}
-                className="w-full h-full object-contain"
-                style={{
-                  willChange: 'transform',
-                  transform: 'translateZ(0)',
-                  backfaceVisibility: 'hidden',
-                  opacity: 1,
-                  transition: 'opacity 0.3s ease-in-out',
-                  zIndex: 1
-                }}
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = staticFile('default.svg');
-                }}
-              />
-            </FadeInOnFrame>
+            {(() => {
+              const playerImageStartFrame = (triggerFrame ?? 0) + 6;
+              const playerImageDuration = 100;
+              const localFrame = Math.max(0, frame - playerImageStartFrame);
+              
+              const opacity = interpolate(localFrame, [0, playerImageDuration], [0, 1], {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+              });
+              
+              const translateY = interpolate(localFrame, [0, playerImageDuration], [400, 0], {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+              });
+              
+              const scale = interpolate(localFrame, [0, playerImageDuration], [0.5, 1], {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+              });
+              
+              return (
+                <Img
+                  src={getSrc(person.image)}
+                  alt={person.name}
+                  className="w-full h-full object-contain"
+                  style={{
+                    willChange: 'transform',
+                    transform: `translateY(${translateY}px) scale(${scale})`,
+                    backfaceVisibility: 'hidden',
+                    opacity,
+                    zIndex: 1
+                  }}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = staticFile('default.svg');
+                  }}
+                />
+              );
+            })()}
           </div>
         </div>
 

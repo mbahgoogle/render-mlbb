@@ -1683,5 +1683,80 @@
         ],
         "date": "2018-05-17",
         "url": "https://liquipedia.net/mobilelegends/index.php?title=Chenn&action=edit&redlink=1"
+    },
+    {
+        "team": "RRQ Hoshi",
+        "name": "Rezzz",
+        "full_name": "Muhammad  Kurniawan",
+        "date_of_birth": "2006-08-07",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "RRQ Hoshi",
+        "status": "Active",
+        "image": "/player/RRQ_REZZ.png",
+        "heros": [
+            "Martis",
+            "Chou",
+            "Benedetta"
+        ],
+        "roles": [
+            "EXP Laner"
+        ],
+        "team_history": [
+            {
+                "date": "2023-06-21",
+                "team": "Pajajaran Esports (page does not exist)"
+            },
+            {
+                "date": "2024-02-24",
+                "team": "ONIC Miracle"
+            },
+            {
+                "date": "2024-07-20",
+                "team": "ONIC Prodigy"
+            },
+            {
+                "date": "2024-08-29",
+                "team": "ONIC"
+            },
+            {
+                "date": "2025-04-17",
+                "team": "Dewa United Esports"
+            },
+            {
+                "date": "2025-07-14",
+                "team": "RRQ Sena"
+            },
+            {
+                "date": "2025-08-11",
+                "team": "RRQ Hoshi"
+            }
+        ],
+        "date": "2025-08-11",
+        "url": "https://liquipedia.net/mobilelegends/rezzz"
+    },
+    {
+        "team": "RRQ Hoshi",
+        "name": "Zunesh",
+        "full_name": "Ilyas Prasetyo",
+        "date_of_birth": "no datas",
+        "nation": "Indonesia",
+        "nation_code": "id",
+        "last_team": "no data",
+        "current_team": "no data",
+        "status": "no data",
+        "image": "/player/RRQ_Zunesh.png",
+        "heros": [
+            "Fanny"
+        ],
+        "roles": [
+            "Jungler"
+        ],
+        "team_history": [
+            "no data"
+        ],
+        "date": "2025-08-11",
+        "url": "https://liquipedia.net/mobilelegends/index.php"
     }
 ]

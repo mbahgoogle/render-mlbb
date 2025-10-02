@@ -1,4 +1,5 @@
 import React from "react";
+import { CONFIG } from "../config";
 
 export const EffectWatermarkText: React.FC<{ rubikFont: string }> = ({ rubikFont }) => (
   <div
@@ -25,6 +26,6 @@ export const EffectWatermarkText: React.FC<{ rubikFont: string }> = ({ rubikFont
       opacity: 0.18,
     }}
   >
-    yt@sinauvideo
+    {`yt@sinauvideo / ${CONFIG.cardsToShow}`}
   </div>
 );

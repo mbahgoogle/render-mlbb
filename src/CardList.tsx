@@ -14,7 +14,7 @@ import React, { useMemo, useEffect, useState } from "react";
 import { loadFont as loadRubik } from "@remotion/google-fonts/Rubik";
 import { rawData, validateRawDatas } from "./types/schema";
 import { Carding } from "./components/CardPlayerMLBB";
-import { CONFIG, getBackgroundColor } from "./config";
+import { CONFIG, getBackgroundColor, getActiveDataSource } from "./config";
 import { getTriggerFrame } from "./utils/triggerFrame";
 
 // import rawTopPlayers from "../public/data/alter_ego.json";
@@ -130,8 +130,10 @@ export const CardList: React.FC<PlayerListProps> = ({
   useEffect(() => {
     const processData = async () => {
       try {
-        // Load JSON from public using dynamic import with staticFile path
-        const jsonPath = staticFile("gaming/rrq_hoshi.json");
+        // Load JSON from public using configurable data source
+        const dataSourcePath = getActiveDataSource();
+        const jsonPath = staticFile(dataSourcePath);
+        console.log(`Loading data from: ${dataSourcePath}`);
         const response = await fetch(jsonPath);
         const json = await response.json();
         const data = validateRawDatas(json)
@@ -161,6 +163,10 @@ export const CardList: React.FC<PlayerListProps> = ({
           return aName.localeCompare(bName);
         });
         setValidatedData(data);
+        if (CONFIG.showDebugInfo) {
+          console.log("Active data source:", dataSourcePath);
+          console.log("Items loaded:", data.length);
+        }
         continueRender(handle);
       } catch (error) {
         console.error("Data validation error:", error);
@@ -231,6 +237,7 @@ export const CardList: React.FC<PlayerListProps> = ({
           <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 1 }} /> */}
         <div style={{ position: "relative", width: "100%", height: "100%", backgroundColor, overflow: "hidden" }}>
           <div className="grid-mask" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
+          
           <div
             className="w-full flex items-center justify-center"
             style={{
@@ -277,7 +284,7 @@ export const CardList: React.FC<PlayerListProps> = ({
 
                 return (
                   <div
-                    key={person.date}
+                    key={`${person.date ?? 'nodate'}-${person.name ?? 'noname'}-${index}`}
                     className="absolute pt-10"
                     style={{
                       left: initialPosition,

@@ -27,9 +27,50 @@ export const CONFIG = {
   HEIGHT: 1440,
 
   // Content Settings
-  cardTitle: "MPL ID",
-  cardsToShow: 5,           // Jumlah kartu yang akan ditampilkan
+  cardTitle: "MPL Indonesia",
+  cardsToShow: 31,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
+  showDebugInfo: true,       // Tampilkan info debug saat dev
+  
+  // Data Source Configuration - Pilih salah satu untuk mengubah data
+  DATA_SOURCE: {
+    // Gaming Data - Uncomment salah satu untuk menggunakan
+    // gaming: "gaming/rrq_hoshi.json",      // Default RRQ Hoshi
+    // gaming: "gaming/evos.json",           // EVOS data
+    gaming: "gaming/onic.json",              // ONIC data
+    // gaming: "gaming/alter_ego.json",      // Alter Ego data
+    
+    // YouTube Data - Uncomment salah satu untuk menggunakan
+    // youtube: "youtube/global.json",       // Global YouTube
+    // youtube: "youtube/india.json",        // India YouTube
+    // youtube: "youtube/usa.json",          // USA YouTube
+    // youtube: "youtube/indonesia.json",    // Indonesia YouTube
+    // youtube: "youtube/bangladesh.json",   // Bangladesh YouTube
+    // youtube: "youtube/brazil.json",       // Brazil YouTube
+    // youtube: "youtube/egypt.json",        // Egypt YouTube
+    // youtube: "youtube/japan.json",        // Japan YouTube
+    // youtube: "youtube/nigeria.json",      // Nigeria YouTube
+    // youtube: "youtube/mexico.json",       // Mexico YouTube
+    // youtube: "youtube/pakistan.json",     // Pakistan YouTube
+    // youtube: "youtube/philipins.json",    // Philippines YouTube
+    // youtube: "youtube/russia.json",       // Russia YouTube
+    // youtube: "youtube/vietnam.json",      // Vietnam YouTube
+    
+    // Instagram Data - Uncomment salah satu untuk menggunakan
+    // instagram: "instagram/ig-global_updated.json",  // Global Instagram
+    // instagram: "instagram/ig-bd_updated.json",      // Bangladesh Instagram
+    // instagram: "instagram/ig-br_updated.json",      // Brazil Instagram
+    // instagram: "instagram/ig-eg_updated.json",      // Egypt Instagram
+    // instagram: "instagram/ig-in_updated.json",      // India Instagram
+    // instagram: "instagram/ig-jp_updated.json",      // Japan Instagram
+    // instagram: "instagram/ig-id_updated.json",      // Indonesia Instagram
+    // instagram: "instagram/ig-mx_updated.json",      // Mexico Instagram
+    // instagram: "instagram/ig-ng_updated.json",      // Nigeria Instagram
+    // instagram: "instagram/ig-ph_updated.json",      // Philippines Instagram
+    // instagram: "instagram/ig-pk_updated.json",      // Pakistan Instagram
+    // instagram: "instagram/ig-ru_updated.json",      // Russia Instagram
+    // instagram: "instagram/ig-usa_updated.json",     // USA Instagram
+  } as { gaming?: string; youtube?: string; instagram?: string },
 
   // Timing Settings
   introDelay: 120,           // Delay intro dalam frame (2 detik)
@@ -72,4 +113,18 @@ export const getBackgroundColor = (): string => {
   return CONFIG.theme.mode === 'dark'
     ? CONFIG.theme.background.dark
     : CONFIG.theme.background.light;
+};
+
+// Data Source Helper - Mengambil data source yang aktif
+export const getActiveDataSource = (): string => {
+  // Cari data source yang tidak di-comment
+  const sources = CONFIG.DATA_SOURCE;
+  
+  // Prioritas: gaming > youtube > instagram
+  if (sources.gaming) return sources.gaming;
+  if (sources.youtube) return sources.youtube;
+  if (sources.instagram) return sources.instagram;
+  
+  // Fallback ke RRQ Hoshi jika tidak ada yang aktif
+  return "gaming/rrq_hoshi.json";
 };

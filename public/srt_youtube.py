@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import re
 
 # Configuration
-JSON_FOLDER = "youtube"
+JSON_FOLDER = "gaming"
 SRT_FOLDER = "srt_output"
 
 # Video settings

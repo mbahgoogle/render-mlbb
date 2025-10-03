@@ -34,6 +34,22 @@ export const RemotionRoot: React.FC = () => {
           // backgroundColor: '#FFF',
         }}
       />
+      <Composition
+        id="MLBBPlayers"
+        component={CardList}
+        durationInFrames={Math.round(TOTAL_DURATION)}
+        fps={CONFIG.FPS}
+        width={CONFIG.WIDTH}
+        height={CONFIG.HEIGHT}
+        defaultProps={{
+          cardsToShow: CONFIG.cardsToShow,
+          durasiPerCardDetik: CONFIG.durasiPerCardDetik,
+          introDelay: CONFIG.introDelay,
+          endingDuration: CONFIG.endingDuration * CONFIG.FPS,
+          backgroundColor: '#212121',
+          dataSourcePath: 'gaming/onic.json'
+        }}
+      />
     </>
   );
 };

@@ -28,16 +28,16 @@ export const CONFIG = {
 
   // Content Settings
   cardTitle: "MPL Indonesia",
-  cardsToShow: 32,           // Jumlah kartu yang akan ditampilkan
+  cardsToShow: 43,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
   showDebugInfo: true,       // Tampilkan info debug saat dev
   
   // Data Source Configuration - Pilih salah satu untuk mengubah data
   DATA_SOURCE: {
     // Gaming Data - Uncomment salah satu untuk menggunakan
-    // gaming: "gaming/rrq_hoshi.json",      // Default RRQ Hoshi
+    gaming: "gaming/rrq_hoshi.json",      // Default RRQ Hoshi
     // gaming: "gaming/evos.json",           // EVOS data
-    gaming: "gaming/onic.json",              // ONIC data
+    // gaming: "gaming/onic.json",              // ONIC data
     // gaming: "gaming/alter_ego.json",      // Alter Ego data
     
     // YouTube Data - Uncomment salah satu untuk menggunakan
@@ -126,5 +126,5 @@ export const getActiveDataSource = (): string => {
   if (sources.instagram) return sources.instagram;
   
   // Fallback ke RRQ Hoshi jika tidak ada yang aktif
-  return "gaming/rrq_hoshi.json";
+  return "gaming/rrq_hoshi.json.json";
 };

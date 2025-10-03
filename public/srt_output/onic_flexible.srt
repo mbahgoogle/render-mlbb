@@ -1,0 +1,168 @@
+1
+00:00:00,000 --> 00:00:02,000
+Riwayat Pemain ONIC 2017-2025
+
+2
+00:00:02,000 --> 00:00:08,000
+Skylar (Indonesia)
+Name: Schevenko Tendean | Bergabung: 08 August 2025 | Roles: [Gold Laner] | Heros: [Claude, Beatrix, Brody, Bruno, Natan]
+
+3
+00:00:08,000 --> 00:00:14,000
+Ryota (Philippines)
+Name: Nowee Cabailo Macasa | Bergabung: 13 March 2025 | Roles: [EXP Laner] | Heros: [Hilda]
+
+4
+00:00:14,000 --> 00:00:20,000
+Lutpiii (Indonesia)
+Name: Moch Ardianto | Bergabung: 28 February 2025 | Roles: [EXP Laner] | Heros: [Terizla, Paquito, Arlott, Cici, Masha]
+
+5
+00:00:20,000 --> 00:00:26,000
+Nnael (Indonesia)
+Name: Manuel Simbolon | Bergabung: 28 February 2025 | Roles: [Jungler] | Heros: [Ling, Lancelot, Nolan, Fanny, Baxia]
+
+6
+00:00:26,000 --> 00:00:32,000
+Savero (Indonesia)
+Name: Clayton Kuswanto | Bergabung: 28 February 2025 | Roles: [Gold Laner] | Heros: [Moskov, Irithel, Harith]
+
+7
+00:00:32,000 --> 00:00:38,000
+Rezzz (Indonesia)
+Name: Muhammad Kurniawan | Bergabung: 29 August 2024 | Roles: [EXP Laner] | Heros: [Martis, Benedetta, Khaleed, Arlott]
+
+8
+00:00:38,000 --> 00:00:44,000
+Marsha (Indonesia)
+Name: Steven Kurniawan | Bergabung: 28 July 2024 | Roles: [Roamer] | Heros: [Franco, Akai, Johnson]
+
+9
+00:00:44,000 --> 00:00:50,000
+Alberttt (Indonesia)
+Name: Albert Iskandar | Bergabung: 23 June 2023 | Roles: [Jungler, Gold Laner] | Heros: [Ling, Lancelot, Hayabusa, Roger, Fredrinn]
+
+10
+00:00:50,000 --> 00:00:56,000
+Kairi (Philippines)
+Name: Kairi Rayosdelsol | Bergabung: 04 July 2022 | Roles: [Jungler] | Heros: [Hayabusa, Ling, Lancelot, Fanny, Joy]
+
+11
+00:00:56,000 --> 00:01:02,000
+SamoHt (Indonesia)
+Name: Thomas Budiman | Bergabung: 24 February 2022 | Roles: [Roamer] | Heros: [Franco, Chou, Lolita, Kadita, Atlas]
+
+12
+00:01:02,000 --> 00:01:08,000
+Maipan (Indonesia)
+Name: Irfan Yusuf | Bergabung: 12 February 2021 | Roles: [Mid Laner] | Heros: [Harley, Pharsa]
+
+13
+00:01:08,000 --> 00:01:14,000
+Sir Ft Lans (Indonesia)
+Name: Moch Aliarahman | Bergabung: 12 February 2021 | Roles: [Jungler] | Heros: [Karina]
+
+14
+00:01:14,000 --> 00:01:20,000
+Sanz (Indonesia)
+Name: Gilang | Bergabung: 07 July 2020 | Roles: [Mid Laner] | Heros: [Valentina, Pharsa, Lylia, Kadita, Luo Yi]
+
+15
+00:01:20,000 --> 00:01:26,000
+Butsss (Indonesia)
+Name: Muhammad Sanubari | Bergabung: 06 June 2020 | Roles: [EXP Laner] | Heros: [Uranus, Fredrinn, Masha, Paquito, Terizla]
+
+16
+00:01:26,000 --> 00:01:32,000
+CW (Indonesia)
+Name: Calvin Winata | Bergabung: 26 February 2020 | Roles: [Gold Laner] | Heros: [Bruno, Claude, Wanwan, Harith, Melissa]
+
+17
+00:01:32,000 --> 00:01:38,000
+Rasy (Indonesia)
+Name: Rasya Wisita | Bergabung: 26 February 2020 | Roles: [Roamer] | Heros: [Atlas, Kadita, Estes, Gatotkaca, Chou]
+
+18
+00:01:38,000 --> 00:01:44,000
+Angsa (Indonesia)
+Name: Dywa Hanif | Bergabung: 27 January 2020 | Roles: [EXP Laner] | Heros: [Chou]
+
+19
+00:01:44,000 --> 00:01:50,000
+Gov (Indonesia)
+Name: Govher Madethen | Bergabung: 27 January 2020 | Roles: [Roamer] | Heros: [Chou, Franco]
+
+20
+00:01:50,000 --> 00:01:56,000
+JHeHeHe (Indonesia)
+Name: Jian Juliansyah | Bergabung: 27 January 2020 | Roles: [Mid Laner] | Heros: [Gusion, Lylia, Valir]
+
+21
+00:01:56,000 --> 00:02:02,000
+Kiboy (Indonesia)
+Name: Nicky Pontonuwu | Bergabung: 27 January 2020 | Roles: [Roamer] | Heros: [Chou, Kadita, Khufra, Jawhead, Kaja]
+
+22
+00:02:02,000 --> 00:02:08,000
+Rasdalima (Indonesia)
+Name: Muhammad Rafli Z | Bergabung: 27 January 2020 | Roles: [Mid Laner] | Heros: [Lunox]
+
+23
+00:02:08,000 --> 00:02:14,000
+AzeR (Indonesia)
+Name: Reza Kurniawan | Bergabung: 31 January 2019 | Roles: [Gold Laner] | Heros: [Wanwan]
+
+24
+00:02:14,000 --> 00:02:20,000
+Psychoo (Indonesia)
+Name: Teguh Firdaus | Bergabung: 31 January 2019 | Roles: [Mid Laner, Roamer] | Heros: [Akai, Chou, Selena, Lunox, Kagura]
+
+25
+00:02:20,000 --> 00:02:26,000
+Sasa (Malaysia)
+Name: Lu Khai Bean | Bergabung: 31 January 2019 | Roles: [Coach, Gold Laner] | Heros: [Clint, Claude, Granger, Bruno, Moskov]
+
+26
+00:02:26,000 --> 00:02:32,000
+Udil (Indonesia)
+Name: Muhammad Ardiansyah | Bergabung: 31 January 2019 | Roles: [Mid Laner] | Heros: [Lunox, Harith, Pharsa, Valentina, Yve]
+
+27
+00:02:32,000 --> 00:02:38,000
+Watt (Indonesia)
+Name: Supriadi Putra | Bergabung: 10 August 2018 | Roles: [Gold Laner] | Heros: [Karrie, Claude, Bruno, Bane, Brody]
+
+28
+00:02:38,000 --> 00:02:44,000
+Antimage (Indonesia)
+Name: Maxhill Leonardo | Bergabung: 13 July 2018 | Roles: [EXP Laner] | Heros: [Thamuz, Yu Zhong, Benedetta, Paquito, Hayabusa]
+
+29
+00:02:44,000 --> 00:02:50,000
+Drian (Indonesia)
+Name: Adriand Wong | Bergabung: 11 July 2018 | Roles: [Roamer, Mid Laner] | Heros: [Kagura, Pharsa, Kaja, Cecilion, Lunox]
+
+30
+00:02:50,000 --> 00:02:56,000
+Eiduart (Indonesia)
+Name: Eiduart Tjahyadikarta | Bergabung: 11 July 2018 | Roles: [Roamer] | Heros: [Franco, Chou]
+
+31
+00:02:56,000 --> 00:03:02,000
+Fenrir (Singapore)
+Name: Nashrudin | Bergabung: 11 July 2018 | Roles: [Mid Laner] | Heros: [Kagura, Lylia, Cyclops, Gusion]
+
+32
+00:03:02,000 --> 00:03:08,000
+Ichsan (Indonesia)
+Name: Muhammad Ichsan | Bergabung: 11 July 2018 | Roles: [Mid Laner] | Heros: [Gusion]
+
+33
+00:03:08,000 --> 00:03:14,000
+Spade (Indonesia)
+Name: Hansen Meyerson | Bergabung: 11 July 2018 | Roles: [Gold Laner] | Heros: [Lesley, Hanabi]
+
+34
+00:03:14,000 --> 00:03:19,000
+Terima kasih sudah menonton!
+

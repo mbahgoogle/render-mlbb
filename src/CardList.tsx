@@ -101,6 +101,7 @@ type PlayerListProps = {
   introDelay: number;
   endingDuration: number;
   backgroundColor?: string;
+  dataSourcePath?: string;
 };
 
 /**
@@ -116,6 +117,7 @@ export const CardList: React.FC<PlayerListProps> = ({
   introDelay = CONFIG.introDelay, 
   endingDuration = CONFIG.endingDuration * CONFIG.FPS, // Convert seconds to frames
   backgroundColor = getBackgroundColor(),
+  dataSourcePath,
 }) => {
   const frame = useCurrentFrame();
   const { fps, width, height, } = useVideoConfig();
@@ -131,9 +133,9 @@ export const CardList: React.FC<PlayerListProps> = ({
     const processData = async () => {
       try {
         // Load JSON from public using configurable data source
-        const dataSourcePath = getActiveDataSource();
-        const jsonPath = staticFile(dataSourcePath);
-        console.log(`Loading data from: ${dataSourcePath}`);
+        const sourcePath = dataSourcePath ?? getActiveDataSource();
+        const jsonPath = staticFile(sourcePath);
+        console.log(`Loading data from: ${sourcePath}`);
         const response = await fetch(jsonPath);
         const json = await response.json();
         const data = validateRawDatas(json)
@@ -164,7 +166,7 @@ export const CardList: React.FC<PlayerListProps> = ({
         });
         setValidatedData(data);
         if (CONFIG.showDebugInfo) {
-          console.log("Active data source:", dataSourcePath);
+          console.log("Active data source:", sourcePath);
           console.log("Items loaded:", data.length);
         }
         continueRender(handle);
@@ -253,7 +255,7 @@ export const CardList: React.FC<PlayerListProps> = ({
             <EffectWatermarkText rubikFont={rubikFont} usedCount={memoizedData.length} />
 
             {/* Watermark Overlay - Muncul setiap 30 detik selama 3 detik */}
-            <EffectWatermarkOverlay frame={frame} fps={fps} introDelay={introDelay} rubikFont={rubikFont} usedCount={memoizedData.length} />
+            <EffectWatermarkOverlay frame={frame} fps={fps} introDelay={introDelay} rubikFont={rubikFont} />
 
             {/* Container Kartu dengan Efek Scroll - Container utama untuk semua kartu */}
             <div

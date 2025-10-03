@@ -50,7 +50,7 @@ export const Carding: React.FC<CardingProps> = ({ person, style, triggerFrame })
         className="w-[600px] rounded-xl shadow-2xl overflow-hidden"
         style={{
           height: HeightConfig,
-          background: "linear-gradient(180deg, #ffffff 0%,rgb(217, 255, 0) 100%)",
+          background: "linear-gradient(180deg, #ffffff 0%,rgb(255, 166, 0) 100%)",
           border: "1px solid rgba(0,0,0,0.05)",
           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.18)",
         }}

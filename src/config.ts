@@ -28,7 +28,7 @@ export const CONFIG = {
 
   // Content Settings
   cardTitle: "MPL Indonesia",
-  cardsToShow: 31,           // Jumlah kartu yang akan ditampilkan
+  cardsToShow: 32,           // Jumlah kartu yang akan ditampilkan
   durasiPerCardDetik: 6,     // Durasi per kartu dalam detik
   showDebugInfo: true,       // Tampilkan info debug saat dev
   

@@ -1,5 +1,4 @@
 import React from "react";
-import { CONFIG } from "../config";
 import { interpolate } from "remotion";
 
 export const EffectWatermarkOverlay: React.FC<{
@@ -53,7 +52,7 @@ export const EffectWatermarkOverlay: React.FC<{
         transition: "opacity 0.2s, transform 0.2s",
       }}
     >
-      yt@sinauvideo / {`${CONFIG.cardsToShow}`}
+      yt@sinauvideo
     </div>
   );
 };

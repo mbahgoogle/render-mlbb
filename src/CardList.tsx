@@ -250,10 +250,10 @@ export const CardList: React.FC<PlayerListProps> = ({
             <EffectWatermarkSVG />
 
             {/* Watermark Text - Teks watermark statis */}
-            <EffectWatermarkText rubikFont={rubikFont} />
+            <EffectWatermarkText rubikFont={rubikFont} usedCount={memoizedData.length} />
 
             {/* Watermark Overlay - Muncul setiap 30 detik selama 3 detik */}
-            <EffectWatermarkOverlay frame={frame} fps={fps} introDelay={introDelay} rubikFont={rubikFont} />
+            <EffectWatermarkOverlay frame={frame} fps={fps} introDelay={introDelay} rubikFont={rubikFont} usedCount={memoizedData.length} />
 
             {/* Container Kartu dengan Efek Scroll - Container utama untuk semua kartu */}
             <div

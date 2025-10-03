@@ -1,7 +1,8 @@
 import React from "react";
 import { CONFIG } from "../config";
 
-export const EffectWatermarkText: React.FC<{ rubikFont: string }> = ({ rubikFont }) => (
+type EffectWatermarkTextProps = { rubikFont: string; usedCount?: number };
+export const EffectWatermarkText: React.FC<EffectWatermarkTextProps> = ({ rubikFont, usedCount }) => (
   <div
     style={{
       position: "absolute",
@@ -25,7 +26,7 @@ export const EffectWatermarkText: React.FC<{ rubikFont: string }> = ({ rubikFont
       transform: "none",
       opacity: 0.18,
     }}
-  >
-    {`yt@sinauvideo / ${CONFIG.cardsToShow}`}
+    >
+    {`yt@sinauvideo / ${usedCount ?? CONFIG.cardsToShow}`}
   </div>
 );
